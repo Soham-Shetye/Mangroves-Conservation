@@ -1,0 +1,14 @@
+:root {
+    --primary-green: #2d5a27; /* Deep Mangrove Green */
+    --accent-green: #76ba1b;  /* Fresh Leaf Green */
+    --earth-brown: #4e3629;   /* Silt/Bark Brown */
+    --water-blue: #004e64;    /* Coastal Blue */
+    --light-bg: #f8fdf7;      /* Subtle Green Tint White */
+    --dark-text: #1a1a1a;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
