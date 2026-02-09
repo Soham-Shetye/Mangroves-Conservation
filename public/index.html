@@ -4,45 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mangrove Conservation | District Initiative</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preload" as="image" href="assets/images/hero/hero-bg.webp" fetchpriority="high">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: rgba(45, 90, 39, 0.95);">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/images/logos/main-logo.png" alt="Logo" width="50" class="me-2">
-                <span class="fw-bold">MANGROVE CARE</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-uppercase small fw-semibold">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Impact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-                <a href="contact.html" class="btn btn-success ms-lg-3 rounded-pill px-4">Volunteer Now</a>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+    <div class="container"> <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span class="fw-bold small">MANGROVE CARE</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto"> 
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">TOUR PACKAGES</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="gallery.html">GALLERY</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+        </li>
+    </ul>
+    
+    <a href="https://wa.me/yournumber" class="btn btn-whatsapp">
+        WhatsApp Your Enquiry
+    </a>
+</div>
+    </div>
+</nav>
 
-    <section class="hero-section text-white d-flex align-items-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/hero-bg.jpg') center/cover no-repeat; height: 90vh;">
-        <div class="container text-center">
-            <h6 class="text-uppercase fw-bold text-accent" style="color: var(--accent-green); letter-spacing: 2px;">Protecting the Coastal Guardians</h6>
-            <h1 class="display-3 fw-bold mb-4">Securing the Future of <br>Our Mangroves</h1>
-            <p class="lead mb-5 mx-auto" style="max-width: 700px;">A district-level initiative dedicated to the restoration, conservation, and awareness of mangrove ecosystems in Maharashtra.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#impact" class="btn btn-lg btn-light px-4">Learn More</a>
-                <a href="https://wa.me/yournumber" class="btn btn-lg btn-outline-light px-4">District Inquiry</a>
+   <section id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+    
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/magroves.webp');"></div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/tiger-jump.webp');"></div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/hero-bg.webp');"></div>
+        </div>
+    </div>
+
+    <div class="hero-overlay-content d-flex align-items-center justify-content-center text-center">
+        <div class="container text-white">
+            <span class="badge rounded-pill bg-warning text-dark mb-3 px-4 py-2 fw-bold text-uppercase" style="letter-spacing: 2px;">District Initiative</span>
+            <h1 class="display-2 fw-bold mb-4">
+                Protect Our <span id="changing-text" class="text-success text-decoration-underline">Mangroves</span>
+            </h1>
+            <p class="lead mb-5 mx-auto opacity-75" style="max-width: 750px;">
+                A dedicated coastal project for restoration and awareness of the 
+                mangrove ecosystems in the Maharashtra district.
+            </p>
+            
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="#impact" class="btn btn-lg btn-light rounded-pill px-5 fw-bold">Learn More</a>
+                <a href="contact.html" class="btn btn-lg btn-outline-light rounded-pill px-5 fw-bold">District Enquiry</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="impact" class="py-5 overflow-hidden">
     <div class="container py-lg-5">
@@ -94,7 +140,7 @@
 
             <div class="col-lg-6 position-relative">
                 <div class="about-image-wrapper p-3">
-                    <img src="assets/images/activities/restoration-site.jpg" alt="Mangrove Restoration" class="img-fluid rounded-4 shadow-lg w-100">
+                    <img src="assets/images/activities/restoration-site-aerial.jpg" alt="Mangrove Restoration" class="img-fluid rounded-4 shadow-lg w-100" loading="lazy">
                     <div class="position-absolute bottom-0 start-0 w-100 h-25 d-none d-lg-block" 
                          style="background: var(--accent-green); z-index: -1; transform: translate(-20px, 20px); border-radius: 20px;">
                     </div>
@@ -116,7 +162,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
                     <div class="position-relative">
-                        <img src="assets/images/activities/nursery.jpg" class="card-img-top" alt="Mangrove Nursery" style="height: 250px; object-fit: cover;">
+                        <img src="assets/images/activities/nursery.jpg" class="card-img-top" alt="Mangrove Nursery" loading="lazy" decoding="async" height: 250px; object-fit: cover; ">
                         <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-dark px-3 py-2">Phase 1: Nursery</span>
                     </div>
                     <div class="card-body p-4">
@@ -134,7 +180,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
                     <div class="position-relative">
-                        <img src="assets/images/activities/cleaning.jpg" class="card-img-top" alt="Coastal Cleanup" style="height: 250px; object-fit: cover;">
+                        <img src="assets/images/activities/community-cleanup.jpg" class="card-img-top" alt="Coastal Cleanup" loading="lazy" decoding="async" style="height: 250px; object-fit: cover;">
                         <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-success px-3 py-2">Community Action</span>
                     </div>
                     <div class="card-body p-4">
@@ -152,7 +198,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
                     <div class="position-relative">
-                        <img src="assets/images/activities/awareness.jpg" class="card-img-top" alt="School Awareness" style="height: 250px; object-fit: cover;">
+                        <img src="assets/images/activities/awareness.jpg" class="card-img-top" alt="School Awareness" loading="lazy" decoding="async" height: 250px; object-fit: cover;">
                         <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-warning text-dark px-3 py-2">Education</span>
                     </div>
                     <div class="card-body p-4">
@@ -253,16 +299,16 @@
                 <p class="text-muted mb-0">High-definition glimpses into the district's diverse mangrove species and restoration sites.</p>
             </div>
             <div class="col-md-5 text-md-end mt-3 mt-md-0">
-                <a href="gallery.html" class="btn btn-outline-success rounded-pill px-4">View Full Archive</a>
+                <a href="gallery.html" class="btn btn-outline-success rounded-pill px-4" >View Full Archive</a>
             </div>
         </div>
 
         <div class="row g-3">
             <div class="col-md-6 col-lg-4">
                 <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm h-100">
-                    <img src="assets/images/gallery/mangrove-roots.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Close up of Mangrove Roots">
+                    <img src="assets/images/gallery/mangrove-roots-detail.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Close up of Mangrove Roots" loading="lazy" decoding="async">
                     <div class="gallery-overlay d-flex align-items-center justify-content-center">
-                        <button class="btn btn-light rounded-circle p-3" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/mangrove-roots.jpg', 'Intricate root network of Avicennia marina')">
+                        <button class="btn btn-light rounded-circle p-3" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/mangrove-roots-details.jpg', 'Intricate root network of Avicennia marina')">
                             <i class="bi bi-eye-fill text-success fs-4"></i>
                         </button>
                     </div>
@@ -273,7 +319,7 @@
                 <div class="row g-3">
                     <div class="col-sm-6">
                         <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm" style="height: 200px;">
-                            <img src="assets/images/gallery/plantation-drive.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Plantation Drive">
+                            <img src="assets/images/gallery/plantation-drive.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Plantation Drive" loading="lazy" decoding="async">
                             <div class="gallery-overlay d-flex align-items-center justify-content-center">
                                 <button class="btn btn-light rounded-circle p-2" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/plantation-drive.jpg', 'Recent community plantation drive at Kudal')">
                                     <i class="bi bi-eye-fill text-success fs-5"></i>
@@ -283,7 +329,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm" style="height: 200px;">
-                            <img src="assets/images/gallery/local-fauna.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Local Fauna">
+                            <img src="assets/images/gallery/local-wildlife-fauna.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Local Fauna" loading="lazy" decoding="async">
                             <div class="gallery-overlay d-flex align-items-center justify-content-center">
                                 <button class="btn btn-light rounded-circle p-2" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/local-fauna.jpg', 'Wildlife spotted within the mangrove canopy')">
                                     <i class="bi bi-eye-fill text-success fs-5"></i>
@@ -293,7 +339,7 @@
                     </div>
                     <div class="col-12">
                         <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm" style="height: 220px;">
-                            <img src="assets/images/gallery/aerial-view.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Aerial View of Creek">
+                            <img src="assets/images/gallery/restoration-site-aerial.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Aerial View of Creek" loading="lazy" decoding="async">
                             <div class="gallery-overlay d-flex align-items-center justify-content-center">
                                 <button class="btn btn-light rounded-circle p-3" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/aerial-view.jpg', 'Aerial survey of the district mangrove belt')">
                                     <i class="bi bi-eye-fill text-success fs-4"></i>
@@ -372,7 +418,7 @@
 
             <div class="col-lg-5 order-1 order-lg-2">
                 <div class="activity-img-container position-relative">
-                    <img src="assets/images/activities/boat-patrol.jpg" alt="Activity" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 500px;">
+                    <img src="assets/images/activities/boat-patrol.jpg" alt="Activity" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 500px;" loading="lazy" decoding="async">
                     <div class="floating-badge bg-white p-3 rounded-4 shadow-sm position-absolute bottom-0 start-0 m-4 d-none d-md-block border-start border-5 border-success">
                         <h6 class="mb-1 fw-bold">Live Monitoring</h6>
                         <p class="small text-muted mb-0">District Creek #04</p>
@@ -394,7 +440,7 @@
                         <p class="mb-0 text-muted small">Can't find what you're looking for? Reach out to the district conservation desk for technical assistance.</p>
                         <a href="contact.html" class="btn btn-sm btn-success mt-3 rounded-pill px-4">Contact Us</a>
                     </div>
-                    <img src="assets/images/activities/faq-visual.jpg" alt="Informational Visual" class="img-fluid rounded-4 shadow-sm d-none d-lg-block">
+                    <img src="assets/images/activities/faq-visual.jpg" alt="Informational Visual" class="img-fluid rounded-4 shadow-sm d-none d-lg-block" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -492,7 +538,7 @@
                                 </div>
                                 <p class="lead italic mb-4">"The plantation drives organized by this initiative have significantly reduced soil erosion in our village. It is heartening to see the youth of the district taking such a proactive role in conservation."</p>
                                 <div class="d-flex align-items-center">
-                                    <img src="assets/images/activities/user-1.jpg" class="rounded-circle me-3" width="60" height="60" style="object-fit: cover;">
+                                    <img src="assets/images/activities/user-1.jpg" class="rounded-circle me-3" width="60" height="60" style="object-fit: cover;" loading="lazy" decoding="async">
                                     <div>
                                         <h6 class="mb-0 fw-bold">Shripad Golatkar</h6>
                                         <p class="small text-success mb-0">Local Village Headman</p>
@@ -513,7 +559,7 @@
                                 </div>
                                 <p class="lead italic mb-4">"As a researcher, I find the data provided by the Citizen Patrol network invaluable. This project bridges the gap between scientific study and grassroots action perfectly."</p>
                                 <div class="d-flex align-items-center">
-                                    <img src="assets/images/activities/user-2.jpg" class="rounded-circle me-3" width="60" height="60" style="object-fit: cover;">
+                                    <img src="assets/images/activities/user-2.jpg" class="rounded-circle me-3" width="60" height="60" style="object-fit: cover;" loading="lazy" decoding="async">
                                     <div>
                                         <h6 class="mb-0 fw-bold">Vinit </h6>
                                         <p class="small text-success mb-0">Environmental Scientist</p>
@@ -547,7 +593,7 @@
                 <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 news-card">
                     <div class="row g-0 h-100">
                         <div class="col-md-5 position-relative">
-                            <img src="assets/images/activities/news-1.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="New Plantation Technique">
+                            <img src="assets/images/activities/news-1.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="New Plantation Technique" loading="lazy" decoding="async">
                             <div class="date-badge position-absolute top-0 start-0 m-3 text-center rounded-3 p-2 bg-success text-white">
                                 <span class="d-block fw-bold lh-1">15</span>
                                 <span class="small text-uppercase">Feb</span>
@@ -569,7 +615,7 @@
                 <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 news-card">
                     <div class="row g-0 h-100">
                         <div class="col-md-5 position-relative">
-                            <img src="assets/images/activities/news-2.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="District Policy Update">
+                            <img src="assets/images/activities/news-2.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="District Policy Update" loading="lazy" decoding="async">
                             <div class="date-badge position-absolute top-0 start-0 m-3 text-center rounded-3 p-2 bg-success text-white">
                                 <span class="d-block fw-bold lh-1">08</span>
                                 <span class="small text-uppercase">Feb</span>
@@ -612,7 +658,7 @@
         <div class="row g-4 mb-5">
             <div class="col-lg-4 col-md-6">
                 <div class="d-flex align-items-center mb-4">
-                    <img src="assets/images/logos/main-logo.png" alt="Logo" width="50" class="me-2">
+                    <img src="assets/images/logos/main-logo.png" alt="Logo" width="50" class="me-2" loading="lazy" decoding="async">
                     <h5 class="text-white fw-bold mb-0">MANGROVE CARE</h5>
                 </div>
                 <p class="small lh-lg">A district-level initiative dedicated to the scientific restoration and community-led protection of Maharashtra's vital mangrove ecosystems.</p>
