@@ -1,246 +1,213 @@
-:root {
-    --primary-green: #2d5a27; /* Deep Mangrove Green */
-    --accent-green: #76ba1b;  /* Fresh Leaf Green */
-    --earth-brown: #4e3629;   /* Silt/Bark Brown */
-    --water-blue: #004e64;    /* Coastal Blue */
-    --light-bg: #f8fdf7;      /* Subtle Green Tint White */
-    --dark-text: #1a1a1a;
+/* Persistent Cylindrical Navbar - No Blur */
+.custom-nav {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1200px;
+    /* Transparent black: 0.4 alpha for a clear floating look */
+    background: rgba(0, 0, 0, 0.10); 
+    /* REMOVED: backdrop-filter: blur() as per your request */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    padding: 10px 25px;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--light-bg);
-    color: var(--dark-text);
+/* Scrolled State: Flush-top and Clear Black */
+.custom-nav.scrolled {
+    top: 0;
+    width: 95%;
+    /* 0.6 alpha: Transparent enough to see text clearly behind it */
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 8px 25px;
 }
 
-/* Typography & Utility */
-.text-accent { color: var(--accent-green); }
-.bg-primary-green { background-color: var(--primary-green); }
-
-/* Animation for the Video Icon (Simple, non-distracting) */
-.about-image-wrapper img {
-    transition: transform 0.4s ease;
-}
-.about-image-wrapper:hover img {
-    transform: scale(1.02);
+/* Navigation Link Alignment & Neat Formatting */
+.custom-nav .navbar-nav {
+    align-items: center; /* Vertically centers links in the pill */
 }
 
-.extra-small {
-    font-size: 0.8rem;
+.custom-nav .nav-item {
+    margin: 0 5px; /* Spacing between menu items */
 }
 
-/* Fix for overlapping on smaller screens */
-@media (max-width: 991px) {
-    .about-image-wrapper {
-        margin-top: 3rem;
-    }
-}
-
-/* Program Card Styling */
-.program-card {
-    transition: all 0.3s ease-in-out;
-}
-
-.program-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
-}
-
-.program-card .badge {
-    font-size: 0.75rem;
+.custom-nav .nav-link {
+    font-size: 0.85rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px; /* Professional breathing room for text */
+    padding: 8px 15px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-/* Icons Fix (Using Bootstrap Icons) */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
-
-/* Feature Card Enhancements */
-.feature-card {
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border: 1px solid rgba(0,0,0,0.05);
+/* Hover Effect: Subtle underline that expands */
+.custom-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 50%;
+    background-color: var(--accent-green);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
-    border-color: var(--accent-green);
+.custom-nav .nav-link:hover::after,
+.custom-nav .nav-link.active::after {
+    width: 20px; /* Short, neat underline indicator */
 }
 
-.feature-card i {
+.custom-nav .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.custom-nav .nav-link.active {
+    color: var(--accent-green) !important;
+}
+
+/* Color Variables - Ensuring consistency */
+:root {
+    --primary-green: #6de056;
+    --accent-green: #7bce57; /* The vibrant green from your screenshots */
+}
+
+/* 1. HOME Link Color Change */
+.custom-nav .nav-link.active {
+    color: var(--accent-green) !important;
+    font-weight: 700;
+}
+
+/* 2. Exact WhatsApp Button Design (as per 2026-02-08_23-29.png) */
+.btn-whatsapp {
+    background-color: var(--accent-green) !important;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    padding: 10px 28px !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: none; /* Matches 'WhatsApp Your Enquiry' casing */
+    transition: all 0.3s ease;
+    /* This creates the depth/shadow effect seen in your image */
+    box-shadow: 0 4px 0 #66a741; 
+    position: relative;
     display: inline-block;
-    transition: transform 0.3s ease;
 }
 
-.feature-card:hover i {
-    transform: scale(1.1) rotate(5deg);
+.btn-whatsapp:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #6bda0a;
+    background-color: #0e0e0e !important;
 }
 
-/* Gallery Item Effects */
-.gallery-item img {
-    transition: transform 0.5s ease;
+.btn-whatsapp:active {
+    transform: translateY(4px);
+    box-shadow: none; /* "Pressed" look */
 }
 
-.gallery-overlay {
+/* Dynamically Full-Screen Hero Section */
+.hero-section {
+    /* Dynamics */
+    height: 100vh; /* Exactly 100% of the viewport height */
+    width: 100%;
+    
+    /* Content Centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Background Logic */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('../images/hero/hero-bg.jpg') center/cover no-repeat;
+    
+    /* Professional Safety Net */
+    min-height: 600px; /* Prevents text overlap on very short/rotated phones */
+    
+    /* Smooth Transition for the floating navbar */
+    padding-top: 80px; 
+}
+
+/* Ensure subsequent sections are NOT dynamic */
+#impact, #programs, #gallery {
+    height: auto; /* Fits only the content inside them */
+    min-height: 0;
+}
+
+/* Hero Carousel Styling */
+#hero-carousel {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 10s ease; /* Subtle zoom effect like pro sites */
+}
+
+.carousel-item.active .hero-slide {
+    transform: scale(1.1);
+}
+
+.hero-overlay-content {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(45, 90, 39, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    z-index: 10;
 }
 
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
+#changing-text {
+    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
+/* Ensure Carousel takes full height */
+#hero-carousel {
+    height: 100vh;
+    min-height: 600px;
+    background-color: #000; /* Fallback */
 }
 
-.object-fit-cover {
-    object-fit: cover;
+.hero-slide {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Smooth zoom effect */
+    animation: kenburns 20s infinite alternate;
 }
 
-/* Activity Tabs Styling */
-.activity-tabs .nav-pills .nav-link {
-    background: #fff;
-    color: var(--dark-text);
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    font-weight: 600;
+@keyframes kenburns {
+    from { transform: scale(1); }
+    to { transform: scale(1.15); }
 }
 
-.activity-tabs .nav-pills .nav-link.active {
-    background-color: var(--primary-green) !important;
-    color: #fff !important;
-    transform: translateX(10px);
+/* Ensure the overlay is always on top of the sliding images */
+.hero-overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; /* Lower than navbar but higher than images */
+    pointer-events: none; /* Allows clicking buttons through the overlay container */
 }
 
-.activity-tabs .nav-pills .nav-link:hover:not(.active) {
-    border-color: var(--accent-green);
-    background-color: rgba(118, 186, 27, 0.05);
-}
-
-.w-40 { width: 40%; }
-
-@media (max-width: 991px) {
-    .w-40 { width: 100%; }
-    .activity-tabs { flex-direction: column !important; }
-    .activity-tabs .tab-content { border-start: 0 !important; border-top: 1px solid #dee2e6; padding-top: 2rem; padding-left: 0 !important; margin-top: 1.5rem; }
-    .activity-tabs .nav-pills .nav-link.active { transform: translateY(-5px); }
-}
-
-/* Custom FAQ Accordion */
-.custom-faq .accordion-item {
-    border: 1px solid rgba(0,0,0,0.05) !important;
-}
-
-.custom-faq .accordion-button:not(.collapsed) {
-    background-color: rgba(45, 90, 39, 0.05) !important;
-    color: var(--primary-green) !important;
-    box-shadow: none;
-}
-
-.custom-faq .accordion-button:focus {
-    box-shadow: none;
-    border-color: var(--accent-green);
-}
-
-.custom-faq .accordion-button::after {
-    background-size: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.custom-faq .accordion-button {
-    padding: 1.25rem;
-    font-size: 1rem;
-}
-
-/* Testimonial Section Styling */
-.testimonial-card {
-    transition: transform 0.3s ease;
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.italic {
-    font-style: italic;
-}
-
-#testimonialCarousel .carousel-item {
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Custom button hover */
-.btn-outline-light:hover {
-    background-color: var(--accent-green);
-    border-color: var(--accent-green);
-}
-
-/* News Card Styling */
-.news-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.03) !important;
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
-}
-
-.date-badge {
-    min-width: 50px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 2;
-}
-
-.date-badge .lh-1 {
-    font-size: 1.25rem;
-}
-
-.date-badge .small {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-}
-
-/* Ensure horizontal layout on small screens works correctly */
-@media (max-width: 767px) {
-    .news-card img {
-        height: 200px !important;
-    }
-}
-
-/* Footer & Newsletter Adjustments */
-.hover-green:hover {
-    color: var(--accent-green) !important;
-    transition: color 0.2s ease;
-}
-
-.extra-small {
-    font-size: 0.75rem;
-}
-
-#newsletter .form-control:focus {
-    box-shadow: none;
-    background-color: #f8fdf7;
-}
-
-@media (max-width: 991px) {
-    #newsletter form {
-        border-radius: 15px !important;
-        flex-direction: column;
-        padding: 1rem !important;
-    }
-    #newsletter form input {
-        margin-bottom: 1rem;
-        text-align: center;
-    }
-    #newsletter form button {
-        margin-left: 0 !important;
-        width: 100%;
-    }
+.hero-overlay-content .container {
+    pointer-events: auto; /* Re-enables button clicks */
 }
