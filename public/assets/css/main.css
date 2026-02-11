@@ -12,8 +12,25 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50px;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1050;
+    z-index: 1030;
     padding: 10px 25px;
+}
+
+/* Fix for sidebar/offcanvas overlap */
+body {
+    padding-left: 0;
+    transition: padding-left 0.3s ease;
+}
+
+/* When offcanvas is open, add left padding to prevent content overlap */
+body.offcanvas-open {
+    padding-left: 280px; /* Match the offcanvas width */
+    overflow: hidden;
+}
+
+/* Ensure main content has proper spacing */
+.main-content {
+    transition: margin-left 0.3s ease;
 }
 
 /* Scrolled State: Flush-top and Clear Black */
@@ -77,9 +94,10 @@
 :root {
     --primary-green: #6de056;
     --accent-green: #7bce57; /* The vibrant green from your screenshots */
+    --light-bg: rgba(118, 186, 27, 0.05);
 }
 
-/* 1. HOME Link Color Change */
+/* Active Link Styling - Consolidated */
 .custom-nav .nav-link.active {
     color: var(--accent-green) !important;
     font-weight: 700;
@@ -208,6 +226,157 @@
     pointer-events: none; /* Allows clicking buttons through the overlay container */
 }
 
+/* Fix z-index stacking context issues */
+/*.custom-nav {
+    z-index: 1050;
+}*/
+
 .hero-overlay-content .container {
     pointer-events: auto; /* Re-enables button clicks */
+}
+
+/* Fix for Mobile Landscape Gap */
+@media (max-height: 500px) and (orientation: landscape) {
+    #hero-carousel, 
+    .hero-slide {
+        height: 100vh !important;
+        min-height: 350px !important; /* Reduces the forced 600px height */
+    }
+
+    /* Reduce vertical padding/margins to fit text in small height */
+    .hero-section h1 {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1rem !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Truncates text to 2 lines to save space */
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+
+    /* Adjust the overlay buttons */
+    .hero-overlay-content .d-flex {
+        margin-top: 0.5rem !important;
+    }
+
+    .btn-lg {
+        padding: 8px 25px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Ensure the Desktop Menu is hidden on small screens */
+@media (max-width: 991px) {
+    .custom-nav .collapse {
+        display: none !important;
+    }
+}
+
+/* Offcanvas (Mobile Drawer) Styling */
+.offcanvas-start {
+    border-right: 2px solid var(--accent-green) !important;
+    width: 280px !important; /* Ensure consistent width */
+    transform: translateX(-100%); /* Start hidden */
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-start.show {
+    transform: translateX(0); /* Slide in when shown */
+}
+
+.offcanvas-body .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.offcanvas-body .nav-link:hover, 
+.offcanvas-body .nav-link.active {
+    color: var(--accent-green) !important;
+    padding-left: 10px; /* Subtle slide effect on hover */
+}
+
+/* Prevent body scroll when offcanvas is open */
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 1. Lower navbar z-index so the menu (offcanvas) sits on top */
+.custom-nav {
+    z-index: 1030 !important;
+}
+
+/* 2. Ensure offcanvas components are at the very top of the stack */
+.offcanvas, .offcanvas-backdrop {
+    z-index: 1060 !important;
+}
+
+/* 3. Clean up the ghosting effect */
+/* Hides the navbar elements when the menu is open so they don't show behind it */
+body.offcanvas-open .custom-nav {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* 4. Correct the Mobile Shift */
+/* On smaller screens, standard overlay menus work better than shifting the whole body */
+@media (max-width: 991px) {
+    body.offcanvas-open {
+        padding-left: 0 !important; 
+        overflow: hidden;
+    }
+}
+
+/* Specific fix for Landscape (Horizontal) Mobile View */
+@media (max-height: 500px) and (orientation: landscape) {
+    
+    /* 1. Lift and slim the pill navbar to prevent badge overlap */
+    .custom-nav {
+        top: 8px !important; /* Brings it closer to the edge */
+        padding: 5px 20px !important; /* Slims the vertical height */
+    }
+
+    /* 2. Scale down the Hero Typography */
+    /* Prevents "Protect Our Future" from taking up the whole screen */
+    .hero-overlay-content h1 {
+        font-size: 1.8rem !important; 
+        margin-top: 45px !important; /* Creates breathing room below the navbar */
+        margin-bottom: 0.3rem !important;
+    }
+
+    /* 3. Adjust the yellow badge and lead text */
+    .badge {
+        font-size: 0.7rem !important;
+        padding: 5px 12px !important;
+    }
+
+    .hero-overlay-content .lead {
+        font-size: 0.85rem !important;
+        line-height: 1.3;
+        margin-bottom: 0.8rem !important;
+        max-width: 85% !important; /* Prevents text from hitting the screen edges */
+    }
+
+    /* 4. Shrink the buttons slightly */
+    .btn-lg {
+        padding: 8px 20px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Ensure the Menu (Offcanvas) stays on top of the Pill Navbar */
+.offcanvas {
+    z-index: 1060 !important;
+}
+
+/* Fixes the "Ghosting" overlap from Image 1 */
+/* This hides the pill navbar ONLY when the menu is open */
+body.offcanvas-open .custom-nav {
+    display: none; 
 }

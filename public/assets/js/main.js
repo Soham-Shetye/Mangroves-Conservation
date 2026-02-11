@@ -4,19 +4,43 @@
  * @param {string} caption - Text description
  */
 function updateModal(imgSrc, caption) {
-    document.getElementById('modalImg').src = imgSrc;
-    document.getElementById('modalCaption').innerText = caption;
+    const modalImg = document.getElementById('modalImg');
+    const modalCaption = document.getElementById('modalCaption');
+    
+    if (modalImg && modalCaption) {
+        modalImg.src = imgSrc;
+        modalCaption.innerText = caption;
+    }
 }
+
+// Handle offcanvas open/close events to prevent content overlap
+document.addEventListener('DOMContentLoaded', function() {
+    const offcanvas = document.getElementById('mobileMenu');
+    const body = document.body;
+    
+    if (offcanvas) {
+        // Add event listeners for offcanvas show/hide
+        offcanvas.addEventListener('show.bs.offcanvas', function () {
+            body.classList.add('offcanvas-open');
+        });
+        
+        offcanvas.addEventListener('hide.bs.offcanvas', function () {
+            body.classList.remove('offcanvas-open');
+        });
+    }
+});
 
 // Optimized scroll detection for smooth transitions
 document.addEventListener('scroll', () => {
     const navbar = document.querySelector('.custom-nav');
     
-    // Trigger the transition after 40px for a more immediate response
-    if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+    if (navbar) {
+        // Trigger the transition after 40px for a more immediate response
+        if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     }
 });
 
@@ -26,6 +50,9 @@ let currentIndex = 0;
 const textElement = document.getElementById("changing-text");
 
 function rotateText() {
+    // Check if element exists before manipulating
+    if (!textElement) return;
+    
     textElement.style.opacity = 0; // Fade out
     
     setTimeout(() => {
@@ -36,4 +63,6 @@ function rotateText() {
 }
 
 // Update text every 5 seconds (matching carousel interval)
-setInterval(rotateText, 5000);
+if (textElement) {
+    setInterval(rotateText, 5000);
+}

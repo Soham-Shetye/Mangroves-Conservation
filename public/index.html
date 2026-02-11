@@ -16,42 +16,55 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
-    <div class="container"> <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <div class="container-fluid container-lg">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/images/logos/main-logo.webp" alt="Logo" width="45" class="me-2 rounded-circle border border-secondary border-opacity-25">
             <span class="fw-bold small">PANKHOL JUVA</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mx-auto"> 
-        <li class="nav-item">
-            <a class="nav-link active" href="index.html">HOME</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about.html">TOUR PACKAGES</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about.html">ABOUT</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="gallery.html">GALLERY</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="contact.html">CONTACT</a>
-        </li>
-    </ul>
-    
-    <a href="https://wa.me/yournumber" class="btn btn-whatsapp">
-        WhatsApp Your Enquiry
-    </a>
-</div>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">IMPACT</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+            </ul>
+            <a href="https://wa.me/yournumber" class="btn btn-whatsapp">WhatsApp Your Enquiry</a>
+        </div>
     </div>
 </nav>
 
-   <section id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu" style="width: 280px;">
+    <div class="offcanvas-header border-bottom border-secondary">
+        <div class="d-flex align-items-center">
+           <img src="assets/images/logos/main-logo.webp" alt="Logo" width="45" class="me-2 rounded-circle border border-secondary border-opacity-25">
+            <h6 class="mb-0 fw-bold">MANGROVE CARE</h6>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column gap-3">
+            <li class="nav-item"><a class="nav-link text-white fw-bold active" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link text-white-50" href="about.html">IMPACT</a></li>
+            <li class="nav-item"><a class="nav-link text-white-50" href="gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a class="nav-link text-white-50" href="faq.html">FAQS</a></li>
+            <li class="nav-item"><a class="nav-link text-white-50" href="contact.html">CONTACT</a></li>
+        </ul>
+        
+        <div class="mt-5 pt-4 border-top border-secondary">
+            <p class="small text-secondary mb-3">To More Inquiry</p>
+            <a href="tel:+916289056302" class="text-success text-decoration-none fw-bold">
+                <i class="bi bi-telephone-fill me-2"></i> +91-6289-056-302
+            </a>
+        </div>
+    </div>
+</div>
+
+   <section id="hero-carousel" class="carousel slide carousel-fade main-content" data-bs-ride="carousel" data-bs-pause="false">
     
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></button>
@@ -90,7 +103,7 @@
     </div>
 </section>
 
-    <section id="impact" class="py-5 overflow-hidden">
+    <section id="impact" class="py-5 overflow-hidden main-content">
     <div class="container py-lg-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0">
@@ -150,7 +163,7 @@
     </div>
 </section>
 
-<section id="programs" class="py-5 bg-white">
+<section id="programs" class="py-5 bg-white main-content">
     <div class="container py-lg-5">
         <div class="text-center mb-5">
             <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Ongoing Initiatives</span>
@@ -162,7 +175,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
                     <div class="position-relative">
-                        <img src="assets/images/activities/nursery.jpg" class="card-img-top" alt="Mangrove Nursery" loading="lazy" decoding="async" height: 250px; object-fit: cover; ">
+                        <img src="assets/images/activities/nursery.jpg" class="card-img-top" alt="Mangrove Nursery" loading="lazy" decoding="async" style="height: 250px; object-fit: cover;">
                         <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-dark px-3 py-2">Phase 1: Nursery</span>
                     </div>
                     <div class="card-body p-4">
@@ -198,7 +211,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
                     <div class="position-relative">
-                        <img src="assets/images/activities/awareness.jpg" class="card-img-top" alt="School Awareness" loading="lazy" decoding="async" height: 250px; object-fit: cover;">
+                        <img src="assets/images/activities/awareness.jpg" class="card-img-top" alt="School Awareness" loading="lazy" decoding="async" style="height: 250px; object-fit: cover;">
                         <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-warning text-dark px-3 py-2">Education</span>
                     </div>
                     <div class="card-body p-4">
@@ -216,7 +229,7 @@
     </div>
 </section>
 
-<section id="why-mangroves" class="py-5 bg-light">
+<section id="why-mangroves" class="py-5 bg-light main-content">
     <div class="container py-lg-5">
         <div class="text-center mb-5">
             <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Ecological Significance</span>
@@ -290,7 +303,7 @@
     </div>
 </section>
 
-<section id="gallery" class="py-5 bg-white">
+<section id="gallery" class="py-5 bg-white main-content">
     <div class="container py-lg-5">
         <div class="row align-items-end mb-5">
             <div class="col-md-7">
@@ -365,7 +378,7 @@
     </div>
 </div>
 
-<section id="activities" class="py-5 bg-light">
+<section id="activities" class="py-5 bg-light main-content">
     <div class="container py-lg-5">
         <div class="row align-items-center">
             <div class="col-lg-7 order-2 order-lg-1 mt-5 mt-lg-0">
@@ -429,7 +442,7 @@
     </div>
 </section>
 
-<section id="faq" class="py-5 bg-white">
+<section id="faq" class="py-5 bg-white main-content">
     <div class="container py-lg-5">
         <div class="row">
             <div class="col-lg-5 mb-5 mb-lg-0">
