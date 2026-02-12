@@ -1,4 +1,15 @@
-/* Persistent Cylindrical Navbar - No Blur */
+/* ============================================
+   COLOR VARIABLES - Single Definition
+   ============================================ */
+:root {
+    --primary-green: #6de056;
+    --accent-green: #7bce57;
+    --light-bg: rgba(118, 186, 27, 0.05);
+}
+
+/* ============================================
+   PERSISTENT CYLINDRICAL NAVBAR
+   ============================================ */
 .custom-nav {
     position: fixed;
     top: 24px;
@@ -6,9 +17,7 @@
     transform: translateX(-50%);
     width: 95%;
     max-width: 1200px;
-    /* Transparent black: 0.4 alpha for a clear floating look */
-    background: rgba(0, 0, 0, 0.10); 
-    /* REMOVED: backdrop-filter: blur() as per your request */
+    background: rgba(0, 0, 0, 0.10);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50px;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -16,55 +25,44 @@
     padding: 10px 25px;
 }
 
-/* Fix for sidebar/offcanvas overlap */
-body {
-    padding-left: 0;
-    transition: padding-left 0.3s ease;
-}
-
-/* When offcanvas is open, add left padding to prevent content overlap */
-body.offcanvas-open {
-    padding-left: 280px; /* Match the offcanvas width */
-    overflow: hidden;
-}
-
-/* Ensure main content has proper spacing */
-.main-content {
-    transition: margin-left 0.3s ease;
-}
-
 /* Scrolled State: Flush-top and Clear Black */
 .custom-nav.scrolled {
     top: 0;
     width: 95%;
-    /* 0.6 alpha: Transparent enough to see text clearly behind it */
     background: rgba(0, 0, 0, 0.8) !important;
     border-color: rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 8px 25px;
 }
 
-/* Navigation Link Alignment & Neat Formatting */
+/* Hide navbar when offcanvas is open (single definition) */
+body.offcanvas-open .custom-nav {
+    display: none;
+}
+
+/* ============================================
+   NAVIGATION STYLING
+   ============================================ */
 .custom-nav .navbar-nav {
-    align-items: center; /* Vertically centers links in the pill */
+    align-items: center;
 }
 
 .custom-nav .nav-item {
-    margin: 0 5px; /* Spacing between menu items */
+    margin: 0 5px;
 }
 
 .custom-nav .nav-link {
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1.2px; /* Professional breathing room for text */
+    letter-spacing: 1.2px;
     padding: 8px 15px !important;
     color: rgba(255, 255, 255, 0.8) !important;
     position: relative;
     transition: all 0.3s ease;
 }
 
-/* Hover Effect: Subtle underline that expands */
+/* Hover Effect: Expanding underline */
 .custom-nav .nav-link::after {
     content: '';
     position: absolute;
@@ -79,43 +77,33 @@ body.offcanvas-open {
 
 .custom-nav .nav-link:hover::after,
 .custom-nav .nav-link.active::after {
-    width: 20px; /* Short, neat underline indicator */
+    width: 20px;
 }
 
 .custom-nav .nav-link:hover {
     color: #ffffff !important;
 }
 
-.custom-nav .nav-link.active {
-    color: var(--accent-green) !important;
-}
-
-/* Color Variables - Ensuring consistency */
-:root {
-    --primary-green: #6de056;
-    --accent-green: #7bce57; /* The vibrant green from your screenshots */
-    --light-bg: rgba(118, 186, 27, 0.05);
-}
-
-/* Active Link Styling - Consolidated */
+/* Active Link Styling (single definition) */
 .custom-nav .nav-link.active {
     color: var(--accent-green) !important;
     font-weight: 700;
 }
 
-/* 2. Exact WhatsApp Button Design (as per 2026-02-08_23-29.png) */
+/* ============================================
+   WHATSAPP BUTTON
+   ============================================ */
 .btn-whatsapp {
     background-color: var(--accent-green) !important;
     color: #ffffff !important;
     border: none;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     padding: 10px 28px !important;
     font-weight: 700;
     font-size: 0.9rem;
-    text-transform: none; /* Matches 'WhatsApp Your Enquiry' casing */
+    text-transform: none;
     transition: all 0.3s ease;
-    /* This creates the depth/shadow effect seen in your image */
-    box-shadow: 0 4px 0 #66a741; 
+    box-shadow: 0 4px 0 #66a741;
     position: relative;
     display: inline-block;
 }
@@ -128,76 +116,56 @@ body.offcanvas-open {
 
 .btn-whatsapp:active {
     transform: translateY(4px);
-    box-shadow: none; /* "Pressed" look */
+    box-shadow: none;
 }
 
-/* Dynamically Full-Screen Hero Section */
+/* ============================================
+   BODY & OFFCANVAS OVERFLOW HANDLING
+   ============================================ */
+body {
+    padding-left: 0;
+    transition: padding-left 0.3s ease;
+}
+
+/* On mobile, don't shift body when offcanvas opens */
+@media (max-width: 991px) {
+    body.offcanvas-open {
+        padding-left: 0 !important;
+        overflow: hidden;
+    }
+}
+
+/* ============================================
+   HERO SECTION - Single Definition
+   ============================================ */
 .hero-section {
-    /* Dynamics */
-    height: 100vh; /* Exactly 100% of the viewport height */
+    height: 100vh;
     width: 100%;
-    
-    /* Content Centering */
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* Background Logic */
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                 url('../images/hero/hero-bg.jpg') center/cover no-repeat;
-    
-    /* Professional Safety Net */
-    min-height: 600px; /* Prevents text overlap on very short/rotated phones */
-    
-    /* Smooth Transition for the floating navbar */
-    padding-top: 80px; 
+    min-height: 600px;
+    padding-top: 80px;
 }
 
 /* Ensure subsequent sections are NOT dynamic */
 #impact, #programs, #gallery {
-    height: auto; /* Fits only the content inside them */
+    height: auto;
     min-height: 0;
 }
 
-/* Hero Carousel Styling */
+/* ============================================
+   HERO CAROUSEL
+   ============================================ */
 #hero-carousel {
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
-}
-
-.hero-slide {
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: transform 10s ease; /* Subtle zoom effect like pro sites */
-}
-
-.carousel-item.active .hero-slide {
-    transform: scale(1.1);
-}
-
-.hero-overlay-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
-
-#changing-text {
-    transition: opacity 0.5s ease-in-out;
-    display: inline-block;
-}
-
-/* Ensure Carousel takes full height */
-#hero-carousel {
-    height: 100vh;
     min-height: 600px;
-    background-color: #000; /* Fallback */
+    background-color: #000;
 }
 
 .hero-slide {
@@ -206,8 +174,16 @@ body.offcanvas-open {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Smooth zoom effect */
+    transition: transform 10s ease;
+}
+
+/* Single animation definition - REMOVED duplicate */
+.hero-slide {
     animation: kenburns 20s infinite alternate;
+}
+
+.carousel-item.active .hero-slide {
+    transform: scale(1.1);
 }
 
 @keyframes kenburns {
@@ -215,77 +191,39 @@ body.offcanvas-open {
     to { transform: scale(1.15); }
 }
 
-/* Ensure the overlay is always on top of the sliding images */
+/* Hero Overlay */
 .hero-overlay-content {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5; /* Lower than navbar but higher than images */
-    pointer-events: none; /* Allows clicking buttons through the overlay container */
+    z-index: 5;
+    pointer-events: none;
 }
-
-/* Fix z-index stacking context issues */
-/*.custom-nav {
-    z-index: 1050;
-}*/
 
 .hero-overlay-content .container {
-    pointer-events: auto; /* Re-enables button clicks */
+    pointer-events: auto;
 }
 
-/* Fix for Mobile Landscape Gap */
-@media (max-height: 500px) and (orientation: landscape) {
-    #hero-carousel, 
-    .hero-slide {
-        height: 100vh !important;
-        min-height: 350px !important; /* Reduces the forced 600px height */
-    }
-
-    /* Reduce vertical padding/margins to fit text in small height */
-    .hero-section h1 {
-        font-size: 2rem !important;
-        margin-bottom: 0.5rem !important;
-    }
-
-    .hero-section p {
-        font-size: 0.9rem !important;
-        margin-bottom: 1rem !important;
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* Truncates text to 2 lines to save space */
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
-    }
-
-    /* Adjust the overlay buttons */
-    .hero-overlay-content .d-flex {
-        margin-top: 0.5rem !important;
-    }
-
-    .btn-lg {
-        padding: 8px 25px !important;
-        font-size: 0.8rem !important;
-    }
+#changing-text {
+    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
 }
 
-/* Ensure the Desktop Menu is hidden on small screens */
-@media (max-width: 991px) {
-    .custom-nav .collapse {
-        display: none !important;
-    }
-}
-
-/* Offcanvas (Mobile Drawer) Styling */
-.offcanvas-start {
+/* ============================================
+   OFFCANVAS (MOBILE DRAWER) - Single Definition
+   ============================================ */
+.offcanvas, .offcanvas-start {
     border-right: 2px solid var(--accent-green) !important;
-    width: 280px !important; /* Ensure consistent width */
-    transform: translateX(-100%); /* Start hidden */
+    width: 280px !important;
+    z-index: 1060 !important;
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
 }
 
-.offcanvas-start.show {
-    transform: translateX(0); /* Slide in when shown */
+.offcanvas.show, .offcanvas-start.show {
+    transform: translateX(0);
 }
 
 .offcanvas-body .nav-link {
@@ -294,63 +232,45 @@ body.offcanvas-open {
     transition: 0.3s;
 }
 
-.offcanvas-body .nav-link:hover, 
+.offcanvas-body .nav-link:hover,
 .offcanvas-body .nav-link.active {
     color: var(--accent-green) !important;
-    padding-left: 10px; /* Subtle slide effect on hover */
+    padding-left: 10px;
 }
 
-/* Prevent body scroll when offcanvas is open */
 .offcanvas-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* 1. Lower navbar z-index so the menu (offcanvas) sits on top */
-.custom-nav {
-    z-index: 1030 !important;
-}
-
-/* 2. Ensure offcanvas components are at the very top of the stack */
-.offcanvas, .offcanvas-backdrop {
     z-index: 1060 !important;
 }
 
-/* 3. Clean up the ghosting effect */
-/* Hides the navbar elements when the menu is open so they don't show behind it */
-body.offcanvas-open .custom-nav {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+/* ============================================
+   MAIN CONTENT SPACING
+   ============================================ */
+.main-content {
+    transition: margin-left 0.3s ease;
 }
 
-/* 4. Correct the Mobile Shift */
-/* On smaller screens, standard overlay menus work better than shifting the whole body */
-@media (max-width: 991px) {
-    body.offcanvas-open {
-        padding-left: 0 !important; 
-        overflow: hidden;
-    }
-}
-
-/* Specific fix for Landscape (Horizontal) Mobile View */
+/* ============================================
+   MOBILE LANDSCAPE FIX
+   ============================================ */
 @media (max-height: 500px) and (orientation: landscape) {
-    
-    /* 1. Lift and slim the pill navbar to prevent badge overlap */
-    .custom-nav {
-        top: 8px !important; /* Brings it closer to the edge */
-        padding: 5px 20px !important; /* Slims the vertical height */
+    #hero-carousel, 
+    .hero-slide {
+        height: 100vh !important;
+        min-height: 350px !important;
     }
 
-    /* 2. Scale down the Hero Typography */
-    /* Prevents "Protect Our Future" from taking up the whole screen */
+    .custom-nav {
+        top: 8px !important;
+        padding: 5px 20px !important;
+    }
+
     .hero-overlay-content h1 {
-        font-size: 1.8rem !important; 
-        margin-top: 45px !important; /* Creates breathing room below the navbar */
+        font-size: 1.8rem !important;
+        margin-top: 45px !important;
         margin-bottom: 0.3rem !important;
     }
 
-    /* 3. Adjust the yellow badge and lead text */
     .badge {
         font-size: 0.7rem !important;
         padding: 5px 12px !important;
@@ -360,23 +280,38 @@ body.offcanvas-open .custom-nav {
         font-size: 0.85rem !important;
         line-height: 1.3;
         margin-bottom: 0.8rem !important;
-        max-width: 85% !important; /* Prevents text from hitting the screen edges */
+        max-width: 85% !important;
     }
 
-    /* 4. Shrink the buttons slightly */
+    .hero-section h1 {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1rem !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .hero-overlay-content .d-flex {
+        margin-top: 0.5rem !important;
+    }
+
     .btn-lg {
         padding: 8px 20px !important;
         font-size: 0.8rem !important;
     }
 }
 
-/* Ensure the Menu (Offcanvas) stays on top of the Pill Navbar */
-.offcanvas {
-    z-index: 1060 !important;
-}
-
-/* Fixes the "Ghosting" overlap from Image 1 */
-/* This hides the pill navbar ONLY when the menu is open */
-body.offcanvas-open .custom-nav {
-    display: none; 
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 991px) {
+    .custom-nav .collapse {
+        display: none !important;
+    }
 }
