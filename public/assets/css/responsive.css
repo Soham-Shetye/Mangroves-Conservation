@@ -102,3 +102,27 @@
         text-align: center !important;
     }
 }
+
+/* Community Section Mobile Optimization */
+@media (max-width: 767px) {
+    .community-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    #community h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Horizontal View Fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+    #community .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    #community .gap-4 {
+        gap: 1.5rem !important;
+    }
+}

@@ -683,3 +683,25 @@ body {
 .hover-green-list:hover {
     transform: translateX(5px);
 }
+
+/* Community Section Icons */
+.community-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Modern rounded square look */
+    text-decoration: none;
+    font-size: 1.8rem; /* Medium icon size */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle Hover Animation for Attraction */
+.community-icon:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-8px) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
