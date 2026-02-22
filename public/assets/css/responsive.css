@@ -126,3 +126,98 @@
         gap: 1.5rem !important;
     }
 }
+
+/* ============================================
+   FONT STYLE
+   ============================================ */
+
+   @media (max-width: 991px) {
+    .offcanvas-body .nav-link {
+        font-family: 'Rubik', sans-serif;
+        font-size: 14px;
+        font-weight: 400;                  /* Thicker for high visibility on mobile */
+        letter-spacing: 0px;
+        padding: 15px 0 !important;
+        line-height: 30px;
+        
+    }
+}
+
+/* --- MOBILE MENU SPECIFIC DESIGN --- */
+.mobile-menu-sundarban {
+    width: 300px !important;
+    background-color: #0c0c0c !important; /* Deep black-gray from reference */
+    padding-left: 10px;
+    
+}
+
+/* 1. Circular Logo */
+.logo-circle-mobile {
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.logo-circle-mobile img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* 2. Navigation Typography */
+.nav-link-mobile {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400; /* Bold thickness as requested */
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0px;
+    transition: 0.3s;
+    line-height: 30px;
+
+}
+
+.nav-link-mobile.active {
+    color: #7bce57 !important; /* Green active state from reference */
+}
+
+/* 3. Close Button Custom Design */
+.btn-close-custom {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+/* 4. Inquiry Section Styling */
+.inquiry-icon {
+    font-size: 1.8rem;
+    color: #7bce57; /* The phone icon green */
+}
+
+.text-accent-green {
+    color: #7bce57;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-footer p {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Enhancement: Mobile Button Feedback */
+.nav-link-mobile:active, 
+.btn-close-custom:active {
+    transform: scale(0.95);
+    background-color: rgba(123, 206, 87, 0.1);
+}

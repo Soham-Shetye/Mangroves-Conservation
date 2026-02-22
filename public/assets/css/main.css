@@ -1,122 +1,11 @@
 /* ============================================
    COLOR VARIABLES - Single Definition
+   (Imported by all other CSS files)
    ============================================ */
 :root {
     --primary-green: #6de056;
     --accent-green: #7bce57;
     --light-bg: rgba(118, 186, 27, 0.05);
-}
-
-/* ============================================
-   PERSISTENT CYLINDRICAL NAVBAR
-   ============================================ */
-.custom-nav {
-    position: fixed;
-    top: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    max-width: 1200px;
-    background: rgba(0, 0, 0, 0.10);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1030;
-    padding: 10px 25px;
-}
-
-/* Scrolled State: Flush-top and Clear Black */
-.custom-nav.scrolled {
-    top: 0;
-    width: 95%;
-    background: rgba(0, 0, 0, 0.8) !important;
-    border-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 8px 25px;
-}
-
-/* Hide navbar when offcanvas is open (single definition) */
-body.offcanvas-open .custom-nav {
-    display: none;
-}
-
-/* ============================================
-   NAVIGATION STYLING
-   ============================================ */
-.custom-nav .navbar-nav {
-    align-items: center;
-}
-
-.custom-nav .nav-item {
-    margin: 0 5px;
-}
-
-.custom-nav .nav-link {
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    padding: 8px 15px !important;
-    color: rgba(255, 255, 255, 0.8) !important;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effect: Expanding underline */
-.custom-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 5px;
-    left: 50%;
-    background-color: var(--accent-green);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.custom-nav .nav-link:hover::after,
-.custom-nav .nav-link.active::after {
-    width: 20px;
-}
-
-.custom-nav .nav-link:hover {
-    color: #ffffff !important;
-}
-
-/* Active Link Styling (single definition) */
-.custom-nav .nav-link.active {
-    color: var(--accent-green) !important;
-    font-weight: 700;
-}
-
-/* ============================================
-   WHATSAPP BUTTON
-   ============================================ */
-.btn-whatsapp {
-    background-color: var(--accent-green) !important;
-    color: #ffffff !important;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 28px !important;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 0 #66a741;
-    position: relative;
-    display: inline-block;
-}
-
-.btn-whatsapp:hover {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 #6bda0a;
-    background-color: #0e0e0e !important;
-}
-
-.btn-whatsapp:active {
-    transform: translateY(4px);
-    box-shadow: none;
 }
 
 /* ============================================
@@ -127,82 +16,11 @@ body {
     transition: padding-left 0.3s ease;
 }
 
-
-
 /* ============================================
-   HERO SECTION - Single Definition
+   MAIN CONTENT SPACING
    ============================================ */
-.hero-section {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('../images/hero/hero-bg.jpg') center/cover no-repeat;
-    min-height: 600px;
-    padding-top: 80px;
-}
-
-/* Ensure subsequent sections are NOT dynamic */
-#impact, #programs, #gallery {
-    height: auto;
-    min-height: 0;
-}
-
-/* ============================================
-   HERO CAROUSEL
-   ============================================ */
-#hero-carousel {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    min-height: 600px;
-    background-color: #000;
-}
-
-.hero-slide {
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: transform 10s ease;
-}
-
-/* Single animation definition - REMOVED duplicate */
-.hero-slide {
-    animation: kenburns 20s infinite alternate;
-}
-
-.carousel-item.active .hero-slide {
-    transform: scale(1.1);
-}
-
-@keyframes kenburns {
-    from { transform: scale(1); }
-    to { transform: scale(1.15); }
-}
-
-/* Hero Overlay */
-.hero-overlay-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    pointer-events: none;
-}
-
-.hero-overlay-content .container {
-    pointer-events: auto;
-}
-
-#changing-text {
-    transition: opacity 0.5s ease-in-out;
-    display: inline-block;
+.main-content {
+    transition: margin-left 0.3s ease;
 }
 
 /* ============================================
@@ -238,35 +56,8 @@ body {
 }
 
 /* ============================================
-   MAIN CONTENT SPACING
+   FOOTER - Background and Typography
    ============================================ */
-.main-content {
-    transition: margin-left 0.3s ease;
-}
-
-
-
-/* Ensure the carousel and images take up the full viewport */
-.carousel-inner, .carousel-item, .hero-wrapper {
-    height: 100vh;
-    min-height: 600px; /* Keep your professional safety net */
-}
-
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.4); /* Replaces the linear-gradient you had in CSS */
-    z-index: 1;
-}
-
-/* Maintain the "Ken Burns" zoom effect on the new img tags */
-.carousel-item img {
-    transition: transform 10s ease;
-}
-
-.carousel-item.active img {
-    transform: scale(1.1);
-}
-
-/* Footer Background and Typography */
 .main-footer {
     background-color: #1a1a1a;
     color: #bbbbbb;
@@ -274,7 +65,7 @@ body {
 }
 
 .join-network-banner {
-    background-color: #7bce57; /* Your brand green */
+    background-color: #7bce57;
 }
 
 .footer-heading {
@@ -298,65 +89,32 @@ body {
     color: #7bce57;
 }
 
-/* Floating WhatsApp Design */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    z-index: 2000;
-}
-
-.help-text {
-    background: #ffffff;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 0.8rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    position: relative;
-}
-
-/* Little arrow for the "Need Help" box */
-.help-text::after {
-    content: '';
-    position: absolute;
-    right: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid #ffffff;
-}
-
-.whatsapp-icon {
-    background-color: #25D366;
-    color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* Footer Enhancements */
+.footer-links a {
     text-decoration: none;
+    color: #cfd8dc;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-/* Container that mimics the "Hero" full screen */
+.footer-links a:hover,
+.hover-green:hover {
+    color: var(--accent-green) !important;
+    transform: translateX(5px);
+}
+
+/* Footer Hero Wrapper */
 .footer-hero-wrapper {
-    width: 95%; /* Matches your navbar's width from s.jpg */
+    width: 95%;
     max-width: 1200px;
-    margin: 0 auto 40px auto; /* Margin bottom makes it "float" */
+    margin: 0 auto 40px auto;
     min-height: 100vh;
     display: flex;
 }
 
 .footer-hero-content {
-    background-color: #1a1a1a; /* Dark theme from Sundarban image */
-    border-radius: 50px; /* Matching the pill shape of your header */
+    background-color: #1a1a1a;
+    border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     box-shadow: 0 15px 40px rgba(0,0,0,0.4);
@@ -367,7 +125,7 @@ body {
     width: 100px;
     height: 100px;
     background: #fff;
-    border-radius: 50%; /* Force it into a circle */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,8 +140,8 @@ body {
     object-fit: contain;
 }
 
-/* Sundarban Content Styling */
-.footer-links-sundarban li, 
+/* Sundarban Footer Links */
+.footer-links-sundarban li,
 .footer-list-sundarban li {
     margin-bottom: 12px;
     font-size: 0.9rem;
@@ -419,13 +177,13 @@ body {
     color: #000;
 }
 
-/* 1. The Main Wrapper: Full Screen & Floating Pill */
+/* Sundarban Footer Container */
 .sundarban-footer-container {
     width: 95%;
     max-width: 1400px;
     margin: 0 auto 40px auto;
-    min-height: 100vh; /* Replicates the Hero height */
-    background-color: #1a1a1a; /* Single background for the whole pill */
+    min-height: 100vh;
+    background-color: #1a1a1a;
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
@@ -433,12 +191,11 @@ body {
     box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
-/* 2. Circular Logo (Matches Column 1 Placement) */
 .logo-circle-sundarban {
     width: 120px;
     height: 120px;
     background: #fff;
-    border-radius: 50%; /* Pure Circle */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -453,8 +210,7 @@ body {
     object-fit: contain;
 }
 
-/* 3. Typography & Lists */
-.footer-links-sundarban li, 
+.footer-links-sundarban li,
 .footer-list-sundarban li {
     margin-bottom: 12px;
     color: #bbbbbb;
@@ -491,24 +247,22 @@ body {
     border-color: var(--accent-green);
 }
 
-/* SUNDARBAN STYLE: Edge-to-Edge Footer */
+/* Sundarban Full Footer */
 .sundarban-footer {
-    background-color: #111111; /* Solid dark color like sundarban image */
+    background-color: #111111;
     width: 100%;
-    min-height: 100vh; /* Covers full screen as requested */
+    min-height: 100vh;
     display: flex;
-    align-items: center; /* Centers content vertically in the 100vh */
+    align-items: center;
     padding: 80px 0 40px 0;
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Central alignment container */
 .footer-content-wrapper {
     max-width: 1200px;
 }
 
-/* Circular Logo Style */
 .logo-circular {
     width: 80px;
     height: 80px;
@@ -528,9 +282,8 @@ body {
     object-fit: contain;
 }
 
-/* Typography and Colors */
 .text-accent-sundarban {
-    color: #7bce57; /* Your primary green */
+    color: #7bce57;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -538,7 +291,7 @@ body {
 .footer-label {
     color: #ffffff;
     font-weight: 700;
-    text-transform: none; /* Matches Sundarban style */
+    text-transform: none;
 }
 
 .footer-nav-links a, .initiative-list li, .contact-item p {
@@ -556,25 +309,23 @@ body {
     background-color: #7bce57;
     color: #fff;
     padding: 12px 30px;
-    border-radius: 5px; /* Square edges like Sundarban button */
+    border-radius: 5px;
     font-weight: 700;
     text-decoration: none;
     display: inline-block;
 }
 
-/* Bottom Bar Styling */
 .footer-bottom-bar {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Newsletter Section with Layered Backgrounds */
+/* Newsletter / Inquiry Section */
 .inquiry-newsletter-section {
     position: relative;
     width: 100%;
     min-height: 350px;
-    /* Layer 1: Dark Blue Overlay | Layer 2: Pattern Image | Layer 3: Main Background */
-    background: linear-gradient(rgba(15, 32, 67, 0.9), rgba(15, 32, 67, 0.9)), 
-                url('../images/hero/pattern-overlay.png'), 
+    background: linear-gradient(rgba(15, 32, 67, 0.9), rgba(15, 32, 67, 0.9)),
+                url('../images/hero/pattern-overlay.png'),
                 url('../images/hero/mangroves-footer.webp');
     background-size: cover;
     background-position: center;
@@ -582,20 +333,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Footer Enhancements */
-.footer-links a {
-    text-decoration: none;
-    color: #cfd8dc;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.footer-links a:hover,
-.hover-green:hover {
-    color: var(--accent-green) !important;
-    transform: translateX(5px); /* Subtle movement on hover */
-}
-
+/* Social Links */
 .social-link {
     width: 35px;
     height: 35px;
@@ -615,6 +353,7 @@ body {
     transform: translateY(-3px);
 }
 
+/* Utility */
 .extra-small {
     font-size: 0.8rem;
 }
@@ -625,16 +364,16 @@ body {
 }
 
 .link-with-dot::before {
-    content: ' ';          /* Creates the empty element */
-    width: 6px;           /* Size of the dot */
+    content: ' ';
+    width: 6px;
     height: 6px;
-    background-color: currentColor; /* Matches the text color (even on hover!) */
-    border-radius: 50%;   /* Makes it a circle */
-    margin-right: 8px;    /* Space between dot and text */
-    opacity: 0.6;         /* Makes it slightly subtle */
+    background-color: currentColor;
+    border-radius: 50%;
+    margin-right: 8px;
+    opacity: 0.6;
 }
 
-/* Footer Hover Effects */
+/* Hover Utilities */
 .hover-green {
     transition: color 0.3s ease;
 }
@@ -650,27 +389,27 @@ body {
 
 .hover-green-list:hover {
     color: #7bce57;
-    transform: translateX(8px); /* Pro slide effect */
+    transform: translateX(8px);
 }
 
-/* Package List Dot Alignment */
+/* Footer Packages List */
 .footer-packages-list li {
     display: flex;
     align-items: center;
 }
 
 .footer-packages-list li i {
-    margin-left: -10px; /* Aligns dots with headers */
+    margin-left: -10px;
 }
 
-/* Ensure hover works for all footer links */
+/* Main Sundarban Footer Links */
 .main-sundarban-footer a {
     transition: color 0.3s ease;
     color: inherit;
     text-decoration: none;
 }
 
-.main-sundarban-footer a:hover, 
+.main-sundarban-footer a:hover,
 .hover-green:hover,
 .hover-green-list:hover {
     color: #7bce57 !important;
@@ -692,16 +431,61 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px; /* Modern rounded square look */
+    border-radius: 15px;
     text-decoration: none;
-    font-size: 1.8rem; /* Medium icon size */
+    font-size: 1.8rem;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Subtle Hover Animation for Attraction */
 .community-icon:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-8px) rotate(5deg);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2000;
+}
+
+.help-text {
+    background: #ffffff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.help-text::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #ffffff;
+}
+
+.whatsapp-icon {
+    background-color: #25D366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
 }

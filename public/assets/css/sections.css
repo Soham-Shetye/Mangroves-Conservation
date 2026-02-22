@@ -1,0 +1,194 @@
+/* Hero & Carousel */
+#hero-carousel {
+    height: 100vh;
+    min-height: 600px;
+}
+
+.hero-slide {
+    height: 100vh;
+    background-size: cover;
+    animation: kenburns 20s infinite alternate;
+}
+
+/* Mission & Jagged Tiger Image */
+.jagged-wrapper {
+    aspect-ratio: 1 / 1.1;
+    overflow: hidden;
+}
+
+.mission-tiger-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: url('../images/vectors/vector.png');
+    -webkit-mask-image: url('../images/vectors/vector.png');
+    mask-size: 100% 100%;
+}
+
+/* Community Social Grid */
+.community-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+}/* ============================================
+   SECTIONS — requires main.css for :root variables
+   ============================================ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('../images/hero/hero-bg.jpg') center/cover no-repeat;
+    min-height: 600px;
+    padding-top: 80px;
+}
+
+/* Ensure subsequent sections are NOT dynamic */
+#impact, #programs, #gallery {
+    height: auto;
+    min-height: 0;
+}
+
+/* ============================================
+   HERO CAROUSEL
+   ============================================ */
+#hero-carousel {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+    background-color: #000;
+}
+
+.hero-slide {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: kenburns 20s infinite alternate;
+}
+
+.carousel-item.active .hero-slide {
+    transform: scale(1.1);
+}
+
+@keyframes kenburns {
+    from { transform: scale(1); }
+    to   { transform: scale(1.15); }
+}
+
+/* Hero Overlay */
+.hero-overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.hero-overlay-content .container {
+    pointer-events: auto;
+}
+
+#changing-text {
+    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
+}
+
+/* Carousel Inner / Item / Hero Wrapper */
+.carousel-inner, .carousel-item, .hero-wrapper {
+    height: 100vh;
+    min-height: 600px;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Ken Burns on img tags */
+.carousel-item img {
+    transition: transform 10s ease;
+}
+
+.carousel-item.active img {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   MISSION SECTION
+   ============================================ */
+.mission-feature {
+    background: #f8fdf7;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.mission-feature:hover {
+    background: #ffffff;
+    border-color: var(--accent-green);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Jagged Mask */
+.jagged-mask {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    mask-image: radial-gradient(circle at 50% 50%, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    clip-path: polygon(10% 0%, 95% 5%, 100% 40%, 90% 90%, 50% 100%, 5% 85%, 0% 30%);
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2));
+}
+
+.cursor-pointer:hover span {
+    color: var(--accent-green);
+    transition: 0.3s;
+}
+
+/* Jagged Wrapper */
+.jagged-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    overflow: hidden;
+}
+
+.mission-tiger-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    -webkit-mask-image: url('../images/logos/vector.webp');
+    mask-image: url('../images/logos/vector.webp');
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    filter: drop-shadow(10px 20px 30px rgba(0,0,0,0.25));
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mission-tiger-img:hover {
+    transform: scale(1.15);
+}
+
+/* Footer Architecture */
+.main-footer {
+    background-color: var(--dark-bg);
+    color: #cfd8dc;
+}
