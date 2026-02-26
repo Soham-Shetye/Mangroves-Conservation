@@ -8,6 +8,9 @@
     --light-bg: rgba(118, 186, 27, 0.05);
 }
 
+:root {
+    --accent-white: #ffffff;
+}
 /* ============================================
    BODY & OFFCANVAS OVERFLOW HANDLING
    ============================================ */
@@ -489,3 +492,5 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     text-decoration: none;
 }
+
+

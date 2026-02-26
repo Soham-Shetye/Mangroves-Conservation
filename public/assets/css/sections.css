@@ -20,7 +20,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    mask-image: url('../images/vectors/vector.png');
+    mask-image: url('../images/logos/vector.webp');
     -webkit-mask-image: url('../images/vectors/vector.png');
     mask-size: 100% 100%;
 }
@@ -192,3 +192,59 @@
     background-color: var(--dark-bg);
     color: #cfd8dc;
 }
+
+/* --- STARBURST BADGE LABEL --- */
+.hero-organic-label-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 47px;
+    margin-bottom: 2rem;
+    z-index: 1;
+
+    /* Orange color directly on element — no pseudo-element needed */
+    background-color: rgb(250, 176, 57);
+
+    /* Starburst shape via clip-path polygon (24 spikes) */
+    clip-path: polygon(
+        100% 50%, 91.6% 55%, 98.3% 62.2%, 88.8% 64.5%,
+        93.3% 73.5%, 83.4% 73.2%, 85.4% 83.2%, 75.6% 80.1%,
+        75%  90.7%, 66.1% 85.1%, 62.9% 95.4%, 55.5% 87.7%,
+        50%  97%,  44.5% 87.7%, 37.1% 95.4%, 33.9% 85.1%,
+        25%  90.7%, 24.4% 80.1%, 14.6% 83.2%, 16.6% 73.2%,
+        6.7% 73.5%, 11.2% 64.5%, 1.7%  62.2%, 8.4%  55%,
+        0%   50%,  8.4%  45%,   1.7%  37.8%, 11.2% 35.5%,
+        6.7% 26.5%, 16.6% 26.8%, 14.6% 16.8%, 24.4% 19.9%,
+        25%  9.3%, 33.9% 14.9%, 37.1% 4.6%,  44.5% 12.3%,
+        50%  3%,   55.5% 12.3%, 62.9% 4.6%,  66.1% 14.9%,
+        75%  9.3%, 75.6% 19.9%, 85.4% 16.8%, 83.4% 26.8%,
+        93.3% 26.5%, 88.8% 35.5%, 98.3% 37.8%, 91.6% 45%
+    );
+
+    /* No ::before or ::after needed at all */
+}
+
+/* Remove the pseudo-elements entirely — they were causing the box */
+.hero-organic-label-container::before,
+.hero-organic-label-container::after {
+    display: none;
+}
+
+/* Typography */
+.pankhol-juva-text {
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 23px;
+    color: rgb(15, 11, 19);           /* Dark brown for contrast on orange */
+    text-shadow: none;
+    display: block;
+    transform: rotate(-1deg);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    transform: rotate(2deg); /* Keeps text horizontal while badge tilts */
+}
+

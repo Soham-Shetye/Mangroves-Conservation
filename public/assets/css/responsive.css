@@ -140,6 +140,7 @@
         padding: 15px 0 !important;
         line-height: 30px;
         
+        
     }
 }
 
@@ -221,3 +222,4 @@
     transform: scale(0.95);
     background-color: rgba(123, 206, 87, 0.1);
 }
+
