@@ -223,3 +223,32 @@
     background-color: rgba(123, 206, 87, 0.1);
 }
 
+/* --- HERO ARROW RESPONSIVENESS --- */
+
+/* 1. Hide arrows by default (Mobile/Small Tablets) */
+.custom-hero-arrow {
+    display: none !important;
+}
+
+/* 2. Show arrows only on screens wider than 992px (Laptops/Desktops) */
+@media (min-width: 992px) {
+    .custom-hero-arrow {
+        display: flex !important; /* Restores the circular buttons */
+    }
+}
+
+/* --- FULL-WIDTH RESPONSIVE FIX --- */
+#hero-carousel, 
+.carousel-inner, 
+.carousel-item {
+    height: 100vh !important;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+.hero-slide {
+    height: 100vh !important;
+    width: 100% !important;
+    object-fit: cover; /* Keeps images looking perfect on all screen shapes */
+}
+

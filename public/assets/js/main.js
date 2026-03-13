@@ -44,25 +44,65 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// Text Rotation Logic
-const words = ["Mangroves", "Heritage", "Future", "Coastline"];
-let currentIndex = 0;
-const textElement = document.getElementById("changing-text");
+const heroWords = [
+        "Holiday",
+        "Family",
+        "Group",
+        "Adventure",
+        
+        
+        // ← Add more words here anytime
+    ];
 
-function rotateText() {
-    // Check if element exists before manipulating
-    if (!textElement) return;
-    
-    textElement.style.opacity = 0; // Fade out
-    
-    setTimeout(() => {
-        currentIndex = (currentIndex + 1) % words.length;
-        textElement.textContent = words[currentIndex];
-        textElement.style.opacity = 1; // Fade in
-    }, 500); // Half-second transition
-}
+    let heroWordIndex = 0;
+    const heroWordEl = document.getElementById('cyclingWord');
 
-// Update text every 5 seconds (matching carousel interval)
-if (textElement) {
-    setInterval(rotateText, 5000);
-}
+    function cycleHeroWord() {
+        if (!heroWordEl) return;
+
+        // Step 1 — Fade current word out (upward)
+        heroWordEl.classList.add('word-exit');
+
+        setTimeout(function () {
+            // Step 2 — Swap text instantly at bottom position
+            heroWordIndex = (heroWordIndex + 1) % heroWords.length;
+            heroWordEl.textContent = heroWords[heroWordIndex];
+            heroWordEl.classList.remove('word-exit');
+            heroWordEl.classList.add('word-enter');
+
+            // Step 3 — Force browser paint, then animate in smoothly
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    heroWordEl.classList.remove('word-enter');
+                });
+            });
+
+        }, 600); // Matches CSS transition duration (0.6s)
+    }
+
+    if (heroWordEl) {
+        /*
+           Word stays visible for 4 seconds before changing.
+           Total cycle = 4s display + 0.6s exit + 0.6s enter = ~5.2s
+           Feels calm and readable — good for a live tourism website.
+           Change 4000 to adjust display time.
+        */
+        setInterval(cycleHeroWord, 4000);
+    }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const myCarouselElement = document.querySelector('#hero-carousel');
+    
+    // Explicitly initialize with WRAP set to TRUE
+    const carousel = new bootstrap.Carousel(myCarouselElement, {
+        interval: 5000,
+        wrap: true, // This ensures image 4 goes back to image 1
+        pause: false, // Keeps cycling even if user hovers
+        touch: true  // Vital for mobile friendliness
+    });
+
+    // Resetting the loop if it ever hits an 'end' state
+    myCarouselElement.addEventListener('slid.bs.carousel', function () {
+        carousel.cycle();
+    });
+});

@@ -248,3 +248,92 @@
     transform: rotate(2deg); /* Keeps text horizontal while badge tilts */
 }
 
+
+.display-2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    line-height: 0.9;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+
+    /*
+       No forced breaks — text wraps naturally like the reference.
+       On wide screens: single line.
+       On narrow screens: wraps to two lines automatically.
+    */
+    word-break: keep-all;
+}
+
+/* The green cycling word */
+.hero-cycle-word {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: #4caf50;
+    display: inline-block;
+    position: relative;
+
+    /* Underline matching reference */
+    border-bottom: 4px solid #4caf50;
+    padding-bottom: 3px;
+
+    /* 
+       Slower, smoother transition — 0.6s feels natural
+       (was 0.35s before — too fast for live project)
+    */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* --- HERO NAVIGATION ARROWS --- */
+.custom-hero-arrow {
+    width: 80px; /* Narrower hit area than default */
+    opacity: 1;
+    z-index: 15;
+    /* Positioned low to match reference 2026-03-12_20-27.jpg */
+    top: auto;
+    bottom: 20%; 
+}
+
+.carousel-control-prev.custom-hero-arrow { left: 3%; }
+.carousel-control-next.custom-hero-arrow { right: 3%; }
+
+.arrow-circle {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.1); /* Subtle dark fill for visibility */
+}
+
+.custom-hero-arrow:hover .arrow-circle {
+    background: var(--accent-green); /* Your brand green rgb(99, 171, 69) */
+    border-color: var(--accent-green);
+    transform: scale(1.1);
+}
+
+
+
+
+/* --- MOBILE LAYOUT REFINEMENT --- */
+@media (max-width: 768px) {
+    .hero-organic-label-container {
+        /* 1. Remove the standard Bootstrap margin */
+        margin-bottom: -3px !important; 
+        
+        /* 2. Use a small negative margin if you want them even closer */
+        /* margin-bottom: -10px !important; */
+    }
+
+    .hero-heading {
+        /* 3. Reduce the top margin of the heading itself */
+        margin-top: 5px !important;
+    }
+}
