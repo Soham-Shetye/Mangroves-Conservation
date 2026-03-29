@@ -1,10 +1,40 @@
-/* ============================================
-   NAVBAR — requires main.css for :root variables
-   ============================================ */
+/* ================================================================
+   NAVBAR.CSS — Pankhol Juva: Mangrove Conservation & Eco Tourism
+   Sindhudurg District, Maharashtra
 
-/* ============================================
-   PERSISTENT CYLINDRICAL NAVBAR
-   ============================================ */
+   Scope: All styles for the site navigation. This file is the
+   single source of truth for:
+     - .custom-nav (desktop floating/sticky navbar)
+     - .nav-link states within the navbar
+     - .btn-whatsapp (CTA button in the navbar)
+     - .nav-link-mobile (offcanvas mobile navigation links)
+     - .offcanvas background override
+
+   Architecture rules:
+     - No @media query blocks — all breakpoints go in responsive.css
+     - .nav-link-mobile is defined ONLY here. It was previously split
+       across main.css, navbar.css, and responsive.css simultaneously.
+       All other instances have been removed from those files.
+     - No "Sundarban" or external-brand naming anywhere in this file
+
+   Audit fixes applied:
+     - font-size: 14 px (broken space in value) → corrected to 14px
+     - text-shadow "ultra-bright" hack removed (accessibility risk)
+     - .btn-whatsapp:hover black (#0e0e0e) background fixed to green
+     - .nav-link-mobile consolidated from 3 files into this one only
+     - Single clean .offcanvas background-color declaration retained
+================================================================ */
+
+
+/* ----------------------------------------------------------------
+   1. DESKTOP NAVBAR CONTAINER — PANKHOL JUVA FLOATING NAV
+
+   Two visual states:
+   Default  → Floating pill shape positioned above the hero image.
+   Scrolled → Full-width sticky dark bar pinned to the top of the
+              viewport. Class .scrolled is toggled by main.js when
+              window.scrollY exceeds 40px.
+---------------------------------------------------------------- */
 .custom-nav {
     position: fixed;
     top: 24px;
@@ -32,9 +62,19 @@ body.offcanvas-open .custom-nav {
     display: none;
 }
 
-/* ============================================
-   NAVIGATION LINKS
-   ============================================ */
+/*
+ * Hide the floating navbar entirely when the mobile offcanvas is
+ * open. The .offcanvas-open class is added to <body> by main.js
+ * via the show.bs.offcanvas event listener.
+ */
+body.offcanvas-open .custom-nav {
+    display: none;
+}
+
+
+/* ----------------------------------------------------------------
+   2. DESKTOP NAVIGATION LINKS
+---------------------------------------------------------------- */
 .custom-nav .navbar-nav {
     align-items: center;
 }
@@ -59,7 +99,7 @@ body.offcanvas-open .custom-nav {
 }
 
 .custom-nav .nav-link:hover {
-    color: #7bce57 !important;
+    color: rgb(99, 171, 69) !important;
 }
 
 .custom-nav .nav-link.active {
@@ -86,82 +126,12 @@ body.offcanvas-open .custom-nav {
     width: 20px;
 }
 
-/* ============================================
-   MOBILE LOGO
-   ============================================ */
-/* FORCE ROUND LOGO */
-.mobile-logo-circle {
-    width: 50px;
-    height: 50px;
-    background: #ffffff;
-    border-radius: 50% !important; /* Force the container to be round */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden !important; /* This is the "Hard-Crop" */
-    border: 2px solid var(--accent-green);
-    aspect-ratio: 1 / 1; /* Ensures it never becomes an oval */
-}
 
-.mobile-logo-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This fills the circle completely like the Sundarban logo */
-    border-radius: 50%; /* Double protection: rounds the image itself */
-}
-
-/* ============================================
-   OFFCANVAS / MOBILE DRAWER
-   ============================================ */
-.offcanvas-body .nav-link {
-    font-family: 'Rubik', sans-serif;
-    font-size: 14 px;
-    font-weight: 400;
-    color: rgb(255, 255, 255) !important;
-    padding: 12px 0;
-    transition: all 0.3s ease;
-}
-
-.offcanvas-body .nav-link:hover {
-    color: var(--accent-green) !important;
-    padding-left: 10px;
-}
-
-.offcanvas-body .nav-link.active {
-    color: var(--accent-green) !important;
-    font-weight: 800;
-}
-
-.offcanvas-body .text-white-50 {
-    color: rgb(255, 255, 255) !important;
-    opacity: 0.7 !important;
-}
-
-/* ULTRA-BRIGHT NAVBAR LINKS */
-.offcanvas-body .nav-link, 
-.custom-nav .nav-link {
-    color: #ffffff !important;
-    opacity: 1 !important;
-    font-weight: 400 !important; /* Thick lines reflect more white light */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    
-    /* THE BRIGHTNESS TRICK: A tiny white glow makes it look "backlit" */
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5), 
-                 0 0 10px rgba(255, 255, 255, 0.1);
-                 
-    /* Smoothing for high-end rendering */
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-}
-
-/* Ensure the background is dark enough to make white "pop" */
-.offcanvas {
-    background-color: #000000 !important; /* Pure black provides max contrast */
-}
-/* ============================================
-   WHATSAPP BUTTON
-   ============================================ */
+/* ----------------------------------------------------------------
+   3. WHATSAPP CTA BUTTON — PANKHOL JUVA INQUIRY SHORTCUT
+   Pill-shaped brand green button in the desktop navbar.
+   The box-shadow on the bottom edge creates a subtle 3D depth effect.
+---------------------------------------------------------------- */
 .btn-whatsapp {
     background-color: var(--accent-green) !important;
     color: #ffffff !important;
@@ -187,4 +157,90 @@ body.offcanvas-open .custom-nav {
     transform: translateY(4px);
     box-shadow: none;
 }
+/*
+ * Hover state corrected.
+ * The original file set background-color: #0e0e0e on hover — a
+ * near-black colour that turned the green button almost black, which
+ * was visually incorrect and inconsistent with every other green
+ * element on the site. The correct behaviour is to darken the button
+ * to a deeper shade of the brand green on hover.
+ */
+.btn-whatsapp:hover,
+.btn-whatsapp:focus {
+    background-color: #5aaa3a;
+    color: #ffffff !important;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #3d7a29;
+    outline: none;
+}
 
+.btn-whatsapp:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+
+/* ----------------------------------------------------------------
+   4. MOBILE OFFCANVAS NAVIGATION LINKS — single definition
+   This is the only place .nav-link-mobile is defined across the
+   entire project. The original codebase defined overlapping versions
+   in main.css, navbar.css, and responsive.css simultaneously, each
+   with slightly different property values. The cascade was
+   unpredictable depending on file load order.
+
+   Both selectors below point to the same elements and are kept
+   together for specificity consistency.
+---------------------------------------------------------------- */
+.nav-link-mobile,
+.offcanvas-body .nav-link-mobile {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;    /* Fixed: responsive.css had "14 px" with a space */
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    display: block;
+    padding: 12px 0;
+    line-height: 30px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    /*
+     * text-shadow removed here for the same reason as the desktop
+     * nav links. The near-black offcanvas background (#0c0c0c) provides
+     * sufficient contrast for white text without any glow effect.
+     */
+}
+
+.nav-link-mobile.active,
+.offcanvas-body .nav-link-mobile.active {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.nav-link-mobile:hover,
+.nav-link-mobile:focus,
+.offcanvas-body .nav-link-mobile:hover,
+.offcanvas-body .nav-link-mobile:focus {
+    color: var(--accent-green);
+    padding-left: 8px;
+    outline: none;
+}
+
+/* Tap feedback for mobile users */
+.nav-link-mobile:active {
+    transform: scale(0.97);
+    background-color: rgba(123, 206, 87, 0.08);
+    border-radius: 4px;
+}
+
+
+/* ----------------------------------------------------------------
+   5. OFFCANVAS BACKGROUND
+   Single authoritative declaration overriding Bootstrap's default
+   white background. The original codebase had multiple competing
+   background rules across three files; only this one remains.
+---------------------------------------------------------------- */
+.offcanvas {
+    background-color: #0c0c0c !important;
+}

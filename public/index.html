@@ -1,834 +1,1299 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mangrove Conservation | District Initiative</title>
+    <meta name="robots" content="index, follow">
 
+    <!-- ═══════════════════════════════════════════════════════
+         PRIMARY SEO
+    ═══════════════════════════════════════════════════════ -->
+    <title>Mangrove Conservation Maharashtra | Eco Tourism & Wildlife | Pankhol Juva</title>
+    <meta name="description"
+        content="Pankhol Juva is Maharashtra's leading mangrove conservation and eco-tourism initiative in Sindhudurg district. Join guided wildlife safaris, restoration drives, and biodiversity programs along the Konkan coast.">
+    <meta name="keywords"
+        content="mangrove conservation Maharashtra, eco tourism Sindhudurg, Konkan coast wildlife, coastal conservation, mangrove safari Maharashtra, Pankhol Juva, Malvan wildlife tour">
+    <link rel="canonical" href="https://www.pankholjuva.com/">
+
+    <!-- ═══════════════════════════════════════════════════════
+         OPEN GRAPH — controls WhatsApp, Facebook, LinkedIn previews
+    ═══════════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pankhol Juva | Mangrove Conservation & Eco Tourism Maharashtra">
+    <meta property="og:description"
+        content="Explore Maharashtra's coastal mangrove ecosystems through expert-guided eco-tours. Join conservation drives and wildlife safaris in Sindhudurg district.">
+    <meta property="og:image" content="https://www.pankholjuva.com/assets/images/hero/magroves.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.pankholjuva.com/">
+    <meta property="og:site_name" content="Pankhol Juva">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- ═══════════════════════════════════════════════════════
+         TWITTER / X CARD
+    ═══════════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pankhol Juva | Mangrove Conservation & Eco Tourism Maharashtra">
+    <meta name="twitter:description"
+        content="Guided eco-tours and conservation programs in Maharashtra's coastal mangrove ecosystems. Book your trail today.">
+    <meta name="twitter:image" content="https://www.pankholjuva.com/assets/images/hero/magroves.webp">
+
+    <!-- ═══════════════════════════════════════════════════════
+         PERFORMANCE — Hero image preload
+    ═══════════════════════════════════════════════════════ -->
     <link rel="preload" as="image" href="assets/images/hero/magroves.webp" fetchpriority="high">
-    
+
+    <!-- ═══════════════════════════════════════════════════════
+         FONTS — Correct loading method (replaces @import)
+         @import inside <style> was render-blocking (audit fix).
+         preconnect + stylesheet loads in parallel with the page.
+    ═══════════════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap"
+        rel="stylesheet">
+
+    <!-- ═══════════════════════════════════════════════════════
+         CSS — CDN Bootstrap kept until local files are confirmed.
+         TODO: Replace CDN links with local paths once
+         bootstrap.min.css and bootstrap-icons.min.css
+         are placed inside assets/css/
+    ═══════════════════════════════════════════════════════ -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet">
-    <link href="assets/css/navbar.css" rel="stylesheet">
-    <link href="assets/css/sections.css" rel="stylesheet" >
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/sections.css">
 
+    <!-- ═══════════════════════════════════════════════════════
+         SCHEMA.ORG STRUCTURED DATA
+         Enables rich results (address, phone, type) in Google Search.
+    ═══════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.pankholjuva.com/#organization",
+          "name": "Pankhol Juva",
+          "url": "https://www.pankholjuva.com",
+          "logo": "https://www.pankholjuva.com/assets/images/logos/pankhol.webp",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-95293-21755",
+            "contactType": "customer service",
+            "email": "info@pankholjuva.com",
+            "availableLanguage": ["English", "Hindi", "Marathi"],
+            "areaServed": "IN"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Malvan",
+            "addressLocality": "Sindhudurg",
+            "addressRegion": "Maharashtra",
+            "postalCode": "416606",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://www.instagram.com/pankholjuva",
+            "https://www.facebook.com/@pankholjuva"
+          ]
+        },
+        {
+          "@type": "TouristAttraction",
+          "@id": "https://www.pankholjuva.com/#attraction",
+          "name": "Pankhol Juva — Mangrove Conservation & Eco Tourism",
+          "description": "A district-level initiative offering guided mangrove eco-tours, wildlife safaris, biodiversity surveys, and conservation programs along the Konkan coast in Maharashtra.",
+          "url": "https://www.pankholjuva.com",
+          "image": "https://www.pankholjuva.com/assets/images/hero/magroves.webp",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "16.0601",
+            "longitude": "73.4677"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Malvan",
+            "addressRegion": "Maharashtra",
+            "postalCode": "416606",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.pankholjuva.com/#website",
+          "url": "https://www.pankholjuva.com",
+          "name": "Pankhol Juva",
+          "description": "Mangrove conservation and eco-tourism in Maharashtra",
+          "publisher": { "@id": "https://www.pankholjuva.com/#organization" }
+        }
+      ]
+    }
+    </script>
 
+</head>
 
-   <style>
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap');
-</style>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
-    <div class="container-fluid container-lg">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="assets/images/logos/pankhol.webp" alt="Logo" width="45" class="me-2 rounded-circle border border-secondary border-opacity-25">
-            <span class="fw-bold small">PANKHOL JUVA</span>
-        </a>
+    <!-- ═══════════════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════════════ -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-nav" aria-label="Main navigation">
+        <div class="container-fluid container-lg">
 
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-            <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Pankhol Juva — Home">
+                <img src="assets/images/logos/pankhol.webp" alt="Pankhol Juva logo" width="45" height="45"
+                    class="me-2 rounded-circle border border-secondary border-opacity-25">
+                <span class="fw-bold small">PANKHOL JUVA</span>
+            </a>
+
+            <!-- Mobile toggler -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                aria-label="Open navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop nav -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tour.html">TOUR PACKAGES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faqs.html">FAQS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <!-- UPDATE: Replace 919529321755 with your actual WhatsApp number -->
+                <a href="https://wa.me/919529321755" class="btn btn-whatsapp d-none d-xl-inline-block" target="_blank"
+                    rel="noopener noreferrer" aria-label="WhatsApp inquiry — opens WhatsApp">
+                    WhatsApp Your Inquiry
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     MOBILE OFFCANVAS DRAWER
+═══════════════════════════════════════════════════════════ -->
+    <div class="offcanvas offcanvas-start bg-dark text-white mobile-menu-sundarban" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+
+        <div class="offcanvas-header border-bottom border-secondary">
+            <div class="d-flex align-items-center">
+                <div class="mobile-logo-circle me-2">
+                    <img src="assets/images/logos/pankhol.webp" alt="Pankhol Juva logo" width="40" height="40">
+                </div>
+                <h6 class="mb-0 fw-bold text-white" id="mobileMenuLabel">PANKHOL JUVA</h6>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close navigation menu">
+            </button>
+        </div>
+
+        <div class="offcanvas-body">
+            <nav class="mobile-nav mb-5" aria-label="Mobile navigation">
+                <ul class="nav flex-column gap-4">
+                    <li class="nav-item"><a class="nav-link-mobile active" href="index.html"
+                            aria-current="page">HOME</a></li>
+                    <li class="nav-item d-flex justify-content-between align-items-center">
+                        <a class="nav-link-mobile" href="tour.html">TOUR PACKAGES</a>
+                        <i class="bi bi-plus text-white fs-4" aria-hidden="true"></i>
+                    </li>
+                    <li class="nav-item"><a class="nav-link-mobile" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link-mobile" href="gallery.html">GALLERY</a></li>
+                    <li class="nav-item"><a class="nav-link-mobile" href="faqs.html">FAQS</a></li>
+                    <li class="nav-item"><a class="nav-link-mobile" href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-inquiry pt-4 border-top border-secondary border-opacity-10">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="inquiry-icon" aria-hidden="true">
+                        <i class="bi bi-telephone-outbound"></i>
+                    </div>
+                    <div class="inquiry-content">
+                        <p class="mb-0 small text-secondary fw-bold">To More Inquiry</p>
+                        <!-- UPDATE: Replace with your actual phone number -->
+                        <a href="tel:+919529321755" class="text-accent-green fw-bold text-decoration-none"
+                            aria-label="Call us at +91 95293 21755">
+                            +91-95293-21755
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     HERO CAROUSEL
+     NOTE: data-bs-ride removed — double-initialisation fix.
+     Bootstrap's auto-init was conflicting with main.js.
+     The carousel is now initialised only once, in main.js.
+═══════════════════════════════════════════════════════════ -->
+    <section id="hero-carousel" class="carousel slide carousel-fade" data-bs-wrap="true"
+        aria-label="Featured images slideshow" aria-roledescription="carousel">
+
+        <!-- Navigation arrows -->
+        <button class="carousel-control-prev custom-hero-arrow" type="button" data-bs-target="#hero-carousel"
+            data-bs-slide="prev" aria-label="Previous slide">
+            <div class="arrow-circle" aria-hidden="true">
+                <i class="bi bi-arrow-left"></i>
+            </div>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
-                <li class="nav-item"><a class="nav-link" href="tour.html">TOUR PACKAGES</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
-                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQS</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-            </ul>
-            <a href="https://wa.me/yournumber" class="btn btn-whatsapp">WhatsApp Your Inquiry</a>
-        </div>
-    </div>
-</nav>
+        <button class="carousel-control-next custom-hero-arrow" type="button" data-bs-target="#hero-carousel"
+            data-bs-slide="next" aria-label="Next slide">
+            <div class="arrow-circle" aria-hidden="true">
+                <i class="bi bi-arrow-right"></i>
+            </div>
+        </button>
 
-<div class="offcanvas offcanvas-start bg-dark text-white mobile-menu-sundarban" tabindex="-1" id="mobileMenu">
-    
-   <div class="offcanvas-header border-bottom border-secondary">
-    <div class="d-flex align-items-center">
-        <div class="mobile-logo-circle me-2">
-            <img src="assets/images/logos/pankhol.webp" alt="Logo">
-        </div>
-        <h6 class="mb-0 fw-bold text-white">MANGROVE CARE</h6>
-    </div>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-</div>
-
-    <div class="offcanvas-body">
-        <nav class="mobile-nav mb-5"> <ul class="nav flex-column gap-4">
-                <li class="nav-item"><a class="nav-link-mobile active" href="index.html">HOME</a></li>
-                <li class="nav-item d-flex justify-content-between align-items-center">
-                    <a class="nav-link-mobile" href="#">TOUR PACKAGES</a>
-                    <i class="bi bi-plus text-white fs-4"></i>
-                </li>
-                <li class="nav-item"><a class="nav-link-mobile" href="about.html">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link-mobile" href="gallery.html">GALLERY</a></li>
-                <li class="nav-item"><a class="nav-link-mobile" href="faqs.html">FAQS</a></li>
-                <li class="nav-item"><a class="nav-link-mobile" href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-
-        <div class="mobile-menu-inquiry pt-4 border-top border-secondary border-opacity-10">
-            <div class="d-flex align-items-center gap-3">
-                <div class="inquiry-icon">
-                    <i class="bi bi-telephone-outbound"></i>
-                </div>
-                <div class="inquiry-content">
-                    <p class="mb-0 small text-secondary fw-bold">To More Inquiry</p>
-                    <a href="tel:+916289056302" class="text-accent-green fw-bold text-decoration-none">+91-6289-056-302</a>
+        <!-- Slides — backgrounds remain as inline styles (safe, functional) -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" aria-roledescription="slide" aria-label="Slide 1 of 4">
+                <div class="hero-slide position-relative">
+                    <div class="position-absolute w-100 h-100 bg-dark opacity-50" style="z-index: 1;"></div>
+                    <img src="assets/images/hero/views.webp" class="w-100 h-100 object-fit-cover"
+                        alt="Scenic view of the mangroves" fetchpriority="high">
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-   <section div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="5000">
-    
-   <button class="carousel-control-prev custom-hero-arrow" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-        <div class="arrow-circle">
-            <i class="bi bi-arrow-left"></i>
-        </div>
-    </button>
-    
-    <button class="carousel-control-next custom-hero-arrow" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-        <div class="arrow-circle">
-            <i class="bi bi-arrow-right"></i>
-        </div>
-    </button>
 
+            <div class="carousel-item" aria-roledescription="slide" aria-label="Slide 2 of 4">
+                <div class="hero-slide position-relative">
+                    <div class="position-absolute w-100 h-100 bg-dark opacity-50" style="z-index: 1;"></div>
+                    <img src="assets/images/hero/tiger-jump.webp" class="w-100 h-100 object-fit-cover"
+                        alt="Tiger jumping in Sundarbans" loading="lazy">
+                </div>
+            </div>
 
-    <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="5000">
-            <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/view.webp');"></div>
+            <div class="carousel-item" aria-roledescription="slide" aria-label="Slide 2 of 4">
+                <div class="hero-slide position-relative">
+                    <div class="position-absolute w-100 h-100 bg-dark opacity-50" style="z-index: 1;"></div>
+                    <img src="assets/images/hero/magroves.webp" class="w-100 h-100 object-fit-cover"
+                        alt="Tiger jumping in Sundarbans" loading="lazy">
+                </div>
+            </div>
+
+            <div class="carousel-item" aria-roledescription="slide" aria-label="Slide 2 of 4">
+                <div class="hero-slide position-relative">
+                    <div class="position-absolute w-100 h-100 bg-dark opacity-50" style="z-index: 1;"></div>
+                    <img src="assets/images/hero/island.webp" class="w-100 h-100 object-fit-cover"
+                        alt="Tiger jumping in Sundarbans" loading="lazy">
+                </div>
+            </div>
+
         </div>
-        <div class="carousel-item" data-bs-interval="5000">
-            <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/tiger-jump.webp');"></div>
-        </div>
-        <div class="carousel-item" data-bs-interval="5000">
-            <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/magroves.webp');"></div>
-        </div>
-        <div class="carousel-item" data-bs-interval="5000">
-            <div class="hero-slide static-bottom-bg" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/island.webp');"></div>
-        </div>
-    </div>
+        <!-- Progress bar — animated by main.js -->
+        <!--<div class="hero-progress-container" aria-hidden="true">
+            <div class="hero-progress-bar" id="heroBar"></div>
+        </div>-->
 
+        <div class="hero-overlay-content d-flex align-items-center justify-content-center text-center">
+            <div class="container text-white px-3">
 
-    
-    <div class="hero-progress-container">
-        <div class="hero-progress-bar" id="heroBar"></div>
-    </div>
+                <div class="hero-organic-label-container mb-4 mb-md-5" aria-hidden="true">
+                    <span class="pankhol-juva-text">PanKhol Juva</span>
+                </div>
 
+                <h1 class="display-2 fw-bold mb-4">
 
-    <div class="hero-overlay-content d-flex align-items-center justify-content-center text-center">
-    <div class="container text-white">
-        
-        <div class="hero-organic-label-container mb-3">
-            <span class="pankhol-juva-text">PanKhol Juva</span>
-        </div>
-
-         <h1 class="display-2 fw-bold mb-4">
-            Let's Book Your 
-            <span class="hero-highlight-wrapper">
-                <span class="hero-cycle-word" id="cyclingWord">Holiday</span>
-            </span> 
-            Trail.
-        </h1>
-        
-        <p class="lead mb-5 mx-auto opacity-75" style="max-width: 750px;">
-            A dedicated coastal project for restoration and awareness of the 
-            mangrove ecosystems in the Maharashtra district.
-        </p>
-        
-        <div class="d-flex justify-content-center gap-3 mt-4">
-            <a href="#impact" class="btn btn-lg btn-light rounded-pill px-5 fw-bold">Learn More</a>
-            <a href="contact.html" class="btn btn-lg btn-outline-pill px-5 fw-bold text-white border-white">District Inquiry</a>
-        </div>
-    </div>
-</div>
-</section>
-
-    <section id="mission" class="py-5 bg-white overflow-hidden">
-    <div class="container py-lg-5">
-        <div class="row align-items-center">
-            <div class="col-lg-7 mb-5 mb-lg-0">
-                <div class="pe-lg-5">
-                    <span class="badge rounded-pill bg-light text-success mb-3 px-3 py-2 fw-bold small border" style="letter-spacing: 1px;">
-                        A New Way to Protect Nature
+                    Let's Book Your
+                    <span class="hero-highlight-wrapper">
+                        <span class="hero-cycle-word" id="cyclingWord" aria-live="polite">Holiday</span>
                     </span>
-                    <h2 class="display-5 fw-bold mb-4" style="color: var(--primary-green); line-height: 1.2;">
-                        Mangrove Conservation <br>Redefined by District Experts
-                    </h2>
-                    <p class="text-muted mb-4 lh-lg">
-                        Explore the intricate world of Maharashtra's coastal guardians. Our mission is carefully curated for conscious citizens who crave more than just a view — they seek meaning, connection, and impact. We blend scientific restoration with local culture to ensure every sapling planted leaves a positive footprint.
-                    </p>
-                    
-                    <div class="row g-3 mb-5">
+                    Trail.
+
+                </h1>
+
+                <div
+                    class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3 mt-4 mt-md-5">
+
+                    <a href="tel:+919529321755" class="pankhol-contact-badge">
+                        <div class="pankhol-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                                <path
+                                    d="M27.2653 21.5995L21.598 17.8201C20.8788 17.3443 19.9147 17.5009 19.383 18.1798L17.7322 20.3024C17.6296 20.4377 17.4816 20.5314 17.3154 20.5664C17.1492 20.6014 16.9759 20.5752 16.8275 20.4928L16.5134 20.3196C15.4725 19.7522 14.1772 19.0458 11.5675 16.4352C8.95784 13.8246 8.25001 12.5284 7.6826 11.4893L7.51042 11.1753C7.42683 11.0269 7.39968 10.8532 7.43398 10.6864C7.46827 10.5195 7.56169 10.3707 7.69704 10.2673L9.81816 8.61693C10.4968 8.08517 10.6536 7.1214 10.1784 6.40198L6.39895 0.734676C5.91192 0.00208106 4.9348 -0.21784 4.18082 0.235398L1.81096 1.65898C1.06634 2.09672 0.520053 2.80571 0.286612 3.63733C-0.56677 6.74673 0.0752209 12.1131 7.98033 20.0191C14.2687 26.307 18.9501 27.9979 22.1677 27.9979C22.9083 28.0011 23.6459 27.9048 24.3608 27.7115C25.1925 27.4783 25.9016 26.932 26.3391 26.1871L27.7641 23.8187C28.218 23.0645 27.9982 22.0868 27.2653 21.5995ZM26.9601 23.3399L25.5384 25.7098C25.2242 26.2474 24.7142 26.6427 24.1152 26.8128C21.2447 27.6009 16.2298 26.9482 8.64053 19.3589C1.0513 11.7697 0.398595 6.75515 1.18669 3.88421C1.35709 3.28446 1.75283 2.77385 2.2911 2.45921L4.66096 1.03749C4.98811 0.840645 5.41221 0.93606 5.62354 1.25397L7.67659 4.3363L9.39976 6.92078C9.60612 7.23283 9.53831 7.65108 9.24392 7.88199L7.1223 9.53232C6.47665 10.026 6.29227 10.9193 6.68979 11.6283L6.85826 11.9344C7.45459 13.0281 8.19599 14.3887 10.9027 17.095C13.6095 19.8012 14.9696 20.5427 16.0628 21.139L16.3694 21.3079C17.0783 21.7053 17.9716 21.521 18.4653 20.8753L20.1157 18.7537C20.3466 18.4595 20.7647 18.3918 21.0769 18.5979L26.7437 22.3773C27.0618 22.5885 27.1572 23.0128 26.9601 23.3399ZM15.8658 4.66809C20.2446 4.67296 23.7931 8.22149 23.798 12.6003C23.798 12.858 24.0069 13.0669 24.2646 13.0669C24.5223 13.0669 24.7312 12.858 24.7312 12.6003C24.7257 7.7063 20.7598 3.74029 15.8658 3.73494C15.6081 3.73494 15.3992 3.94381 15.3992 4.20151C15.3992 4.45922 15.6081 4.66809 15.8658 4.66809Z">
+                                </path>
+                                <path
+                                    d="M15.865 7.46746C18.6983 7.4708 20.9943 9.76678 20.9976 12.6001C20.9976 12.7238 21.0468 12.8425 21.1343 12.93C21.2218 13.0175 21.3404 13.0666 21.4642 13.0666C21.5879 13.0666 21.7066 13.0175 21.7941 12.93C21.8816 12.8425 21.9308 12.7238 21.9308 12.6001C21.9269 9.2516 19.2134 6.53813 15.865 6.5343C15.6073 6.5343 15.3984 6.74318 15.3984 7.00088C15.3984 7.25859 15.6073 7.46746 15.865 7.46746Z">
+                                </path>
+                                <path
+                                    d="M15.865 10.267C17.1528 10.2686 18.1964 11.3122 18.198 12.6C18.198 12.7238 18.2472 12.8424 18.3347 12.9299C18.4222 13.0174 18.5409 13.0666 18.6646 13.0666C18.7883 13.0666 18.907 13.0174 18.9945 12.9299C19.082 12.8424 19.1312 12.7238 19.1312 12.6C19.1291 10.797 17.668 9.33589 15.865 9.33386C15.6073 9.33386 15.3984 9.54274 15.3984 9.80044C15.3984 10.0581 15.6073 10.267 15.865 10.267Z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <div class="pankhol-text">
+                            <span class="pankhol-label">To More Inquiry</span>
+                            <span class="pankhol-number">+91-95293-21755</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     MISSION / ABOUT INTRO
+═══════════════════════════════════════════════════════════ -->
+    <section id="mission" class="py-5 bg-white overflow-hidden">
+        <div class="container py-lg-5">
+            <div class="row align-items-center">
+
+                <!-- Left: Text -->
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="pe-lg-5">
+                        <span class="section-badge">A New Way to Experience PanKhol Juva</span>
+                        <h2 class="fw-bold mb-4"
+                            style="color: var(--primary-black); line-height: 50px; font-size: 35px; font-weight: 600;">
+                            PanKhol Eco Tourism
+                            Redefined by Pankhol Eco Trails
+                        </h2>
+                        <p class="text-muted mb-4 lh-lg">
+                            Explore the intricate world of Maharashtra's coastal guardians. Our mission is carefully
+                            curated for conscious citizens who crave more than just a view — they seek meaning,
+                            connection, and impact. We blend scientific restoration with local culture to ensure every
+                            sapling planted leaves a positive footprint.
+
+                        </p>
+
+                        <div class="row g-3 mb-5">
+
+                            <div class="col-sm-6">
+                                <div class="mission-feature feature-green d-flex align-items-center p-3 rounded-4">
+                                    <div class="icon-box me-3 rounded-circle d-flex align-items-center justify-content-center fs-4"
+                                        style="width: 45px; height: 45px;" aria-hidden="true">
+                                        <i class="ph-fill ph-compass"></i>
+                                    </div>
+                                    <h6 class="mb-0 fw-bold small feature-text">Experienced Travel Guide</h6>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="mission-feature feature-orange d-flex align-items-center p-3 rounded-4">
+                                    <div class="icon-box me-3 rounded-circle d-flex align-items-center justify-content-center fs-4"
+                                        style="width: 45px; height: 45px;" aria-hidden="true">
+                                        <i class="ph-fill ph-first-aid"></i>
+                                    </div>
+                                    <h6 class="mb-0 fw-bold small feature-text">Safety &amp; Hygiene First</h6>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="mission-feature feature-orange d-flex align-items-center p-3 rounded-4">
+                                    <div class="icon-box me-3 rounded-circle d-flex align-items-center justify-content-center fs-4"
+                                        style="width: 45px; height: 45px;" aria-hidden="true">
+                                        <i class="ph-fill ph-tent"></i>
+                                    </div>
+                                    <h6 class="mb-0 fw-bold small feature-text">Premium Yet Affordable Stays</h6>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="mission-feature feature-green d-flex align-items-center p-3 rounded-4">
+                                    <div class="icon-box me-3 rounded-circle d-flex align-items-center justify-content-center fs-4"
+                                        style="width: 45px; height: 45px;" aria-hidden="true">
+                                        <i class="ph-fill ph-fork-knife"></i>
+                                    </div>
+                                    <h6 class="mb-0 fw-bold small feature-text">Fresh Delicious Cuisine</h6>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- CTAs -->
+                        <div class="d-flex align-items-center gap-4">
+
+                            <a href="about.html"
+                                class="btn btn-pankhol-action rounded-pill px-4 py-2 fw-bold text-nowrap">Find Out
+                                More</a>
+
+                            <div class="d-flex align-items-center" style="cursor: pointer;" data-bs-toggle="modal"
+                                data-bs-target="#videoModal" role="button" tabindex="0"
+                                aria-label="Watch our conservation documentary">
+                                <div class="flex-shrink-0">
+                                    <div class="rounded-circle border border-2 border-dark d-flex align-items-center justify-content-center"
+                                        style="width: 45px; height: 45px;" aria-hidden="true">
+                                        <i class="bi bi-play-fill fs-4 text-dark"></i>
+                                    </div>
+                                </div>
+                                <span class="ms-2 fw-bold small text-uppercase" style="letter-spacing: 1px;">Watch
+                                    Tour</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Tiger image with jagged mask -->
+                <div class="col-lg-7 position-relative text-center text-lg-end d-none d-lg-block">
+
+                    <img src="assets/images/hero/plane-vector.svg" alt="" class="pankhol-plane-floating"
+                        aria-hidden="true">
+
+                    <div class="jagged-wrapper">
+                        <img src="assets/images/hero/Tiger.webp"
+                            alt="Bengal tiger in mangrove forest — Sindhudurg district wildlife" width="550"
+                            height="620" class="mission-tiger-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-label="Conservation documentary video"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                        data-bs-dismiss="modal" aria-label="Close video">
+                    </button>
+                    <div class="ratio ratio-16x9 shadow-lg rounded-4 overflow-hidden">
+                        <!-- UPDATE: Replace YOUR_VIDEO_ID with the actual YouTube video ID -->
+                        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0"
+                            title="Pankhol Juva — Mangrove Conservation Documentary" allowfullscreen loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     CONSERVATION PROGRAMS
+═══════════════════════════════════════════════════════════ -->
+    <section id="programs" class="py-5 bg-white main-content">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5">
+                <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Ongoing
+                    Initiatives</span>
+                <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">District Conservation Programs
+                </h2>
+                <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: var(--accent-green);"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
+                        <div class="position-relative">
+                            <img src="assets/images/activities/nursery.jpg" class="card-img-top"
+                                alt="Mangrove seedling nursery — native Avicennia marina cultivation at Kudal coast"
+                                width="400" height="250" loading="lazy" decoding="async"
+                                style="height: 250px; object-fit: cover;">
+                            <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-dark px-3 py-2">Phase
+                                1: Nursery</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="card-title fw-bold mb-3 h5">Sapling Cultivation</h3>
+                            <p class="card-text text-muted small mb-4">Establishing local nurseries to grow native
+                                mangrove species like Avicennia marina for large-scale plantation drives.</p>
+                            <hr class="text-muted opacity-25">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="small fw-bold text-success"><i class="bi bi-geo-alt-fill"
+                                        aria-hidden="true"></i> Kudal Coast</span>
+                                <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
+                        <div class="position-relative">
+                            <img src="assets/images/activities/community-cleanup.jpg" class="card-img-top"
+                                alt="Volunteers removing plastic waste from mangrove creek during coastal cleanup drive"
+                                width="400" height="250" loading="lazy" decoding="async"
+                                style="height: 250px; object-fit: cover;">
+                            <span
+                                class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-success px-3 py-2">Community
+                                Action</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="card-title fw-bold mb-3 h5">Plastic-Free Creeks</h3>
+                            <p class="card-text text-muted small mb-4">Bi-weekly cleanup drives involving district
+                                volunteers to remove non-biodegradable waste from mangrove root systems.</p>
+                            <hr class="text-muted opacity-25">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="small fw-bold text-success"><i class="bi bi-calendar-check"
+                                        aria-hidden="true"></i> Every Sunday</span>
+                                <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3">Join Drive</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
+                        <div class="position-relative">
+                            <img src="assets/images/activities/awareness.jpg" class="card-img-top"
+                                alt="School students attending mangrove ecology workshop — Green Guardian Schools program"
+                                width="400" height="250" loading="lazy" decoding="async"
+                                style="height: 250px; object-fit: cover;">
+                            <span
+                                class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-warning text-dark px-3 py-2">Education</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="card-title fw-bold mb-3 h5">Green Guardian Schools</h3>
+                            <p class="card-text text-muted small mb-4">Educational workshops for SYIT and school
+                                students to learn about carbon sequestration and local biodiversity.</p>
+                            <hr class="text-muted opacity-25">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="small fw-bold text-success"><i class="bi bi-people-fill"
+                                        aria-hidden="true"></i> 15 Schools</span>
+                                <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3">Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     WHY MANGROVES MATTER
+═══════════════════════════════════════════════════════════ -->
+    <section id="why-mangroves" class="py-5 bg-light main-content">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5">
+                <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Ecological
+                    Significance</span>
+                <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">Why Mangroves Matter</h2>
+                <p class="text-muted mx-auto mt-3" style="max-width: 700px;">
+                    Mangroves are one of the most productive ecosystems on Earth, providing critical services that
+                    sustain both nature and human civilisation.
+                </p>
+            </div>
+
+            <div class="row g-4 mt-2">
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
+                        <div class="mb-3 text-success" aria-hidden="true"><i class="bi bi-shield-shaded fs-1"></i></div>
+                        <h3 class="h5 fw-bold">Natural Storm Buffer</h3>
+                        <p class="text-muted small">Their dense root systems dissipate wave energy, reducing the impact
+                            of tsunamis and storm surges on coastal villages by up to 60%.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
+                        <div class="mb-3 text-success" aria-hidden="true"><i class="bi bi-cloud-haze2-fill fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold">Blue Carbon Sink</h3>
+                        <p class="text-muted small">Mangroves sequester up to 10 times more carbon per acre than
+                            terrestrial forests, making them vital in the fight against climate change.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
+                        <div class="mb-3 text-success" aria-hidden="true"><i class="bi bi-water fs-1"></i></div>
+                        <h3 class="h5 fw-bold">Nursery for Marine Life</h3>
+                        <p class="text-muted small">The roots provide a safe haven for juvenile fish, crabs, and shrimp,
+                            supporting the district's local fishing economy and biodiversity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
+                        <div class="mb-3 text-success" aria-hidden="true"><i class="bi bi-droplets-fill fs-1"></i></div>
+                        <h3 class="h5 fw-bold">Water Filtration</h3>
+                        <p class="text-muted small">They act as natural filters, trapping sediments and absorbing
+                            pollutants from inland runoff before they reach the open ocean.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
+                        <div class="mb-3 text-success" aria-hidden="true"><i class="bi bi-tree-fill fs-1"></i></div>
+                        <h3 class="h5 fw-bold">Soil Stabilisation</h3>
+                        <p class="text-muted small">The intricate root network binds the shoreline soil together,
+                            preventing coastal erosion and reclaiming land from the sea.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
+                        <div class="mb-3 text-success" aria-hidden="true"><i class="bi bi-people-fill fs-1"></i></div>
+                        <h3 class="h5 fw-bold">Sustainable Livelihoods</h3>
+                        <p class="text-muted small">Supporting eco-tourism and sustainable harvesting of honey and
+                            medicinal plants for indigenous coastal communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     GALLERY PREVIEW
+═══════════════════════════════════════════════════════════ -->
+    <section id="gallery" class="py-5 bg-white main-content">
+        <div class="container py-lg-5">
+            <div class="row align-items-end mb-5">
+                <div class="col-md-7">
+                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Visual
+                        Evidence</span>
+                    <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">Mangroves in Frames</h2>
+                    <p class="text-muted mb-0">High-definition glimpses into the district's diverse mangrove species and
+                        restoration sites.</p>
+                </div>
+                <div class="col-md-5 text-md-end mt-3 mt-md-0">
+                    <a href="gallery.html" class="btn btn-outline-success rounded-pill px-4">View Full Archive</a>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Large item — left column -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm h-100"
+                        data-img="assets/images/gallery/mangrove-roots-detail.jpg"
+                        data-caption="Intricate root network of Avicennia marina" role="button" tabindex="0"
+                        aria-label="View full image: Intricate root network of Avicennia marina">
+                        <img src="assets/images/gallery/mangrove-roots-detail.jpg"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                            alt="Close-up of Avicennia marina mangrove root network at Kudal coast" width="400"
+                            height="480" loading="lazy" decoding="async">
+                        <div class="gallery-overlay d-flex align-items-center justify-content-center"
+                            aria-hidden="true">
+                            <button class="btn btn-light rounded-circle p-3">
+                                <i class="bi bi-eye-fill text-success fs-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: smaller grid -->
+                <div class="col-md-6 col-lg-8">
+                    <div class="row g-3">
                         <div class="col-sm-6">
-                            <div class="mission-feature d-flex align-items-center p-3 rounded-4">
-                                <div class="icon-box me-3 bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-                                    <i class="bi bi-people-fill"></i>
+                            <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm"
+                                style="height: 200px;" data-img="assets/images/gallery/plantation-drive.jpg"
+                                data-caption="Recent community plantation drive at Kudal" role="button" tabindex="0"
+                                aria-label="View full image: Community plantation drive at Kudal">
+                                <img src="assets/images/gallery/plantation-drive.jpg"
+                                    class="img-fluid w-100 h-100 object-fit-cover"
+                                    alt="Volunteers planting mangrove saplings during community drive at Kudal"
+                                    width="300" height="200" loading="lazy" decoding="async">
+                                <div class="gallery-overlay d-flex align-items-center justify-content-center"
+                                    aria-hidden="true">
+                                    <button class="btn btn-light rounded-circle p-2">
+                                        <i class="bi bi-eye-fill text-success fs-5"></i>
+                                    </button>
                                 </div>
-                                <h6 class="mb-0 fw-bold small">Experienced Conservationist</h6>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="mission-feature d-flex align-items-center p-3 rounded-4">
-                                <div class="icon-box me-3 bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-                                    <i class="bi bi-shield-lock-fill"></i>
-                                </div>
-                                <h6 class="mb-0 fw-bold small">Safety & Ecology First</h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="mission-feature d-flex align-items-center p-3 rounded-4">
-                                <div class="icon-box me-3 bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                </div>
-                                <h6 class="mb-0 fw-bold small">Premium Local Impact</h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="mission-feature d-flex align-items-center p-3 rounded-4">
-                                <div class="icon-box me-3 bg-info bg-opacity-10 text-info rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-                                    <i class="bi bi-droplets-fill"></i>
-                                </div>
-                                <h6 class="mb-0 fw-bold small">Fresh Scientific Data</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center gap-4">
-                        <a href="about.html" class="btn btn-success rounded-pill px-4 py-2 fw-bold">Find Out More</a>
-                        <div class="d-flex align-items-center cursor-pointer" data-bs-toggle="modal" data-bs-target="#videoModal" style="cursor: pointer;">
-                            <div class="flex-shrink-0">
-                                <div class="rounded-circle border border-2 border-dark d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-                                    <i class="bi bi-play-fill fs-4 text-dark"></i>
+                            <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm"
+                                style="height: 200px;" data-img="assets/images/gallery/local-wildlife-fauna.jpg"
+                                data-caption="Wildlife spotted within the mangrove canopy" role="button" tabindex="0"
+                                aria-label="View full image: Wildlife in mangrove canopy">
+                                <img src="assets/images/gallery/local-wildlife-fauna.jpg"
+                                    class="img-fluid w-100 h-100 object-fit-cover"
+                                    alt="Local fauna spotted within mangrove canopy at Sindhudurg district" width="300"
+                                    height="200" loading="lazy" decoding="async">
+                                <div class="gallery-overlay d-flex align-items-center justify-content-center"
+                                    aria-hidden="true">
+                                    <button class="btn btn-light rounded-circle p-2">
+                                        <i class="bi bi-eye-fill text-success fs-5"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <span class="ms-2 fw-bold small text-uppercase" style="letter-spacing: 1px;">Watch Documentary</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5">
-    <div class="jagged-wrapper">
-        <img src="assets/images/hero/tiger-jump.webp" alt="Mangrove Tiger" class="mission-tiger-img">
-    </div>
-</div>
-        </div>
-    </div>
-</section>
-
-<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-transparent border-0">
-            <div class="modal-body p-0">
-                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                <div class="ratio ratio-16x9 shadow-lg rounded-4 overflow-hidden">
-                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<section id="programs" class="py-5 bg-white main-content">
-    <div class="container py-lg-5">
-        <div class="text-center mb-5">
-            <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Ongoing Initiatives</span>
-            <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">District Conservation Programs</h2>
-            <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: var(--accent-green);"></div>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
-                    <div class="position-relative">
-                        <img src="assets/images/activities/nursery.jpg" class="card-img-top" alt="Mangrove Nursery" loading="lazy" decoding="async" style="height: 250px; object-fit: cover;">
-                        <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-dark px-3 py-2">Phase 1: Nursery</span>
-                    </div>
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-bold mb-3">Sapling Cultivation</h5>
-                        <p class="card-text text-muted small mb-4">Establishing local nurseries to grow native mangrove species like Avicennia marina for large-scale plantation drives.</p>
-                        <hr class="text-muted opacity-25">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="small fw-bold text-success"><i class="bi bi-geo-alt-fill"></i> Kudal Coast</span>
-                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
-                    <div class="position-relative">
-                        <img src="assets/images/activities/community-cleanup.jpg" class="card-img-top" alt="Coastal Cleanup" loading="lazy" decoding="async" style="height: 250px; object-fit: cover;">
-                        <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-success px-3 py-2">Community Action</span>
-                    </div>
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-bold mb-3">Plastic-Free Creeks</h5>
-                        <p class="card-text text-muted small mb-4">Bi-weekly cleanup drives involving district volunteers to remove non-biodegradable waste from mangrove root systems.</p>
-                        <hr class="text-muted opacity-25">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="small fw-bold text-success"><i class="bi bi-calendar-check"></i> Every Sunday</span>
-                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3">Join Drive</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden program-card">
-                    <div class="position-relative">
-                        <img src="assets/images/activities/awareness.jpg" class="card-img-top" alt="School Awareness" loading="lazy" decoding="async" style="height: 250px; object-fit: cover;">
-                        <span class="position-absolute top-0 start-0 m-3 badge rounded-pill bg-warning text-dark px-3 py-2">Education</span>
-                    </div>
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-bold mb-3">Green Guardian Schools</h5>
-                        <p class="card-text text-muted small mb-4">Educational workshops for SYIT and school students to learn about carbon sequestration and local biodiversity.</p>
-                        <hr class="text-muted opacity-25">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="small fw-bold text-success"><i class="bi bi-people-fill"></i> 15 Schools</span>
-                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3">Case Study</a>
+                        <div class="col-12">
+                            <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm"
+                                style="height: 220px;" data-img="assets/images/gallery/restoration-site-aerial.jpg"
+                                data-caption="Aerial survey of the district mangrove belt" role="button" tabindex="0"
+                                aria-label="View full image: Aerial survey of mangrove belt">
+                                <img src="assets/images/gallery/restoration-site-aerial.jpg"
+                                    class="img-fluid w-100 h-100 object-fit-cover"
+                                    alt="Aerial view of mangrove restoration site along Sindhudurg coastline"
+                                    width="600" height="220" loading="lazy" decoding="async">
+                                <div class="gallery-overlay d-flex align-items-center justify-content-center"
+                                    aria-hidden="true">
+                                    <button class="btn btn-light rounded-circle p-3">
+                                        <i class="bi bi-eye-fill text-success fs-4"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="why-mangroves" class="py-5 bg-light main-content">
-    <div class="container py-lg-5">
-        <div class="text-center mb-5">
-            <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Ecological Significance</span>
-            <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">Why Mangroves Matter</h2>
-            <p class="text-muted mx-auto mt-3" style="max-width: 700px;">
-                Mangroves are one of the most productive ecosystems on Earth, providing critical services that sustain both nature and human civilization.
-            </p>
-        </div>
-
-        <div class="row g-4 mt-2">
-            <div class="col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
-                    <div class="mb-3 text-success">
-                        <i class="bi bi-shield-shaded fs-1"></i>
-                    </div>
-                    <h5 class="fw-bold">Natural Storm Buffer</h5>
-                    <p class="text-muted small">Their dense root systems dissipate wave energy, reducing the impact of tsunamis and storm surges on coastal villages by up to 60%.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
-                    <div class="mb-3 text-success">
-                        <i class="bi bi-cloud-haze2-fill fs-1"></i>
-                    </div>
-                    <h5 class="fw-bold">Blue Carbon Sink</h5>
-                    <p class="text-muted small">Mangroves sequester up to 10 times more carbon per acre than terrestrial forests, making them vital in the fight against climate change.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
-                    <div class="mb-3 text-success">
-                        <i class="bi bi-water fs-1"></i>
-                    </div>
-                    <h5 class="fw-bold">Nursery for Marine Life</h5>
-                    <p class="text-muted small">The roots provide a safe haven for juvenile fish, crabs, and shrimp, supporting the district's local fishing economy and biodiversity.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
-                    <div class="mb-3 text-success">
-                        <i class="bi bi-droplets-fill fs-1"></i>
-                    </div>
-                    <h5 class="fw-bold">Water Filtration</h5>
-                    <p class="text-muted small">They act as natural filters, trapping sediments and absorbing pollutants from inland runoff before they reach the open ocean.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
-                    <div class="mb-3 text-success">
-                        <i class="bi bi-tree-fill fs-1"></i>
-                    </div>
-                    <h5 class="fw-bold">Soil Stabilization</h5>
-                    <p class="text-muted small">The intricate root network binds the shoreline soil together, preventing coastal erosion and reclaiming land from the sea.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-success feature-card">
-                    <div class="mb-3 text-success">
-                        <i class="bi bi-people-fill fs-1"></i>
-                    </div>
-                    <h5 class="fw-bold">Sustainable Livelihoods</h5>
-                    <p class="text-muted small">Supporting eco-tourism and sustainable harvesting of honey and medicinal plants for indigenous coastal communities.</p>
+    <!-- Gallery Lightbox Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center">
+                    <img src="" id="modalImg" class="img-fluid rounded-4 shadow-lg mb-2" alt="">
+                    <p id="modalCaption" class="text-white small fw-bold"></p>
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                        data-bs-dismiss="modal" aria-label="Close image">
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<section id="gallery" class="py-5 bg-white main-content">
-    <div class="container py-lg-5">
-        <div class="row align-items-end mb-5">
-            <div class="col-md-7">
-                <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Visual Evidence</span>
-                <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">Mangroves in Frames</h2>
-                <p class="text-muted mb-0">High-definition glimpses into the district's diverse mangrove species and restoration sites.</p>
-            </div>
-            <div class="col-md-5 text-md-end mt-3 mt-md-0">
-                <a href="gallery.html" class="btn btn-outline-success rounded-pill px-4" >View Full Archive</a>
+    <!-- ═══════════════════════════════════════════════════════════
+     ACTIVITIES — Vertical tab panel
+═══════════════════════════════════════════════════════════ -->
+    <section id="activities" class="py-5 bg-light main-content">
+        <div class="container py-lg-5">
+            <div class="row align-items-center">
+
+                <div class="col-lg-7 order-2 order-lg-1 mt-5 mt-lg-0">
+                    <div class="pe-lg-5">
+                        <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">What We
+                            Do</span>
+                        <h2 class="display-6 fw-bold mt-2 mb-4" style="color: var(--primary-green);">Our Strategic
+                            Activities</h2>
+
+                        <div class="d-flex align-items-start activity-tabs">
+                            <div class="nav flex-column nav-pills me-4 w-40" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical" aria-label="Activity categories">
+                                <button class="nav-link active mb-3 text-start rounded-pill px-4 py-3 shadow-sm"
+                                    id="v-pills-nursery-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nursery"
+                                    type="button" role="tab" aria-selected="true">
+                                    <i class="bi bi-tree me-2" aria-hidden="true"></i> Nursery Mgmt
+                                </button>
+                                <button class="nav-link mb-3 text-start rounded-pill px-4 py-3 shadow-sm"
+                                    id="v-pills-patrol-tab" data-bs-toggle="pill" data-bs-target="#v-pills-patrol"
+                                    type="button" role="tab" aria-selected="false">
+                                    <i class="bi bi-shield-check me-2" aria-hidden="true"></i> Citizen Patrol
+                                </button>
+                                <button class="nav-link mb-3 text-start rounded-pill px-4 py-3 shadow-sm"
+                                    id="v-pills-survey-tab" data-bs-toggle="pill" data-bs-target="#v-pills-survey"
+                                    type="button" role="tab" aria-selected="false">
+                                    <i class="bi bi-camera-video me-2" aria-hidden="true"></i> Bio-Surveys
+                                </button>
+                                <button class="nav-link mb-3 text-start rounded-pill px-4 py-3 shadow-sm"
+                                    id="v-pills-workshop-tab" data-bs-toggle="pill" data-bs-target="#v-pills-workshop"
+                                    type="button" role="tab" aria-selected="false">
+                                    <i class="bi bi-journal-text me-2" aria-hidden="true"></i> Workshops
+                                </button>
+                            </div>
+
+                            <div class="tab-content border-start ps-4" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-nursery" role="tabpanel"
+                                    aria-labelledby="v-pills-nursery-tab">
+                                    <h3 class="h4 fw-bold text-success">Mangrove Nursery Management</h3>
+                                    <p class="text-muted">We maintain scientific nurseries for high-risk species like
+                                        Ceriops tagal. Our volunteers ensure saplings reach the 'Hardening' stage before
+                                        coastal transplantation.</p>
+                                    <ul class="list-unstyled small text-muted">
+                                        <li><i class="bi bi-check2-circle text-success me-2" aria-hidden="true"></i>
+                                            Species-specific soil preparation</li>
+                                        <li><i class="bi bi-check2-circle text-success me-2" aria-hidden="true"></i>
+                                            Daily irrigation monitoring</li>
+                                        <li><i class="bi bi-check2-circle text-success me-2" aria-hidden="true"></i>
+                                            Genetic health tracking</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-patrol" role="tabpanel"
+                                    aria-labelledby="v-pills-patrol-tab">
+                                    <h3 class="h4 fw-bold text-success">Citizen Patrol Networks</h3>
+                                    <p class="text-muted">Empowering local coastal communities to monitor and report
+                                        illegal mangrove felling or encroachment using our reporting tools.</p>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-survey" role="tabpanel"
+                                    aria-labelledby="v-pills-survey-tab">
+                                    <h3 class="h4 fw-bold text-success">Biodiversity Surveys</h3>
+                                    <p class="text-muted">Monthly mapping of flora and fauna within the district creeks
+                                        to maintain a health index of our blue carbon sinks.</p>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-workshop" role="tabpanel"
+                                    aria-labelledby="v-pills-workshop-tab">
+                                    <h3 class="h4 fw-bold text-success">Ecological Workshops</h3>
+                                    <p class="text-muted">Technical training for students (SYIT) and researchers on
+                                        mangrove data collection and conservation techniques.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <div class="activity-img-container position-relative">
+                        <img src="assets/images/activities/boat-patrol.jpg"
+                            alt="Conservation team conducting boat patrol along mangrove creek in Sindhudurg"
+                            width="600" height="500" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover"
+                            style="height: 500px;" loading="lazy" decoding="async">
+                        <div
+                            class="floating-badge bg-white p-3 rounded-4 shadow-sm position-absolute bottom-0 start-0 m-4 d-none d-md-block border-start border-5 border-success">
+                            <h6 class="mb-1 fw-bold">Live Monitoring</h6>
+                            <p class="small text-muted mb-0">District Creek #04</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <div class="row g-3">
-            <div class="col-md-6 col-lg-4">
-                <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm h-100">
-                    <img src="assets/images/gallery/mangrove-roots-detail.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Close up of Mangrove Roots" loading="lazy" decoding="async">
-                    <div class="gallery-overlay d-flex align-items-center justify-content-center">
-                        <button class="btn btn-light rounded-circle p-3" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/mangrove-roots-details.jpg', 'Intricate root network of Avicennia marina')">
-                            <i class="bi bi-eye-fill text-success fs-4"></i>
+    <!-- ═══════════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════════ -->
+    <section id="faq" class="py-5 bg-white main-content">
+        <div class="container py-lg-5">
+            <div class="row">
+
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="pe-lg-4">
+                        <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Common
+                            Queries</span>
+                        <h2 class="display-6 fw-bold mt-2 mb-4" style="color: var(--primary-green);">
+                            General Questions <br>&amp; Information
+                        </h2>
+                        <div class="p-4 rounded-4 shadow-sm mb-4"
+                            style="background: var(--light-bg); border-left: 5px solid var(--accent-green);">
+                            <p class="mb-0 text-muted small">Can't find what you're looking for? Reach out to the
+                                district conservation desk for technical assistance.</p>
+                            <a href="contact.html" class="btn btn-sm btn-success mt-3 rounded-pill px-4">Contact Us</a>
+                        </div>
+                        <img src="assets/images/activities/faq-visual.jpg"
+                            alt="Mangrove conservation informational visual" width="400" height="280"
+                            class="img-fluid rounded-4 shadow-sm d-none d-lg-block" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="accordion accordion-flush custom-faq" id="mangroveAccordion">
+
+                        <div class="accordion-item mb-3 border rounded-4 overflow-hidden shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fw-bold text-dark bg-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    01. Why are mangroves protected by district law?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#mangroveAccordion">
+                                <div class="accordion-body text-muted small">
+                                    Mangroves are protected under the Environment (Protection) Act, 1986, and Coastal
+                                    Regulation Zone (CRZ) notifications. They are vital for preventing coastal erosion
+                                    and serve as essential breeding grounds for local marine biodiversity in
+                                    Maharashtra.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border rounded-4 overflow-hidden shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    02. Can individuals participate in plantation drives?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#mangroveAccordion">
+                                <div class="accordion-body text-muted small">
+                                    Yes. We organise monthly community drives. However, all plantations must be
+                                    supervised by local forest officials to ensure that the correct native species are
+                                    planted in suitable intertidal zones.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border rounded-4 overflow-hidden shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    03. How can I report illegal felling of mangroves?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#mangroveAccordion">
+                                <div class="accordion-body text-muted small">
+                                    You can use the 'Report Encroachment' feature in our contact section or visit the
+                                    local District Magistrate office. Providing GPS-tagged photos through our portal
+                                    significantly helps in swift legal action.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3 border rounded-4 overflow-hidden shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    04. Which mangrove species are native to this district?
+                                </button>
+                            </h3>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#mangroveAccordion">
+                                <div class="accordion-body text-muted small">
+                                    The most common species in our district include Avicennia marina (Grey Mangrove),
+                                    Rhizophora mucronata (Loop-root Mangrove), and Sonneratia alba (Apple Mangrove).
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS — Dark section
+═══════════════════════════════════════════════════════════ -->
+    <section id="testimonials" class="py-5" style="background-color: #1a1a1a; color: #ffffff;">
+        <div class="container py-lg-5">
+            <div class="row align-items-center">
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Voice of the
+                        People</span>
+                    <h2 class="display-6 fw-bold mt-2 mb-4">Feedback from Our Stakeholders</h2>
+                    <p class="text-secondary small mb-4">Read how our conservation efforts are impacting the lives of
+                        local coastal communities and the environment.</p>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-light rounded-circle p-2" type="button"
+                            data-bs-target="#testimonialCarousel" data-bs-slide="prev"
+                            aria-label="Previous testimonial">
+                            <i class="bi bi-arrow-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn btn-outline-light rounded-circle p-2" type="button"
+                            data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next testimonial">
+                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-8">
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm" style="height: 200px;">
-                            <img src="assets/images/gallery/plantation-drive.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Plantation Drive" loading="lazy" decoding="async">
-                            <div class="gallery-overlay d-flex align-items-center justify-content-center">
-                                <button class="btn btn-light rounded-circle p-2" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/plantation-drive.jpg', 'Recent community plantation drive at Kudal')">
-                                    <i class="bi bi-eye-fill text-success fs-5"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm" style="height: 200px;">
-                            <img src="assets/images/gallery/local-wildlife-fauna.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Local Fauna" loading="lazy" decoding="async">
-                            <div class="gallery-overlay d-flex align-items-center justify-content-center">
-                                <button class="btn btn-light rounded-circle p-2" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/local-fauna.jpg', 'Wildlife spotted within the mangrove canopy')">
-                                    <i class="bi bi-eye-fill text-success fs-5"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="gallery-item position-relative overflow-hidden rounded-4 shadow-sm" style="height: 220px;">
-                            <img src="assets/images/gallery/restoration-site-aerial.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Aerial View of Creek" loading="lazy" decoding="async">
-                            <div class="gallery-overlay d-flex align-items-center justify-content-center">
-                                <button class="btn btn-light rounded-circle p-3" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="updateModal('assets/images/gallery/aerial-view.jpg', 'Aerial survey of the district mangrove belt')">
-                                    <i class="bi bi-eye-fill text-success fs-4"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                <div class="col-lg-8">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"
+                        aria-label="Stakeholder testimonials">
+                        <div class="carousel-inner">
 
-<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-transparent border-0">
-            <div class="modal-body p-0 text-center">
-                <img src="" id="modalImg" class="img-fluid rounded-4 shadow-lg mb-2">
-                <p id="modalCaption" class="text-white small fw-bold"></p>
-                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section id="activities" class="py-5 bg-light main-content">
-    <div class="container py-lg-5">
-        <div class="row align-items-center">
-            <div class="col-lg-7 order-2 order-lg-1 mt-5 mt-lg-0">
-                <div class="pe-lg-5">
-                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">What We Do</span>
-                    <h2 class="display-6 fw-bold mt-2 mb-4" style="color: var(--primary-green);">Our Strategic Activities</h2>
-                    
-                    <div class="d-flex align-items-start activity-tabs">
-                        <div class="nav flex-column nav-pills me-4 w-40" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <button class="nav-link active mb-3 text-start rounded-pill px-4 py-3 shadow-sm" id="v-pills-nursery-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nursery" type="button" role="tab">
-                                <i class="bi bi-tree me-2"></i> Nursery Mgmt
-                            </button>
-                            <button class="nav-link mb-3 text-start rounded-pill px-4 py-3 shadow-sm" id="v-pills-patrol-tab" data-bs-toggle="pill" data-bs-target="#v-pills-patrol" type="button" role="tab">
-                                <i class="bi bi-shield-check me-2"></i> Citizen Patrol
-                            </button>
-                            <button class="nav-link mb-3 text-start rounded-pill px-4 py-3 shadow-sm" id="v-pills-survey-tab" data-bs-toggle="pill" data-bs-target="#v-pills-survey" type="button" role="tab">
-                                <i class="bi bi-camera-video me-2"></i> Bio-Surveys
-                            </button>
-                            <button class="nav-link mb-3 text-start rounded-pill px-4 py-3 shadow-sm" id="v-pills-workshop-tab" data-bs-toggle="pill" data-bs-target="#v-pills-workshop" type="button" role="tab">
-                                <i class="bi bi-journal-text me-2"></i> Workshops
-                            </button>
-                        </div>
-                        
-                        <div class="tab-content border-start ps-4" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active" id="v-pills-nursery" role="tabpanel">
-                                <h4 class="fw-bold text-success">Mangrove Nursery Management</h4>
-                                <p class="text-muted">We maintain scientific nurseries for high-risk species like Ceriops tagal. Our volunteers ensure saplings reach the 'Hardening' stage before coastal transplantation.</p>
-                                <ul class="list-unstyled small text-muted">
-                                    <li><i class="bi bi-check2-circle text-success me-2"></i> Species-specific soil preparation</li>
-                                    <li><i class="bi bi-check2-circle text-success me-2"></i> Daily irrigation monitoring</li>
-                                    <li><i class="bi bi-check2-circle text-success me-2"></i> Genetic health tracking</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-patrol" role="tabpanel">
-                                <h4 class="fw-bold text-success">Citizen Patrol Networks</h4>
-                                <p class="text-muted">Empowering local coastal communities to monitor and report illegal mangrove felling or encroachment using our reporting tools.</p>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-survey" role="tabpanel">
-                                <h4 class="fw-bold text-success">Biodiversity Surveys</h4>
-                                <p class="text-muted">Monthly mapping of flora and fauna within the district creeks to maintain a health index of our blue carbon sinks.</p>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-workshop" role="tabpanel">
-                                <h4 class="fw-bold text-success">Ecological Workshops</h4>
-                                <p class="text-muted">Technical training for students (SYIT) and researchers on mangrove data collection and conservation techniques.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 order-1 order-lg-2">
-                <div class="activity-img-container position-relative">
-                    <img src="assets/images/activities/boat-patrol.jpg" alt="Activity" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 500px;" loading="lazy" decoding="async">
-                    <div class="floating-badge bg-white p-3 rounded-4 shadow-sm position-absolute bottom-0 start-0 m-4 d-none d-md-block border-start border-5 border-success">
-                        <h6 class="mb-1 fw-bold">Live Monitoring</h6>
-                        <p class="small text-muted mb-0">District Creek #04</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="faq" class="py-5 bg-white main-content">
-    <div class="container py-lg-5">
-        <div class="row">
-            <div class="col-lg-5 mb-5 mb-lg-0">
-                <div class="pe-lg-4">
-                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Common Queries</span>
-                    <h2 class="display-6 fw-bold mt-2 mb-4" style="color: var(--primary-green);">General Questions <br>& Information</h2>
-                    <div class="p-4 rounded-4 shadow-sm mb-4" style="background: var(--light-bg); border-left: 5px solid var(--accent-green);">
-                        <p class="mb-0 text-muted small">Can't find what you're looking for? Reach out to the district conservation desk for technical assistance.</p>
-                        <a href="contact.html" class="btn btn-sm btn-success mt-3 rounded-pill px-4">Contact Us</a>
-                    </div>
-                    <img src="assets/images/activities/faq-visual.jpg" alt="Informational Visual" class="img-fluid rounded-4 shadow-sm d-none d-lg-block" loading="lazy" decoding="async">
-                </div>
-            </div>
-
-            <div class="col-lg-7">
-                <div class="accordion accordion-flush custom-faq" id="mangroveAccordion">
-                    
-                    <div class="accordion-item mb-3 border rounded-4 overflow-hidden shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                01. Why are mangroves protected by district law?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#mangroveAccordion">
-                            <div class="accordion-body text-muted small">
-                                Mangroves are protected under the Environment (Protection) Act, 1986, and Coastal Regulation Zone (CRZ) notifications. They are vital for preventing coastal erosion and serve as essential breeding grounds for local marine biodiversity in Maharashtra.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item mb-3 border rounded-4 overflow-hidden shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                02. Can individuals participate in plantation drives?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#mangroveAccordion">
-                            <div class="accordion-body text-muted small">
-                                Yes. We organize monthly community drives. However, all plantations must be supervised by local forest officials to ensure that the correct native species are planted in suitable intertidal zones.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item mb-3 border rounded-4 overflow-hidden shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                                03. How can I report illegal felling of mangroves?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#mangroveAccordion">
-                            <div class="accordion-body text-muted small">
-                                You can use the 'Report Encroachment' feature in our contact section or visit the local District Magistrate office. Providing GPS-tagged photos through our portal significantly helps in swift legal action.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item mb-3 border rounded-4 overflow-hidden shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                                04. Which mangrove species are native to this district?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#mangroveAccordion">
-                            <div class="accordion-body text-muted small">
-                                The most common species in our district include Avicennia marina (Grey Mangrove), Rhizophora mucronata (Loop-root Mangrove), and Sonneratia alba (Apple Mangrove).
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="testimonials" class="py-5" style="background-color: #1a1a1a; color: #ffffff;">
-    <div class="container py-lg-5">
-        <div class="row align-items-center">
-            <div class="col-lg-4 mb-5 mb-lg-0">
-                <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Voice of the People</span>
-                <h2 class="display-6 fw-bold mt-2 mb-4">Feedback from Our Stakeholders</h2>
-                <p class="text-secondary small mb-4">Read how our conservation efforts are impacting the lives of local coastal communities and the environment.</p>
-                <div class="d-flex gap-2">
-                    <button class="btn btn-outline-light rounded-circle p-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                        <i class="bi bi-arrow-left"></i>
-                    </button>
-                    <button class="btn btn-outline-light rounded-circle p-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                        <i class="bi bi-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="col-lg-8">
-                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        
-                        <div class="carousel-item active">
-                            <div class="p-4 p-md-5 rounded-4 bg-dark border border-secondary border-opacity-25 testimonial-card position-relative">
-                                <i class="bi bi-quote position-absolute top-0 end-0 m-4 opacity-25 display-1 text-success"></i>
-                                <div class="mb-4">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                </div>
-                                <p class="lead italic mb-4">"The plantation drives organized by this initiative have significantly reduced soil erosion in our village. It is heartening to see the youth of the district taking such a proactive role in conservation."</p>
-                                <div class="d-flex align-items-center">
-                                    <img src="assets/images/activities/user-1.jpg" class="rounded-circle me-3" width="60" height="60" style="object-fit: cover;" loading="lazy" decoding="async">
-                                    <div>
-                                        <h6 class="mb-0 fw-bold">Shripad Golatkar</h6>
-                                        <p class="small text-success mb-0">Local Village Headman</p>
+                            <div class="carousel-item active">
+                                <div
+                                    class="p-4 p-md-5 rounded-4 bg-dark border border-secondary border-opacity-25 testimonial-card position-relative">
+                                    <i class="bi bi-quote position-absolute top-0 end-0 m-4 opacity-25 display-1 text-success"
+                                        aria-hidden="true"></i>
+                                    <div class="mb-4" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    </div>
+                                    <blockquote class="blockquote mb-4">
+                                        <p class="lead fst-italic">"The plantation drives organised by this initiative
+                                            have significantly reduced soil erosion in our village. It is heartening to
+                                            see the youth of the district taking such a proactive role in conservation."
+                                        </p>
+                                    </blockquote>
+                                    <div class="d-flex align-items-center">
+                                        <!-- NOTE: Move user avatars from activities/ to testimonials/ folder -->
+                                        <img src="assets/images/testimonials/user-1.jpg" class="rounded-circle me-3"
+                                            alt="Shripad Golatkar — Local Village Headman" width="60" height="60"
+                                            style="object-fit: cover;" loading="lazy" decoding="async">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Shripad Golatkar</h6>
+                                            <p class="small text-success mb-0">Local Village Headman</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="carousel-item">
-                            <div class="p-4 p-md-5 rounded-4 bg-dark border border-secondary border-opacity-25 testimonial-card position-relative">
-                                <i class="bi bi-quote position-absolute top-0 end-0 m-4 opacity-25 display-1 text-success"></i>
-                                <div class="mb-4">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                </div>
-                                <p class="lead italic mb-4">"As a researcher, I find the data provided by the Citizen Patrol network invaluable. This project bridges the gap between scientific study and grassroots action perfectly."</p>
-                                <div class="d-flex align-items-center">
-                                    <img src="assets/images/activities/user-2.jpg" class="rounded-circle me-3" width="60" height="60" style="object-fit: cover;" loading="lazy" decoding="async">
-                                    <div>
-                                        <h6 class="mb-0 fw-bold">Vinit </h6>
-                                        <p class="small text-success mb-0">Environmental Scientist</p>
+                            <div class="carousel-item">
+                                <div
+                                    class="p-4 p-md-5 rounded-4 bg-dark border border-secondary border-opacity-25 testimonial-card position-relative">
+                                    <i class="bi bi-quote position-absolute top-0 end-0 m-4 opacity-25 display-1 text-success"
+                                        aria-hidden="true"></i>
+                                    <div class="mb-4" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                        <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                                    </div>
+                                    <blockquote class="blockquote mb-4">
+                                        <p class="lead fst-italic">"As a researcher, I find the data provided by the
+                                            Citizen Patrol network invaluable. This project bridges the gap between
+                                            scientific study and grassroots action perfectly."</p>
+                                    </blockquote>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/testimonials/user-2.jpg" class="rounded-circle me-3"
+                                            alt="Vinit — Environmental Scientist" width="60" height="60"
+                                            style="object-fit: cover;" loading="lazy" decoding="async">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Vinit</h6>
+                                            <p class="small text-success mb-0">Environmental Scientist</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="news" class="py-5 bg-white">
-    <div class="container py-lg-5">
-        <div class="row align-items-end mb-5">
-            <div class="col-md-8">
-                <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Latest Updates</span>
-                <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">From the Field: Conservation News</h2>
-                <p class="text-muted mb-0">Stay informed about the latest restoration breakthroughs and district-level policy changes.</p>
-            </div>
-            <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                <a href="news.html" class="btn btn-success rounded-pill px-4">Browse All News</a>
-            </div>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 news-card">
-                    <div class="row g-0 h-100">
-                        <div class="col-md-5 position-relative">
-                            <img src="assets/images/activities/news-1.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="New Plantation Technique" loading="lazy" decoding="async">
-                            <div class="date-badge position-absolute top-0 start-0 m-3 text-center rounded-3 p-2 bg-success text-white">
-                                <span class="d-block fw-bold lh-1">15</span>
-                                <span class="small text-uppercase">Feb</span>
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="card-body p-4 d-flex flex-column h-100">
-                                <span class="text-accent small fw-bold mb-2">Restoration Success</span>
-                                <h5 class="card-title fw-bold mb-3">Breakthrough in Sapling Survival Rates in Kudal Creeks</h5>
-                                <p class="card-text text-muted small mb-4">New monitoring techniques have resulted in an 85% survival rate for the latest batch of Avicennia marina saplings.</p>
-                                <a href="#" class="mt-auto text-success fw-bold text-decoration-none small">Read Article <i class="bi bi-arrow-right ms-1"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     NEWS
+═══════════════════════════════════════════════════════════ -->
+    <section id="news" class="py-5 bg-white">
+        <div class="container py-lg-5">
+            <div class="row align-items-end mb-5">
+                <div class="col-md-8">
+                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Latest
+                        Updates</span>
+                    <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">From the Field: Conservation
+                        News</h2>
+                    <p class="text-muted mb-0">Stay informed about the latest restoration breakthroughs and
+                        district-level policy changes.</p>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="news.html" class="btn btn-success rounded-pill px-4">Browse All News</a>
+                </div>
             </div>
 
-            <div class="col-lg-6">
-                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 news-card">
-                    <div class="row g-0 h-100">
-                        <div class="col-md-5 position-relative">
-                            <img src="assets/images/activities/news-2.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="District Policy Update" loading="lazy" decoding="async">
-                            <div class="date-badge position-absolute top-0 start-0 m-3 text-center rounded-3 p-2 bg-success text-white">
-                                <span class="d-block fw-bold lh-1">08</span>
-                                <span class="small text-uppercase">Feb</span>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 news-card">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5 position-relative">
+                                <img src="assets/images/activities/news-1.jpg"
+                                    class="img-fluid h-100 w-100 object-fit-cover"
+                                    alt="Mangrove sapling survival rate improvement — Kudal creek restoration"
+                                    width="300" height="300" loading="lazy" decoding="async">
+                                <div class="date-badge position-absolute top-0 start-0 m-3 text-center rounded-3 p-2 bg-success text-white"
+                                    aria-label="Published 15 February">
+                                    <span class="d-block fw-bold lh-1" aria-hidden="true">15</span>
+                                    <span class="small text-uppercase" aria-hidden="true">Feb</span>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <span class="text-success small fw-bold mb-2">Restoration Success</span>
+                                    <h3 class="card-title fw-bold mb-3 h5">Breakthrough in Sapling Survival Rates in
+                                        Kudal Creeks</h3>
+                                    <p class="card-text text-muted small mb-4">New monitoring techniques have resulted
+                                        in an 85% survival rate for the latest batch of Avicennia marina saplings.</p>
+                                    <a href="#" class="mt-auto text-success fw-bold text-decoration-none small">
+                                        Read Article <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-7">
-                            <div class="card-body p-4 d-flex flex-column h-100">
-                                <span class="text-accent small fw-bold mb-2">Policy Update</span>
-                                <h5 class="card-title fw-bold mb-3">New District Regulations for Coastal Land Usage Released</h5>
-                                <p class="card-text text-muted small mb-4">The district administration has tightened norms for construction near sensitive mangrove belts to prevent illegal encroachment.</p>
-                                <a href="#" class="mt-auto text-success fw-bold text-decoration-none small">Read Article <i class="bi bi-arrow-right ms-1"></i></a>
+                    </article>
+                </div>
+
+                <div class="col-lg-6">
+                    <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 news-card">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5 position-relative">
+                                <img src="assets/images/activities/news-2.jpg"
+                                    class="img-fluid h-100 w-100 object-fit-cover"
+                                    alt="District coastal land usage policy update — Sindhudurg regulation" width="300"
+                                    height="300" loading="lazy" decoding="async">
+                                <div class="date-badge position-absolute top-0 start-0 m-3 text-center rounded-3 p-2 bg-success text-white"
+                                    aria-label="Published 8 February">
+                                    <span class="d-block fw-bold lh-1" aria-hidden="true">08</span>
+                                    <span class="small text-uppercase" aria-hidden="true">Feb</span>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <span class="text-success small fw-bold mb-2">Policy Update</span>
+                                    <h3 class="card-title fw-bold mb-3 h5">New District Regulations for Coastal Land
+                                        Usage Released</h3>
+                                    <p class="card-text text-muted small mb-4">The district administration has tightened
+                                        norms for construction near sensitive mangrove belts to prevent illegal
+                                        encroachment.</p>
+                                    <a href="#" class="mt-auto text-success fw-bold text-decoration-none small">
+                                        Read Article <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     COMMUNITY — Social CTA
+     NOTE: background-attachment: fixed is kept here as an
+     inline style. The iOS Safari override (scroll on touch
+     devices) must be added to responsive.css in the next step.
+═══════════════════════════════════════════════════════════ -->
+    <section id="community" class="py-5 position-relative overflow-hidden"
+        style="background: linear-gradient(rgba(10, 31, 10, 0.9), rgba(10, 31, 10, 0.9)), url('assets/images/hero/mangroves-footer.webp') center/cover fixed;">
+        <div class="container py-lg-4 text-center text-white">
+            <h2 class="display-6 fw-bold mb-2">Join Our Community</h2>
+            <p class="text-white-50 mb-5 small">Connect with fellow Green Guardians and stay updated with live
+                conservation reports.</p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-4" role="list" aria-label="Social media links">
+                <a href="https://www.instagram.com/pankholjuva" target="_blank" rel="noopener noreferrer"
+                    class="community-icon" aria-label="Follow Pankhol Juva on Instagram" role="listitem">
+                    <i class="bi bi-instagram" style="color: #E1306C;" aria-hidden="true"></i>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbBxbYSK0IBmsXstEc14" target="_blank"
+                    rel="noopener noreferrer" class="community-icon" aria-label="Join Pankhol Juva WhatsApp channel"
+                    role="listitem">
+                    <i class="bi bi-whatsapp" style="color: #25D366;" aria-hidden="true"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="community-icon"
+                    aria-label="Follow Pankhol Juva on X (Twitter)" role="listitem">
+                    <i class="bi bi-twitter-x" style="color: #ffffff;" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.facebook.com/@pankholjuva" target="_blank" rel="noopener noreferrer"
+                    class="community-icon" aria-label="Like Pankhol Juva on Facebook" role="listitem">
+                    <i class="bi bi-facebook" style="color: #1877F2;" aria-hidden="true"></i>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&to=info@pankholjuva.com" target="_blank"
+                    rel="noopener noreferrer" class="community-icon" aria-label="Send an email to Pankhol Juva"
+                    role="listitem">
+                    <i class="bi bi-envelope-fill" style="color: #EA4335;" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+     NOTE: main-sundarban-footer class retained — CSS files
+     reference this name. It will be renamed when CSS is
+     refactored in the next step.
+═══════════════════════════════════════════════════════════ -->
+    <footer class="pt-5 pb-3 main-sundarban-footer" style="background-color: #111512; color: #cfd8dc;"
+        role="contentinfo">
+        <div class="container">
+            <div class="row g-4 mb-5">
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="assets/images/logos/pankhol.webp" alt="Pankhol Juva logo" width="50" height="50"
+                            class="me-2 rounded-circle footer-logo" loading="lazy">
+                        <h2 class="h5 text-white fw-bold mb-0">PANKHOL JUVA</h2>
+                    </div>
+                    <p class="small lh-lg">A district-level initiative dedicated to the scientific restoration and
+                        community-led protection of Maharashtra's vital mangrove ecosystems.</p>
+                    <div class="d-flex gap-3 mt-4" aria-label="Social media links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="X (Twitter)"><i class="bi bi-twitter-x"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"
+                                aria-hidden="true"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="community" class="py-5 position-relative overflow-hidden" style="background: linear-gradient(rgba(10, 31, 10, 0.9), rgba(10, 31, 10, 0.9)), url('assets/images/hero/mangroves-footer.webp') center/cover fixed;">
-    <div class="container py-lg-4 text-center text-white">
-        <h2 class="display-6 fw-bold mb-2">Join Our Community</h2>
-        <p class="text-white-50 mb-5 small">Connect with fellow Green Guardians and stay updated with live conservation reports.</p>
-
-        <div class="d-flex flex-wrap justify-content-center gap-4">
-            <a href="https://www.instagram.com/pankholjuva" target="_blank" class="community-icon" title="Instagram">
-                <i class="bi bi-instagram" style="color: #E1306C;"></i>
-            </a>
-            <a href="https://whatsapp.com/channel/0029VbBxbYSK0IBmsXstEc14" target="_blank" class="community-icon" title="WhatsApp Channel">
-                <i class="bi bi-whatsapp" style="color: #25D366;"></i>
-            </a>
-            <a href="#" target="_blank" class="community-icon" title="X (Twitter)">
-                <i class="bi bi-twitter-x" style="color: #ffffff;"></i>
-            </a>
-            <a href="https://www.facebook.com/@pankholjuva" target="_blank" class="community-icon" title="Facebook">
-                <i class="bi bi-facebook" style="color: #1877F2;"></i>
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&to=info@pankholjuva.com" target="_blank" class="community-icon" title="Email Us">
-                <i class="bi bi-envelope-fill" style="color: #EA4335;"></i>
-            </a>
-        </div>
-        
-        <!--<div class="mt-5 d-inline-block p-3 rounded-4" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-            <p class="mb-0 small fw-bold text-success"><i class="bi bi-people-fill me-2"></i> 1,200+ Members Strong</p>
-        </div>-->
-    </div>
-</section>
-<footer class="pt-5 pb-3 main-sundarban-footer" style="background-color: #111512; color: #cfd8dc;">
-    <div class="container">
-        <div class="row g-4 mb-5">
-            
-            <div class="col-lg-3 col-md-6 col-12 mb-4">
-                <div class="d-flex align-items-center mb-4">
-                   
-                    <img src="assets/images/logos/pankhol.webp" 
-                        alt="Logo" 
-                        width="50" 
-                        height="50"
-                        class="me-2 rounded-circle footer-logo" 
-                        loading="lazy">
-
-                    <h5 class="text-white fw-bold mb-0">PANKHOL JUVA</h5>
+                <div class="col-lg-2 col-md-6 col-12 mb-4 ps-lg-4">
+                    <h3 class="h6 text-white fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Quick Links
+                    </h3>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 footer-links">
+                        <li><a href="index.html" class="hover-green">Home</a></li>
+                        <li><a href="about.html" class="hover-green">About Impact</a></li>
+                        <li><a href="gallery.html" class="hover-green">Media Gallery</a></li>
+                        <li><a href="news.html" class="hover-green">Latest News</a></li>
+                        <li><a href="contact.html" class="hover-green">Contact Us</a></li>
+                    </ul>
                 </div>
-                <p class="small lh-lg">A district-level initiative dedicated to the scientific restoration and community-led protection of Maharashtra's vital mangrove ecosystems.</p>
-                <div class="d-flex gap-3 mt-4">
-                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <h3 class="h6 text-white fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Contact
+                        Desk</h3>
+                    <address>
+                        <ul class="list-unstyled small d-flex flex-column gap-3">
+                            <li class="d-flex align-items-start">
+                                <i class="bi bi-geo-alt-fill text-success me-3 fs-5 mt-1" aria-hidden="true"></i>
+                                <span>PanKhol Juva,<br>Sindhudurg,<br>Malvan, Maharashtra 416606</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bi bi-envelope-fill text-success me-3 fs-5" aria-hidden="true"></i>
+                                <a href="mailto:info@pankholjuva.com"
+                                    class="text-reset text-decoration-none hover-green">info@pankholjuva.com</a>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bi bi-telephone-fill text-success me-3 fs-5" aria-hidden="true"></i>
+                                <a href="tel:+919529321755" class="text-reset text-decoration-none hover-green">+91
+                                    95293 21755</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <h3 class="h6 text-white fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Tour
+                        Packages</h3>
+                    <ul class="list-unstyled footer-packages-list small d-flex flex-column gap-3">
+                        <li class="hover-green-list"><i class="bi bi-dot text-success fs-4" aria-hidden="true"></i>
+                            Standard Restoration Program</li>
+                        <li class="hover-green-list"><i class="bi bi-dot text-success fs-4" aria-hidden="true"></i>
+                            Mangroves Safari Packages</li>
+                        <li class="hover-green-list"><i class="bi bi-dot text-success fs-4" aria-hidden="true"></i>
+                            Wildlife Photography Drive</li>
+                        <li class="hover-green-list"><i class="bi bi-dot text-success fs-4" aria-hidden="true"></i>
+                            Marine Bio-Classroom Trip</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary opacity-25">
+
+            <div class="row align-items-center mt-3">
+                <div class="col-md-6 col-12 text-center text-md-start mb-2 mb-md-0">
+                    <p class="extra-small mb-0">&copy; 2026 Pankhol Juva — District Mangrove Foundation. All Rights
+                        Reserved.</p>
+                </div>
+                <div class="col-md-6 col-12 text-center text-md-end">
+                    <a href="privacy-policy.html" class="hover-green extra-small text-decoration-none me-3">Privacy
+                        Policy</a>
+                    <a href="terms.html" class="hover-green extra-small text-decoration-none">Terms &amp; Conditions</a>
                 </div>
             </div>
-
-            <div class="col-lg-2 col-md-6 col-12 mb-4 ps-lg-4">
-                <h6 class="text-white fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Quick Links</h6>
-                <ul class="list-unstyled small d-flex flex-column gap-2 footer-links">
-                    <li><a href="index.html" class="hover-green">Home</a></li>
-                    <li><a href="about.html" class="hover-green">About Impact</a></li>
-                    <li><a href="gallery.html" class="hover-green">Media Gallery</a></li>
-                    <li><a href="news.html" class="hover-green">Latest News</a></li>
-                    <li><a href="contact.html" class="hover-green">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4">
-                <h6 class="text-white fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Contact Desk</h6>
-                <ul class="list-unstyled small d-flex flex-column gap-3">
-                    <li class="d-flex align-items-start">
-                        <i class="bi bi-geo-alt-fill text-success me-3 fs-5 mt-1"></i>
-                        <span>PanKhol Juva, <br>Sindhudurg, <br>Malvan, Maharashtra 416606</span>
-                    </li>
-                    <li class="d-flex align-items-center">
-                        <i class="bi bi-envelope-fill text-success me-3 fs-5"></i>
-                        <a href="mailto:contact@mangrovecare.in" class="text-reset text-decoration-none hover-green">info@pankholjuva.com</a>
-                    </li>
-                    <li class="d-flex align-items-center">
-                        <i class="bi bi-telephone-fill text-success me-3 fs-5"></i>
-                        <a href="tel:+9102362123456" class="text-reset text-decoration-none hover-green">+91 95293 21755</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-12 mb-4">
-                <h6 class="text-white fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Tour Packages</h6>
-                <ul class="list-unstyled footer-packages-list small d-flex flex-column gap-3">
-                    <li class="hover-green-list"><i class="bi bi-dot text-success fs-4"></i> Standard Restoration Program</li>
-                    <li class="hover-green-list"><i class="bi bi-dot text-success fs-4"></i> Mangroves Safari Packages</li>
-                   <!-- <li class="hover-green-list"><i class="bi bi-dot text-success fs-4"></i> Premium CSR Partnership</li> -->
-                    <li class="hover-green-list"><i class="bi bi-dot text-success fs-4"></i> Wildlife Photography Drive</li>
-                    <li class="hover-green-list"><i class="bi bi-dot text-success fs-4"></i> Marine Bio-Classroom Trip</li>
-                </ul>
-            </div>
-
-        </div> <hr class="border-secondary opacity-25">
-        
-        <div class="row align-items-center mt-3">
-            <div class="col-md-6 col-12 text-center text-md-start mb-2 mb-md-0">
-                <p class="extra-small mb-0">&copy; 2026 District Mangrove Foundation. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 col-12 text-center text-md-end">
-               <a href="privacy-policy.html" class="hover-green extra-small text-decoration-none me-3">Privacy Policy</a>
-               <a href="terms.html" class="hover-green extra-small text-decoration-none">Terms & Conditions</a>
-            </div>
         </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     WHATSAPP FLOATING BUTTON (site-wide persistent element)
+     Previously missing from HTML entirely — now implemented.
+     UPDATE: Replace 919529321755 with your actual number.
+═══════════════════════════════════════════════════════════ -->
+    <div class="whatsapp-float" role="complementary" aria-label="WhatsApp quick contact">
+        <span class="help-text" aria-hidden="true">Need Help?</span>
+        <a href="https://wa.me/919529321755" class="whatsapp-icon" target="_blank" rel="noopener noreferrer"
+            aria-label="Chat with us on WhatsApp">
+            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        </a>
     </div>
-</footer>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════════════ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
