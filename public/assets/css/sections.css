@@ -334,6 +334,21 @@
     transform: scale(1.05);
 }
 
+/* 2. Apply the font to your specific paragraph */
+.pankhol-text-jost {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 17px;
+    color: rgb(120, 120, 120);
+}
+
+.pankhol-text-design {
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 600px;
+    color: rgb(16, 12, 8);
+}
+
+
 /* =========================================
    Custom Action Button (Matches Navbar)
 ========================================= */
@@ -380,8 +395,8 @@
 
     /* 2. OVERSTRETCH: This stretches the mask width to 150%. 
        The right jagged edge is pushed outside the box, leaving a straight, plain line on the right side. */
-    -webkit-mask-size: 150% 100%;
-    mask-size: 150% 100%;
+    -webkit-mask-size: 150% 92%;
+    mask-size: 150% 92%;
 
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
