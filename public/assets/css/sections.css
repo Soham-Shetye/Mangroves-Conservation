@@ -272,6 +272,13 @@
    MISSION SECTION — PANKHOL JUVA ABOUT INTRO
 ---------------------------------------------------------------- */
 /* BASE FEATURE CARD SETTINGS */
+
+.conserv-heading {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 53px;
+}
+
 .mission-feature {
     transition: background-color 0.3s ease;
     cursor: default;
@@ -406,6 +413,44 @@
 }
 
 
+
+/* ----------------------------------------------------------------
+   WHY PANKHOL-JUVA SECTION — 
+---------------------------------------------------------------- */
+/* --- MOBILE & TABLET VIEW --- */
+/* Allows text to wrap naturally, but shrinks the font size so "journey" fits on line 1 */
+.pankhol-one-line {
+    white-space: normal;
+    overflow-wrap: break-word;
+    font-size: 32px !important;
+    /* Approx 25px - exact size to fit the first 3 words */
+    line-height: 1.2;
+    font-weight: 600;
+    color: rgb(16, 12, 8);
+}
+
+/* --- PC & LAPTOP VIEW --- */
+/* Keeps text strictly on one line and restores the large font size */
+@media (min-width: 992px) {
+    .pankhol-one-line {
+        white-space: nowrap !important;
+        font-size: 45px !important;
+        line-height: 50px;
+        font-weight: 600;
+        color: rgb(16, 12, 8);
+
+        /* Adjust this number if desktop is too big/small */
+    }
+}
+
+.section-subtitle {
+    line-height: 26px;
+    color: rgb(122, 122, 122);
+}
+
+
+/* Optional: Add this to ensure the font size shrinks slightly 
+   on smaller laptops so it doesn't touch the edges */
 
 /* ----------------------------------------------------------------
    COMMUNITY SECTION SOCIAL ICONS
