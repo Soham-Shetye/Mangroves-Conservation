@@ -269,7 +269,7 @@
 
 
 /* ----------------------------------------------------------------
-   MISSION SECTION — PANKHOL JUVA ABOUT INTRO
+   INFO SECTION — PANKHOL JUVA ABOUT INTRO
 ---------------------------------------------------------------- */
 /* BASE FEATURE CARD SETTINGS */
 
@@ -676,6 +676,53 @@
 .section-subtitle {
     line-height: 26px;
     color: rgb(122, 122, 122);
+}
+
+
+/* Base state for headings and text inside the card so they can transition smoothly */
+.pankhol-feature-card h5,
+.pankhol-feature-card p,
+.pankhol-feature-card .feature-card-icon {
+    transition: color 0.4s ease;
+}
+
+/* Hover State - Green Version (Matches "Eco-Conscious" and "Wildlife") */
+.pankhol-feature-card:hover {
+    background-color: #63AB45 !important;
+    /* Your Pankhol Green */
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Turn text and icons white on hover */
+.pankhol-feature-card:hover h5,
+.pankhol-feature-card:hover p,
+.pankhol-feature-card:hover .feature-card-icon {
+    color: #ffffff !important;
+}
+
+/* --- Optional: Specific Card Colors --- */
+/* To get the exact Orange/Yellow hover states like Sundarban Eco Trails, 
+   add these classes to specific card HTML wrappers */
+
+.hover-orange:hover {
+    background-color: #F89C2A !important;
+    /* Orange color */
+}
+
+.hover-olive:hover {
+    background-color: #90A955 !important;
+    /* Olive color */
+}
+
+/* Green Variant: Dark green icon, light green circle */
+.icon-green {
+    color: #63AB45 !important;
+}
+
+/* Orange Variant: Dark orange icon, light orange circle */
+.icon-orange {
+    color: #F89C2A !important;
 }
 
 
