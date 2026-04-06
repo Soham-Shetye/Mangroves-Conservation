@@ -413,6 +413,236 @@
 }
 
 
+/* ----------------------------------------------------------------
+   TOUR PACKAGES SECTION -
+---------------------------------------------------------------- */
+
+.tour-packages-section {
+    padding: 60px 0;
+    background-color: rgb(249, 252, 215);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Heading */
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #63AB45;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(16, 12, 8);
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-5 {
+    margin-bottom: 48px;
+}
+
+/* ===== CARDS GRID ===== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 991px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+/* ===== PACKAGE CARD ===== */
+.package-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* .package-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+} */
+
+/* ===== BADGE — card च्या top-left corner पासून ===== */
+.card-badge {
+    position: absolute;
+    top: 10;
+    left: 0;
+    background-color: #111111;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 8px 14px;
+    z-index: 3;
+    /* border-top-left-radius: 12px;      card च्या corner ला match */
+    border-bottom-right-radius: 10px;
+}
+
+/* ===== IMAGE WRAP — padding देऊन image floating दिसते ===== */
+.package-card-img-wrap {
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.package-card-img-wrap img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+/* .package-card:hover .package-card-img-wrap img {
+    transform: scale(1.05);
+} */
+
+/* ===== CARD CONTENT ===== */
+.package-card-content {
+    padding: 20px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 14px;
+}
+
+.package-card-content h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.package-card-content h5 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.package-card-content h5 a:hover {
+    color: #63AB45;
+}
+
+/* Divider */
+.card-divider {
+    height: 1px;
+    background: #e8e8e8;
+    margin: 0;
+}
+
+/* Bottom row */
+.card-content-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* Price Area */
+.price-area h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin: 0 0 2px;
+}
+
+.price-area .price-main {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #63AB45;
+    display: inline-block;
+}
+
+.price-area .price-old {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-left: 6px;
+}
+
+.price-area .price-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #888;
+    margin: 2px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Book Button */
+.btn-book {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #63AB45;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-book:hover {
+    background-color: #51963a;
+    transform: scale(1.03);
+}
+
+.btn-book svg {
+    flex-shrink: 0;
+}
+
+
+
+
 
 /* ----------------------------------------------------------------
    WHY PANKHOL-JUVA SECTION — 
