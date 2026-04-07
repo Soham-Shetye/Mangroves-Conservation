@@ -844,3 +844,34 @@
     opacity: 1;
     transform: translate(-50%, -50%);
 }
+
+/* ==========================================================================
+   FANCYBOX GALLERY ARROW FIX
+   Forces the left/right arrows and close button to be visible, 
+   overriding any global theme conflicts.
+========================================================================== */
+
+/* 1. Force the buttons to appear and give them a dark background */
+.f-button {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+}
+
+/* 2. Force the SVG arrow icons inside the buttons to show */
+.f-button svg {
+    display: block !important;
+    opacity: 1 !important;
+    width: 24px !important;
+    height: 24px !important;
+    stroke: #ffffff !important;
+}
+
+/* 3. Stop the navigation container from auto-hiding */
+.f-carousel__nav {
+    opacity: 1 !important;
+    visibility: visible !important;
+}

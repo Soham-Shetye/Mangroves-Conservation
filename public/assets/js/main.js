@@ -322,3 +322,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 }); /* END DOMContentLoaded */
+
+
+/* ------------------------------------------------------------
+       7. INITIALIZE FANCYBOX GALLERY
+       This binds the Fancybox library to all links containing 
+       the 'data-fancybox' attribute, creating the dark overlay 
+       and arrow navigation instead of opening the raw image.
+    ------------------------------------------------------------ */
+if (typeof Fancybox !== "undefined") {
+    Fancybox.bind("[data-fancybox]", {
+        // This groups them automatically based on the attribute name
+        groupAll: true,
+    });
+}
