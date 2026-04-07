@@ -765,3 +765,82 @@
         width: 220px;
     }
 }
+
+
+
+/* ----------------------------------------------------------------
+   GALLERY SECTION — 
+---------------------------------------------------------------- */
+
+
+/* 1. Wrapper — fixed height so all images in a row align */
+.gallery-img-wrap {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    border-radius: 4px;
+    height: 580px;
+    /* ← Controls the consistent row height */
+}
+
+/* 2. Image — fills the fixed wrapper without distortion */
+.gallery-img-wrap img {
+    width: 100%;
+    height: 100%;
+    /* ← Fill the wrapper fully */
+    object-fit: cover;
+    /* ← Crop to fill, never stretch */
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 3. The Dark Overlay */
+.gallery-img-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 4. The Hover Text & Icon */
+.gallery-hover-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.gallery-hover-btn i {
+    color: #f5a637;
+    font-size: 26px;
+}
+
+
+
+.gallery-img-wrap:hover::after {
+    opacity: 1;
+}
+
+.gallery-img-wrap:hover .gallery-hover-btn {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
