@@ -498,8 +498,8 @@
 /* ===== BADGE — card च्या top-left corner पासून ===== */
 .card-badge {
     position: absolute;
-    top: 10;
-    left: 0;
+    top: 30px;
+    left: -8px;
     background-color: #111111;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -874,4 +874,84 @@
 .f-carousel__nav {
     opacity: 1 !important;
     visibility: visible !important;
+}
+
+
+
+/* ----------------------------------------------------------------
+   WHAT WE DO SECTION — 
+---------------------------------------------------------------- */
+
+
+/* --- Section Background --- */
+.activities-section {
+    background-color: #FEFDF2;
+    /* The light cream background */
+}
+
+/* --- "What We Do" Tag --- */
+.eg-section-tag {
+    display: inline-block;
+    background-color: #E2EED9;
+    color: #63AB45;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-family: 'Satisfy', cursive;
+    /* Matches your other headings */
+    font-size: 1.1rem;
+}
+
+/* --- The Tab Buttons --- */
+.custom-activity-tabs .nav-link {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-radius: 50px;
+    padding: 12px 20px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+/* The Icon Inside the Inactive Tab */
+.custom-activity-tabs .nav-link .tab-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #E8F4E3;
+    color: #63AB45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* --- The ACTIVE Tab Button --- */
+.custom-activity-tabs .nav-link.active {
+    background-color: #F89C2A !important;
+    /* Orange background */
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(248, 156, 42, 0.3);
+}
+
+/* The Icon Inside the Active Tab */
+.custom-activity-tabs .nav-link.active .tab-icon {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+/* --- List Styling --- */
+.custom-bullet-list li {
+    margin-bottom: 12px;
+    color: #1a1a1a;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-bullet-list li i {
+    font-size: 8px;
+    /* Small circle bullet */
 }
