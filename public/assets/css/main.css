@@ -84,6 +84,15 @@ body {
     transition: margin-left 0.3s ease;
 }
 
+/* This CSS is used where it will force browser to adjust screen size for website */
+
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 
 /* ----------------------------------------------------------------
    3. PANKHOL JUVA MOBILE DRAWER (OFFCANVAS)

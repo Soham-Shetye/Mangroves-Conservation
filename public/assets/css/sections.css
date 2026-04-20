@@ -955,3 +955,132 @@
     font-size: 8px;
     /* Small circle bullet */
 }
+
+
+
+
+/* ----------------------------------------------------------------
+   FAQS SECTION — 
+---------------------------------------------------------------- */
+
+
+.promo-banner {
+    min-height: 510px;
+    background-color: #2a2a2a;
+}
+
+
+
+/* Sets up the orange block */
+.promo-content {
+    background-color: #faad39;
+    padding-bottom: 1.5rem !important;
+    /* Shorter padding keeps the block from getting too tall */
+    position: relative;
+}
+
+/* Draws the authentic textured brush stroke */
+.promo-content::after {
+    content: '';
+    position: absolute;
+    bottom: -23px;
+    /* Pulls the brush stroke down over the bird image */
+    left: 0;
+    width: 100%;
+    height: 24px;
+    /* Height of the bristles */
+
+    /* Authentic Brush Stroke SVG encoded as a background image */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 283.5 27.8' preserveAspectRatio='none'%3E%3Cpath fill='%23faad39' d='M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7 s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7 c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z M260.8,11.3 c-0.7-1-2-0.4-4.3-0.4c-2.3,0-6.1-1.2-5.8-1.1c0.3,0.1,3.1,1.5,6,1.9C259.7,12.2,261.4,12.3,260.8,11.3z M242.4,8.6 c0,0-2.4-0.2-5.6-0.9c-3.2-0.8-10.3-2.8-15.1-3.5c-8.2-1.1-15.8,0-15.1,0.1c0.8,0.1,9.6-0.6,17.6,1.1c3.3,0.7,9.3,2.2,12.4,2.7 C239.9,8.7,242.4,8.6,242.4,8.6z M185.2,8.5c1.7-0.7-13.3,4.7-18.5,6.1c-2.1,0.6-6.2,1.6-10,2c-3.9,0.4-8.9,0.4-8.8,0.5 c0.1,0.2,5.8,0.8,11.2,0c5.4-0.8,5.2-1.1,7.6-1.6C170.5,14.7,183.5,9.2,185.2,8.5z M199.1,6.9c-2.6-0.8-7.4-2.3-10-3.2 c-2.6-0.8-8-3-10.8-3c-2.7,0-7.9,2.4-10.4,3.5c-2.5,1.1-7.5,4.3-9.8,5.7c-2.3,1.4-8.7,4.8-13,8c-4.3,3.2-9.7,7.4-14.5,10.4 c-4.8,3-11.4,5.9-15.7,4.3c-4.3-1.6-10.7-4.5-10.6-4.5c0.1,0,6.4,2.7,10.9,3.1c4.6,0.4,10.7-2.5,15.9-6.1c5.2-3.6,11-8.4,14.3-10.8 c3.3-2.5,9-6,11.2-7.2c2.2-1.2,7.3-3.2,10.1-4.1c2.8-0.9,7.7-2.3,10.4-2.1c2.7,0.2,8.9,2.3,11.2,3.3C190.5,5.4,199.1,6.9,199.1,6.9 z M283,11.8c-0.9,0-3,0.9-5.8,2.8c-2.9,1.9-6.9,4.4-11.6,7.6c-4.8,3.3-8.5,5.9-14.6,8.4c-6.1,2.5-16.4,2.7-16.5,2.7 c0.1,0,9.9,2,18.4-1.6c8.5-3.6,13.7-7,17.7-10.8C274.6,17,283.9,11.8,283,11.8z'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+/* Creates the thin inner white line */
+.promo-banner::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    /* 40% transparent white line */
+    border-radius: 4px;
+    /* Slight rounding for a premium feel */
+    z-index: 1;
+    /* Keeps it above the image, but below the orange text block (z-index: 2) */
+    pointer-events: none;
+}
+
+.font-script {
+    font-family: 'Satisfy', cursive;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   CUSTOM FAQ ACCORDION 
+========================================================================== */
+.custom-faq-accordion .accordion-item {
+    border: none;
+    border-bottom: 1px solid #1a1a1a;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+
+
+/* Button Styling */
+.custom-faq-accordion .accordion-button {
+    background-color: transparent;
+    color: rgb(16, 12, 8);
+    font-weight: 500;
+    padding: 1.5rem 0;
+    box-shadow: none;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.custom-faq-accordion .accordion-button:not(.collapsed) {
+    color: rgb(16, 12, 8);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Body Styling */
+.custom-faq-accordion .faq-answer {
+    padding: 0 0 1.5rem 0;
+    line-height: 1.8;
+}
+
+/* Custom + and - Icons */
+.custom-faq-accordion .accordion-button::after {
+    background-image: none;
+    /* Removes default bootstrap arrow */
+    content: '\002B';
+    /* Unicode for Plus sign */
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.custom-faq-accordion .accordion-button:not(.collapsed)::after {
+    background-image: none;
+    content: '\2212';
+    /* Unicode for Minus sign */
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    font-family: "Jost", sans-serif;
+    color: rgb(120, 120, 120);
+    font-size: 16px;
+    line-height: 30px;
+}
