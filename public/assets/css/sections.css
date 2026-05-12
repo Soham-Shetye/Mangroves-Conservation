@@ -1084,3 +1084,269 @@
     font-size: 16px;
     line-height: 30px;
 }
+
+
+/* ============================================================
+   TESTIMONIAL SECTION
+   ============================================================ */
+
+.pankhol-testimonials {
+    position: relative;
+    background-color: rgb(29, 35, 31);
+    padding: 100px 0 80px;
+    overflow: hidden;
+
+}
+
+/* Decorative image — bleeds out bottom-left */
+.testimonial-decor-img {
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 210px;
+    z-index: 1;
+    pointer-events: none;
+    object-fit: contain;
+}
+
+.pankhol-testimonials>.container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ── Badge ── */
+.testimonial-badge {
+    /* ── Mask: defines the brushstroke shape ── */
+    -webkit-mask-image: url('../images/hero/section-title-tag.svg');
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+
+    /* Standard (non-webkit) — Firefox, etc. */
+    mask-image: url('../images/hero/section-title-tag.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+    /* ── Background: shows only inside the mask shape ── */
+    /*
+        Option A — If you have a CSS variable storing the green
+        as raw RGB values (e.g. --pankhol-primary-rgb: 83, 144, 80):
+        background-color: rgba(var(--pankhol-primary-rgb), 0.28);
+
+        Option B — Direct hex value (simpler, use this if unsure):
+    */
+    background-color: rgb(96, 77, 40);
+
+    /* ── Layout ── */
+    padding: 12px 40px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    /* ── Typography — use your existing loaded script font ── */
+    font-family: 'Satisfy', cursive;
+    /* ← match your loaded font name */
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(243, 171, 58);
+    /* dark green text */
+    letter-spacing: 0.3px;
+    line-height: 1;
+}
+
+/* ── Section heading ── */
+.testimonial-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 1.1rem;
+}
+
+/* ── Intro text ── */
+.testimonial-intro {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+/* ── Review block ── */
+.testimonial-review-block {
+    margin-top: 2rem;
+}
+
+.review-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.review-card {
+    background-color: #252d1c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 140px;
+}
+
+.review-card-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tp-icon {
+    color: #00b67a;
+    font-size: 0.8rem;
+}
+
+.ta-icon {
+    color: #34e0a1;
+    font-size: 0.55rem;
+}
+
+.review-platform-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.review-stars {
+    color: #f4b942;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.review-stars.ta-stars {
+    color: #34e0a1;
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+}
+
+.review-score {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Right column wrapper ── */
+.testimonial-right {
+    padding-left: 16px;
+}
+
+/* ── Quote card ── */
+.testimonial-quote-card {
+    position: relative;
+    background-color: #252d1c;
+    border-radius: 16px;
+    padding: 50px 48px 42px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Ghost watermark text */
+.t-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    letter-spacing: 0.3em;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Quote text */
+.t-quote-text {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    font-style: italic;
+    color: #f0ece0;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+}
+
+/* Stars inside card */
+.t-stars {
+    position: relative;
+    z-index: 1;
+    color: #f4b942;
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+}
+
+/* ── Speech bubble tail ── */
+.t-bubble-tail {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 22px solid #252d1c;
+    margin: 0 auto;
+}
+
+/* ── Reviewer info ── */
+.t-reviewer-info {
+    padding: 1rem 0 0.25rem;
+}
+
+.t-reviewer-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.t-reviewer-role {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 0;
+}
+
+/* ── Divider ── */
+.t-divider {
+    border-color: rgba(255, 255, 255, 0.12);
+    margin: 1.25rem 0;
+}
+
+/* ── Prev / Next buttons ── */
+.t-nav-btn {
+    background: none;
+    border: none;
+    color: #c8a84b;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    padding: 6px 0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.t-nav-btn:hover {
+    opacity: 0.7;
+}
+
+/* ── Slide transition states ── */
+.t-sliding {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.t-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
