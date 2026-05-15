@@ -370,3 +370,40 @@
         padding: 10px 32px;
     }
 }
+
+/* ── Testimonial Section ── */
+@media (max-width: 991.98px) {
+    .testimonial-decor-img {
+        display: none;
+    }
+
+    .testimonial-right {
+        padding-left: 0;
+    }
+
+    .testimonial-quote-card {
+        padding: 36px 30px 30px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .pankhol-testimonials {
+        padding: 70px 0 60px;
+    }
+
+    .testimonial-quote-card {
+        padding: 28px 20px 24px;
+        height: 260px;
+    }
+
+    .t-watermark {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        letter-spacing: 0.15em;
+    }
+
+    .review-card {
+        flex: 1;
+        min-width: 0;
+    }
+}

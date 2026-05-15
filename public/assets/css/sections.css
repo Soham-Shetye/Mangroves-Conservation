@@ -1240,6 +1240,7 @@
 /* ── Right column wrapper ── */
 .testimonial-right {
     padding-left: 16px;
+    overflow: hidden;
 }
 
 /* ── Quote card ── */
@@ -1250,21 +1251,31 @@
     padding: 50px 48px 42px;
     text-align: center;
     overflow: hidden;
+
+    /* FIXED height — card never grows or shrinks between slides */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Ghost watermark text */
+/* Ghost watermark text — scales with container width */
 .t-watermark {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 10vw, 4.5rem);
     font-weight: 900;
     color: rgba(255, 255, 255, 0.03);
     letter-spacing: 0.3em;
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
 }
 
 /* Quote text */
@@ -1341,14 +1352,55 @@
 }
 
 /* ── Slide transition states ── */
-.t-sliding {
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
+
+/* Default state — elements start fully visible and centered.
+   transition is set so the first slide-out animates properly. */
+#t-quote-text,
+#t-reviewer-name,
+#t-reviewer-role,
+#t-stars {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.t-visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+/* Phase 1 — slide OUT to the left and fade out */
+.t-slide-out {
+    opacity: 0 !important;
+    transform: translateX(-60px) !important;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 1, 1),
+        transform 0.35s cubic-bezier(0.4, 0, 1, 1) !important;
+}
+
+/* Phase 2 — instantly jump to the right (no transition) before sliding in */
+.t-slide-enter {
+    opacity: 0 !important;
+    transform: translateX(60px) !important;
+    transition: none !important;
+}
+
+/* Phase 3 — slide IN from the right to center and fade in */
+.t-slide-in {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition: opacity 0.4s cubic-bezier(0, 0, 0.2, 1),
+        transform 0.4s cubic-bezier(0, 0, 0.2, 1) !important;
+}
+
+/* ── Reverse direction (for PREV button) ── */
+
+/* Exit to the RIGHT */
+.t-slide-out-rev {
+    opacity: 0 !important;
+    transform: translateX(60px) !important;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 1, 1),
+        transform 0.35s cubic-bezier(0.4, 0, 1, 1) !important;
+}
+
+/* Reposition off-screen LEFT (instant, no transition) */
+.t-slide-enter-rev {
+    opacity: 0 !important;
+    transform: translateX(-60px) !important;
+    transition: none !important;
 }

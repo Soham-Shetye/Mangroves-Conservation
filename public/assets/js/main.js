@@ -336,3 +336,163 @@ if (typeof Fancybox !== "undefined") {
         groupAll: true,
     });
 }
+
+
+/* ============================================================
+   TESTIMONIAL SLIDER - 
+   ============================================================ */
+window.addEventListener('DOMContentLoaded', function () {
+    (function () {
+        'use strict';
+
+        var pankholTestimonials = [
+            {
+                quote: '"My kids loved the boat tour through the mangroves. The guides were knowledgeable, the food was tasty, and the stay was peaceful. Great value for money."',
+                name: 'Laboni Chatterjee',
+                role: 'Family Traveller, Durgapur',
+                rating: 5
+            },
+            {
+                quote: '"An unforgettable experience. The sunrise walk through the mangrove forest was magical — our guide knew every bird call by name. We left with a deep respect for nature."',
+                name: 'Aditya Nair',
+                role: 'Solo Explorer, Kochi',
+                rating: 5
+            },
+            {
+                quote: '"We brought our college group here for an eco-study trip. The conservation briefing was thorough, and the facilities were clean and comfortable."',
+                name: 'Priya Deshmukh',
+                role: 'Student Traveller, Pune',
+                rating: 5
+            }
+        ];
+
+        var currentIndex = 0;
+        var isAnimating = false;   // Prevents overlapping slides
+        var autoSlideInterval;
+
+        var quoteEl = document.getElementById('t-quote-text');
+        var nameEl = document.getElementById('t-reviewer-name');
+        var roleEl = document.getElementById('t-reviewer-role');
+        var starsEl = document.getElementById('t-stars');
+        var prevBtn = document.getElementById('t-prev');
+        var nextBtn = document.getElementById('t-next');
+
+        if (!quoteEl || !nameEl || !roleEl || !starsEl || !prevBtn || !nextBtn) {
+            console.error('Testimonial Slider: Missing one or more required IDs in HTML.');
+            return;
+        }
+
+        var targets = [quoteEl, nameEl, roleEl, starsEl];
+
+        /* ── Helper: build star HTML ── */
+        function buildStars(count) {
+            var html = '';
+            for (var i = 0; i < count; i++) html += '<span>★</span>';
+            return html;
+        }
+
+        /* ── Helper: remove all slide classes at once ── */
+        function clearSlideClasses() {
+            targets.forEach(function (el) {
+                el.classList.remove('t-slide-out', 't-slide-out-rev',
+                    't-slide-enter', 't-slide-enter-rev',
+                    't-slide-in');
+            });
+        }
+
+        /**
+         * goToSlide — drives the 3-phase horizontal animation.
+         *
+         * @param {number} newIndex  — index of the next testimonial
+         * @param {string} direction — 'next' (slide left) or 'prev' (slide right)
+         */
+        function goToSlide(newIndex, direction) {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            var exitClass = (direction === 'prev') ? 't-slide-out-rev' : 't-slide-out';
+            var enterClass = (direction === 'prev') ? 't-slide-enter-rev' : 't-slide-enter';
+
+            /* ── Phase 1: slide current content OUT ── */
+            clearSlideClasses();
+            targets.forEach(function (el) { el.classList.add(exitClass); });
+
+            /* Wait for exit transition to finish (350ms matches CSS) */
+            setTimeout(function () {
+                /* Swap the text content */
+                var t = pankholTestimonials[newIndex];
+                quoteEl.textContent = t.quote;
+                nameEl.textContent = t.name;
+                roleEl.textContent = t.role;
+                starsEl.innerHTML = buildStars(t.rating);
+
+                /* ── Phase 2: instantly jump to opposite side (no transition) ── */
+                clearSlideClasses();
+                targets.forEach(function (el) { el.classList.add(enterClass); });
+
+                /*
+                 * Force the browser to paint the enter-position before
+                 * applying the slide-in transition. Double-rAF guarantees
+                 * the class swap is committed to a rendered frame first.
+                 */
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+
+                        /* ── Phase 3: slide IN to center ── */
+                        targets.forEach(function (el) {
+                            el.classList.remove(enterClass);
+                            el.classList.add('t-slide-in');
+                        });
+
+                        /* Unlock after slide-in completes (400ms) */
+                        setTimeout(function () {
+                            clearSlideClasses();
+                            isAnimating = false;
+                        }, 420);
+
+                    });
+                });
+
+            }, 370);
+
+            currentIndex = newIndex;
+        }
+
+        /* ── Auto-slide every 5 seconds ── */
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(function () {
+                var next = (currentIndex + 1) % pankholTestimonials.length;
+                goToSlide(next, 'next');
+            }, 5000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        /* ── Button handlers ── */
+        prevBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var prev = (currentIndex - 1 + pankholTestimonials.length) % pankholTestimonials.length;
+            goToSlide(prev, 'prev');
+            resetAutoSlide();
+        });
+
+        nextBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var next = (currentIndex + 1) % pankholTestimonials.length;
+            goToSlide(next, 'next');
+            resetAutoSlide();
+        });
+
+        /* ── Initialise: show first testimonial immediately ── */
+        var firstT = pankholTestimonials[0];
+        quoteEl.textContent = firstT.quote;
+        nameEl.textContent = firstT.name;
+        roleEl.textContent = firstT.role;
+        starsEl.innerHTML = buildStars(firstT.rating);
+        startAutoSlide();
+
+    }());
+});
