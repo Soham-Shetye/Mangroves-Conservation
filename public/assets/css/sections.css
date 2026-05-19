@@ -1404,3 +1404,257 @@
     transform: translateX(-60px) !important;
     transition: none !important;
 }
+
+
+/* ============================================================
+   NEWS / BLOG SECTION
+   Matches Sundarbans Eco Trails "Stories Teaser" blog section.
+   ============================================================ */
+
+.pankhol-news {
+    background-color: #f5f5f5;
+    padding: 90px 0 100px;
+}
+
+/* ── Badge ── */
+.news-section-badge {
+    display: inline-block;
+    background-color: #e2eed9;
+    color: #63AB45;
+    font-family: 'Satisfy', cursive;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.51px;
+    padding: 12px 40px;
+    margin-bottom: 14px;
+    -webkit-mask-image: url('../images/hero/section-title-tag.svg');
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-image: url('../images/hero/section-title-tag.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+/* ── Section heading ── */
+.news-section-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(1.5rem, 3.5vw, 45px);
+    font-weight: 600;
+    color: rgb(16, 12, 8);
+    line-height: 1.3;
+    letter-spacing: normal;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    /* This forces the text to wrap and overrides any stray nowrap classes */
+    white-space: normal !important;
+}
+
+/* ── Card wrapper ── */
+.news-card {
+    border-radius: 5px;
+    overflow: visible;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-out;
+}
+
+/* ── Image wrapper ── */
+.news-card-img-wrap {
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.news-card-img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-card-img {
+    transform: scale(1.05);
+}
+
+/* ── Date badge ── */
+.news-date-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 54px;
+    height: 54px;
+    background-color: #63AB45;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    line-height: 1;
+    gap: 1px;
+    z-index: 2;
+}
+
+.news-date-day {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.news-date-month {
+    font-size: 0.62rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ── Card body (overlapping content area) ── */
+.news-card-body {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.08);
+    padding: 22px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: -40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Meta line */
+.news-card-meta {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    color: rgb(16, 12, 8);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.news-author-link {
+    color: #63AB45;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.news-author-link:hover {
+    text-decoration: underline;
+    color: #4d8a35;
+}
+
+.news-meta-dot {
+    color: #63AB45;
+    font-size: 0.45rem;
+    line-height: 1;
+}
+
+/* Card title */
+.news-card-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: rgb(16, 12, 8);
+    line-height: 32.2px;
+    letter-spacing: 0.23px;
+    margin-bottom: 0;
+    flex: 1;
+    transition: color 0.3s ease;
+}
+
+.news-card-title:hover {
+    color: #63AB45;
+}
+
+.news-card-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-card-title a:hover {
+    color: #63AB45;
+}
+
+/* Image link wrapper */
+.news-card-img-link {
+    display: block;
+    line-height: 0;
+}
+
+/* ── Card footer ── */
+.news-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #eeeeee;
+    padding-top: 14px;
+    margin-top: 18px;
+}
+
+/* View Post link */
+.news-view-post {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #63AB45;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.news-view-post:hover {
+    color: #4d8a35;
+}
+
+/* Arrow icon inside circle */
+.news-arrow-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid #63AB45;
+    font-size: 0.75rem;
+    color: #63AB45;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+}
+
+.news-view-post:hover .news-arrow-icon {
+    background-color: #63AB45;
+    color: #ffffff;
+    border-color: #63AB45;
+}
+
+/* Read time */
+.news-read-time {
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    color: rgb(16, 12, 8);
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.news-read-time svg {
+    fill: #63AB45;
+}

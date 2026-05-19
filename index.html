@@ -1464,87 +1464,123 @@
     <!-- ═══════════════════════════════════════════════════════════
      NEWS
 ═══════════════════════════════════════════════════════════ -->
-    <section id="news" class="py-5 bg-white">
-        <div class="container py-lg-5">
-            <div class="row align-items-end mb-5">
-                <div class="col-md-8">
-                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing: 2px;">Latest
-                        Updates</span>
-                    <h2 class="display-6 fw-bold mt-2" style="color: var(--primary-green);">From the Field: Conservation
-                        News</h2>
-                    <p class="text-muted mb-0">Stay informed about the latest restoration breakthroughs and
-                        district-level policy changes.</p>
+    <section class="pankhol-news" id="news">
+        <div class="container">
+
+            <!-- Badge + Heading -->
+            <div class="text-center mb-5">
+                <div class="news-section-badge">
+                    <em>Stories Teaser</em>
                 </div>
-                <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                    <a href="news.html" class="btn btn-success rounded-pill px-4">Browse All News</a>
-                </div>
+                <h2 class="section-main-title mb-4  pankhol-one-line">From the Mangroves: Travel Tips, Stories &
+                    Wildlife Facts
+                </h2>
             </div>
 
-            <div class="row g-4">
+            <!-- News Card Grid -->
+            <div class="row g-lg-4 gy-5">
+
+                <!-- Card 1 -->
+                <!-- PHP TODO: Start loop here -->
                 <div class="col-lg-6">
-                    <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 news-card">
-                        <div class="row g-0 h-100">
-                            <div class="col-md-5 position-relative">
-                                <img src="assets/images/activities/news-1.jpg"
-                                    class="img-fluid h-100 w-100 object-fit-cover"
-                                    alt="Mangrove sapling survival rate improvement — Kudal creek restoration"
-                                    width="300" height="300" loading="lazy" decoding="async">
-                                <div class="date-badge position-absolute top-0 start-0 m-3 text-center rounded-3 p-2 bg-success text-white"
-                                    aria-label="Published 15 February">
-                                    <span class="d-block fw-bold lh-1" aria-hidden="true">15</span>
-                                    <span class="small text-uppercase" aria-hidden="true">Feb</span>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body p-4 d-flex flex-column h-100">
-                                    <span class="text-success small fw-bold mb-2">Restoration Success</span>
-                                    <h3 class="card-title fw-bold mb-3 h5">Breakthrough in Sapling Survival Rates in
-                                        Kudal Creeks</h3>
-                                    <p class="card-text text-muted small mb-4">New monitoring techniques have resulted
-                                        in an 85% survival rate for the latest batch of Avicennia marina saplings.</p>
-                                    <a href="#" class="mt-auto text-success fw-bold text-decoration-none small">
-                                        Read Article <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
-                                    </a>
-                                </div>
+                    <div class="news-card">
+                        <div class="news-card-img-wrap">
+                            <a href="#" class="news-card-img-link">
+                                <img src="/public/assets/images/hero/Tiger.webp"
+                                    alt="Discover the mangroves of Sindhudurg" class="news-card-img" loading="lazy">
+                            </a>
+                            <div class="news-date-badge" aria-label="Published 5 January">
+                                <span class="news-date-day">5</span>
+                                <span class="news-date-month">Jan</span>
                             </div>
                         </div>
-                    </article>
+                        <div class="news-card-body">
+                            <p class="news-card-meta">
+                                By <a href="#" class="news-author-link"> Pankhol Juva</a>
+                                <span class="news-meta-dot">•</span>
+                                Mangrove Conservation
+                            </p>
+                            <h3 class="news-card-title">
+                                <a href="#">Discover The Wild Heart Of Sindhudurg: A 3-Day Eco Tour You'll Never
+                                    Forget</a>
+                            </h3>
+                            <div class="news-card-footer">
+                                <a href="#" class="news-view-post">
+                                    View Post
+                                    <span class="news-arrow-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12"
+                                            viewBox="0 0 14 12" fill="none">
+                                            <path d="M2.07617 8.73272L12.1899 2.89355" stroke="currentColor"
+                                                stroke-linecap="round" />
+                                            <path d="M10.412 7.59764L12.1908 2.89295L7.22705 2.08105"
+                                                stroke="currentColor" stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <span class="news-read-time">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12">
+                                        <path
+                                            d="M5.85726 11.3009C7.14547 9.08822 6.60613 6.30362 4.57475 4.68025C4.57356 4.67933 4.57238 4.67818 4.57143 4.6775L4.58021 4.69862L4.57878 4.71446C4.97457 5.72599 4.91905 6.83648 4.43285 7.78924L4.09022 8.461L3.9851 7.71876C3.91368 7.21529 3.71745 6.735 3.41515 6.32382H3.36745L3.3423 6.25495C3.34586 7.02428 3.17834 7.78213 2.8497 8.49704C2.41856 9.43259 2.48191 10.5114 3.01936 11.3833L3.39023 11.9853L2.72299 11.7126C1.62271 11.2628 0.743103 10.3964 0.309587 9.33547C-0.176131 8.15083 -0.0862008 6.77725 0.550429 5.66194C0.882388 5.08179 1.11493 4.46582 1.24187 3.8308L1.36597 3.2084L1.68251 3.76353C1.83366 4.02824 1.94494 4.31476 2.01399 4.61574L2.02111 4.62285L2.02847 4.67107L2.03535 4.669C2.98353 3.45015 3.55158 1.93354 3.6344 0.397865L3.65575 0L4.00076 0.217643C5.4088 1.10544 6.38664 2.52976 6.6887 4.13017L6.69558 4.163L6.69914 4.16805L6.71457 4.14693C6.99053 3.79429 7.13622 3.37485 7.13622 2.93336V2.24967L7.56261 2.7947C8.55398 4.06153 9.06224 5.63301 8.99391 7.21988C8.90991 9.08776 7.85708 10.7272 6.17736 11.6154L5.45008 12L5.85726 11.3009Z" />
+                                    </svg>
+                                    5 Min Read
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="col-lg-6">
-                    <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 news-card">
-                        <div class="row g-0 h-100">
-                            <div class="col-md-5 position-relative">
-                                <img src="assets/images/activities/news-2.jpg"
-                                    class="img-fluid h-100 w-100 object-fit-cover"
-                                    alt="District coastal land usage policy update — Sindhudurg regulation" width="300"
-                                    height="300" loading="lazy" decoding="async">
-                                <div class="date-badge position-absolute top-0 start-0 m-3 text-center rounded-3 p-2 bg-success text-white"
-                                    aria-label="Published 8 February">
-                                    <span class="d-block fw-bold lh-1" aria-hidden="true">08</span>
-                                    <span class="small text-uppercase" aria-hidden="true">Feb</span>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body p-4 d-flex flex-column h-100">
-                                    <span class="text-success small fw-bold mb-2">Policy Update</span>
-                                    <h3 class="card-title fw-bold mb-3 h5">New District Regulations for Coastal Land
-                                        Usage Released</h3>
-                                    <p class="card-text text-muted small mb-4">The district administration has tightened
-                                        norms for construction near sensitive mangrove belts to prevent illegal
-                                        encroachment.</p>
-                                    <a href="#" class="mt-auto text-success fw-bold text-decoration-none small">
-                                        Read Article <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
-                                    </a>
-                                </div>
+                    <div class="news-card">
+                        <div class="news-card-img-wrap">
+                            <a href="#" class="news-card-img-link">
+                                <img src="/public/assets/images/hero/tiger-jump.webp"
+                                    alt="Top reasons to visit the Sindhudurg mangroves" class="news-card-img"
+                                    loading="lazy">
+                            </a>
+                            <div class="news-date-badge" aria-label="Published 6 February">
+                                <span class="news-date-day">6</span>
+                                <span class="news-date-month">Feb</span>
                             </div>
                         </div>
-                    </article>
+                        <div class="news-card-body">
+                            <p class="news-card-meta">
+                                By <a href="#" class="news-author-link"> Pankhol Juva</a>
+                                <span class="news-meta-dot">•</span>
+                                Wildlife &amp; Safari
+                            </p>
+                            <h3 class="news-card-title">
+                                <a href="#">Top Reasons To Visit Sindhudurg With Your Family Or Group</a>
+                            </h3>
+                            <div class="news-card-footer">
+                                <a href="#" class="news-view-post">
+                                    View Post
+                                    <span class="news-arrow-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12"
+                                            viewBox="0 0 14 12" fill="none">
+                                            <path d="M2.07617 8.73272L12.1899 2.89355" stroke="currentColor"
+                                                stroke-linecap="round" />
+                                            <path d="M10.412 7.59764L12.1908 2.89295L7.22705 2.08105"
+                                                stroke="currentColor" stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <span class="news-read-time">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12">
+                                        <path
+                                            d="M5.85726 11.3009C7.14547 9.08822 6.60613 6.30362 4.57475 4.68025C4.57356 4.67933 4.57238 4.67818 4.57143 4.6775L4.58021 4.69862L4.57878 4.71446C4.97457 5.72599 4.91905 6.83648 4.43285 7.78924L4.09022 8.461L3.9851 7.71876C3.91368 7.21529 3.71745 6.735 3.41515 6.32382H3.36745L3.3423 6.25495C3.34586 7.02428 3.17834 7.78213 2.8497 8.49704C2.41856 9.43259 2.48191 10.5114 3.01936 11.3833L3.39023 11.9853L2.72299 11.7126C1.62271 11.2628 0.743103 10.3964 0.309587 9.33547C-0.176131 8.15083 -0.0862008 6.77725 0.550429 5.66194C0.882388 5.08179 1.11493 4.46582 1.24187 3.8308L1.36597 3.2084L1.68251 3.76353C1.83366 4.02824 1.94494 4.31476 2.01399 4.61574L2.02111 4.62285L2.02847 4.67107L2.03535 4.669C2.98353 3.45015 3.55158 1.93354 3.6344 0.397865L3.65575 0L4.00076 0.217643C5.4088 1.10544 6.38664 2.52976 6.6887 4.13017L6.69558 4.163L6.69914 4.16805L6.71457 4.14693C6.99053 3.79429 7.13622 3.37485 7.13622 2.93336V2.24967L7.56261 2.7947C8.55398 4.06153 9.06224 5.63301 8.99391 7.21988C8.90991 9.08776 7.85708 10.7272 6.17736 11.6154L5.45008 12L5.85726 11.3009Z" />
+                                    </svg>
+                                    5 Min Read
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- PHP TODO: End loop here -->
+
             </div>
         </div>
     </section>
-
     <!-- ═══════════════════════════════════════════════════════════
      COMMUNITY — Social CTA
      NOTE: background-attachment: fixed is kept here as an
