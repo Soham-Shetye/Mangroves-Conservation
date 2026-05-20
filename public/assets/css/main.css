@@ -697,23 +697,79 @@ body {
 }
 
 
-/* ----------------------------------------------------------------
-   RESPONSIVE — About Hero only
-   All other responsive rules for reused components already exist
-   in responsive.css and apply automatically.
----------------------------------------------------------------- */
-@media (max-width: 767px) {
-    .about-hero {
-        min-height: 300px;
-    }
-
-    .about-hero-content h1 {
-        font-size: clamp(1.8rem, 8vw, 2.6rem);
-    }
+/* ==========================================================================
+   SUNDARBAN-STYLE HERO BANNER (REPLICATED)
+   ========================================================================== */
+.breadcrumb-section {
+    padding: 100px 0;
+    /* Dictates vertical height cleanly via inner spacing */
+    min-height: 317px;
+    /* Guarantees section structure won't collapse */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
 }
 
-@media (max-width: 575px) {
-    .about-hero {
-        min-height: 240px;
-    }
+.banner-content {
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 52px;
+    line-height: 62px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+/* Breadcrumb Navigation Horizontal List Configuration */
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    /* Strips standard browser bullet points */
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.breadcrumb-list .breadcrumb-item,
+.breadcrumb-list li {
+    display: inline-block;
+}
+
+/* Link State colorization */
+.breadcrumb-list a {
+    color: var(--accent-green, #4f9d69);
+    /* Uses theme variable with a fallback green */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-list a:hover {
+    color: #ffffff;
+}
+
+/* Separator Icon Execution */
+.breadcrumb-list .breadcrumb-item+li::before {
+    content: "→";
+    /* Matches the structural arrow layout */
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+/* Current Active Page State */
+.breadcrumb-list .active {
+    color: #ffffff;
+    opacity: 0.9;
+    font-weight: 400;
 }
