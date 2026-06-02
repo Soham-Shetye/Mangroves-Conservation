@@ -1658,3 +1658,265 @@
 .news-read-time svg {
     fill: #63AB45;
 }
+
+
+/* =============================================================================
+   CONTACT SECTION WRAPPER
+   ============================================================================= */
+.mc-contact-section {
+    padding: var(--mc-section-py, 60px) 0;
+    background-color: #ffffff;
+}
+
+
+/* =============================================================================
+   CONTACT INFO CARDS (Left Column)
+   ============================================================================= */
+/* ── Contact Info Cards ─────────────────────────────────────────── */
+.mc-contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mc-contact-card {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #e8e2d4;
+    border-radius: 10px;
+    padding: 28px 22px 20px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.mc-contact-card:hover {
+    box-shadow: 0 6px 28px rgba(27, 67, 50, 0.14);
+    border-color: rgba(64, 145, 108, 0.3);
+}
+
+.mc-contact-card__label {
+    position: absolute;
+    top: -9px;
+    left: 18px;
+    background-color: #ffffff;
+    padding: 0 8px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #7a8e7a;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.mc-contact-card__body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mc-contact-card__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #2d6a4f;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease;
+}
+
+.mc-contact-card:hover .mc-contact-card__icon {
+    background-color: #1b4332;
+}
+
+.mc-contact-card__content h6 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #1a2a1a;
+    margin: 0;
+    line-height: 1.45;
+}
+
+.mc-contact-card__content h6 a {
+    color: #1a2a1a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.mc-contact-card__content h6 a:hover {
+    color: #2d6a4f;
+}
+
+.mc-contact-card__content h6 span {
+    color: #3d4f3d;
+    font-weight: 500;
+}
+
+/* ── Contact Form Area ──────────────────────────────────────────── */
+.mc-contact-form-area {
+    background-color: #f6f3ec;
+    border-radius: 14px;
+    padding: 40px 38px;
+    height: 100%;
+}
+
+.mc-contact-form-area__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1a2a1a;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.mc-contact-form-area__subtitle {
+    font-size: 0.9375rem;
+    color: #7a8e7a;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.mc-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mc-form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1a2a1a;
+    line-height: 1;
+}
+
+.mc-form-required {
+    color: #c0392b;
+    margin-left: 2px;
+}
+
+.mc-form-control {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #d4d0c8;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 0.9375rem;
+    color: #1a2a1a;
+    line-height: 1.5;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+}
+
+.mc-form-control::placeholder {
+    color: #aaa89d;
+    font-weight: 400;
+}
+
+.mc-form-control:focus {
+    border-color: #2d6a4f;
+    box-shadow: 0 0 0 3px rgba(64, 145, 108, 0.15);
+}
+
+.mc-form-control--error {
+    border-color: #c0392b !important;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12) !important;
+}
+
+.mc-form-textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.mc-form-feedback {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #c0392b;
+    display: block;
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+
+.mc-form-feedback--visible {
+    max-height: 3rem;
+}
+
+.mc-btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2d6a4f;
+    color: #ffffff;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.mc-btn-submit:hover:not(:disabled) {
+    background-color: #1b4332;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(27, 67, 50, 0.25);
+}
+
+.mc-btn-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.mc-btn-submit__arrow {
+    transition: transform 0.2s ease;
+}
+
+.mc-btn-submit:hover:not(:disabled) .mc-btn-submit__arrow {
+    transform: translateX(4px);
+}
+
+.mc-form-status {
+    margin-top: 20px;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.5;
+    border-left: 4px solid transparent;
+}
+
+.mc-form-status--success {
+    background-color: #edfaf1;
+    border-left-color: #2d6a4f;
+    color: #1a5c35;
+}
+
+.mc-form-status--error {
+    background-color: #fdecea;
+    border-left-color: #c0392b;
+    color: #7b1e14;
+}
+
+
+/* =============================================================================
+   GOOGLE MAPS EMBED
+   ============================================================================= */
+.mc-contact-map {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    line-height: 0;
+    /* Remove inline gap under iframe */
+}
+
+.mc-contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
