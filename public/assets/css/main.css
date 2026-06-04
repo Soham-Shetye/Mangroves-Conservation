@@ -196,8 +196,6 @@ body {
 
 /* ----------------------------------------------------------------
    5. PANKHOL JUVA SITE FOOTER
-   Renamed from .main-sundarban-footer to .main-pankhol-footer.
-   Update the class on the <footer> element in index.html.
 ---------------------------------------------------------------- */
 .main-pankhol-footer {
     background-color: var(--pankhol-footer-bg);
@@ -231,8 +229,23 @@ body {
    The hover colour was also defined twice as two different ways of
    writing the same value. Merged into one definitive rule here.
 ---------------------------------------------------------------- */
+.footer-links {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
 .footer-links a {
-    color: var(--pankhol-footer-text);
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     display: inline-block;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -243,16 +256,16 @@ body {
     transform: translateX(4px);
 }
 
-/* ── Footer tour packages list with leading dot icons ── */
-.footer-packages-list li {
-    display: flex;
-    align-items: center;
-    color: var(--pankhol-footer-text);
-}
 
-.footer-packages-list li i {
-    margin-left: -10px;
-    flex-shrink: 0;
+
+.footer-tour-packages {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
 }
 
 
