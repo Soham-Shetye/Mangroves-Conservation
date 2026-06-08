@@ -1920,3 +1920,32 @@
     border: 0;
     display: block;
 }
+
+
+/* =============================================================================
+   TIDE & WEATHER WIDGET
+   ============================================================================= */
+.mc-tide-section {
+    padding: 60px 0 70px;
+    background-color: #f6f3ec;
+}
+
+.mc-tide-widget-wrap {
+    background-color: #ffffff;
+    border: 1px solid #e8e2d4;
+    border-radius: 14px;
+    padding: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(27, 67, 50, 0.08);
+    transition: box-shadow 0.25s ease;
+}
+
+.mc-tide-widget-wrap:hover {
+    box-shadow: 0 8px 36px rgba(27, 67, 50, 0.14);
+}
+
+/* Ensure the third-party widget respects container bounds */
+.mc-tide-widget-wrap > div {
+    max-width: 100%;
+    overflow-x: auto;
+}
