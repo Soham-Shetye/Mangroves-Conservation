@@ -111,42 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    /* ------------------------------------------------------------
-       3. HERO PROGRESS BAR
-       Animates from 0% to 100% over 5000ms — matching the carousel
-       interval. Resets to 0% and restarts after each slide change.
-    ------------------------------------------------------------ */
-    var heroBar = document.getElementById('heroBar');
-
-    /**
-     * Starts the progress bar animation from 0 to 100%
-     * over the carousel interval duration (5000ms).
-     */
-    function startProgressBar() {
-        if (!heroBar) return;
-
-        /* Remove transition first so the width resets instantly */
-        heroBar.style.transition = 'none';
-        heroBar.style.width = '0%';
-
-        /*
-         * Force a reflow so the browser registers the width: 0%
-         * before the transition is re-applied. Without this, the
-         * browser batches both changes and skips the reset.
-         */
-        void heroBar.offsetWidth;
-
-        /* Apply the animation */
-        heroBar.style.transition = 'width 5000ms linear';
-        heroBar.style.width = '100%';
-    }
-
-    /** Resets the bar and restarts the animation cleanly. */
-    function resetProgressBar() {
-        if (!heroBar) return;
-        startProgressBar();
-    }
-
 
     /* ------------------------------------------------------------
        4. CYCLING HEADLINE WORD
@@ -337,6 +301,47 @@ if (typeof Fancybox !== "undefined") {
     });
 }
 
+/* ============================================================
+   TOUR PACKAGES - 
+   ============================================================ */
+
+(function () {
+
+    function initWaButtons() {
+        var buttons = document.querySelectorAll('.btn-book[data-wa-number][data-wa-package]');
+
+        for (var i = 0; i < buttons.length; i++) {
+            (function (btn) {
+                // Guard: skip if already bound
+                if (btn.dataset.waBound === 'true') return;
+                btn.dataset.waBound = 'true';
+
+                btn.addEventListener('click', function () {
+                    var number = btn.dataset.waNumber;
+                    var pkg = btn.dataset.waPackage;
+                    var text = encodeURIComponent(
+                        'Hi, I am interested in the ' + pkg + '. Please share more details.'
+                    );
+
+                    // Update href and let the browser navigate natively
+                    btn.href = 'https://wa.me/' + number + '?text=' + text;
+                    // NO e.preventDefault()
+                    // NO window.open()
+                });
+            })(buttons[i]);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initWaButtons);
+    } else {
+        initWaButtons();
+    }
+
+})();
+
+
+
 
 /* ============================================================
    TESTIMONIAL SLIDER - 
@@ -496,3 +501,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
     }());
 });
+
