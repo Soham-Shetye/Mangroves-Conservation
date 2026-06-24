@@ -1719,16 +1719,18 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: #2d6a4f;
+    background-color: #63AB45;
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.25s ease;
+    fill: #ffffff;
+
 }
 
 .mc-contact-card:hover .mc-contact-card__icon {
-    background-color: #1b4332;
+    background-color: #63AB45;
 }
 
 .mc-contact-card__content h6 {
@@ -1945,7 +1947,7 @@
 }
 
 /* Ensure the third-party widget respects container bounds */
-.mc-tide-widget-wrap > div {
+.mc-tide-widget-wrap>div {
     max-width: 100%;
     overflow-x: auto;
 }

@@ -502,3 +502,68 @@ window.addEventListener('DOMContentLoaded', function () {
     }());
 });
 
+
+
+// ────────────────────────────────────────
+// Tide Widget: lazy-load on scroll 
+// ────────────────────────────────────────
+(function () {
+    'use strict';
+
+    var section = document.getElementById('tide-conditions');
+    var placeholder = document.getElementById('mc-tide-placeholder');
+    if (!section) return;
+
+    var loaded = false;
+
+    function loadTideWidget() {
+        if (loaded) return;
+        loaded = true;
+
+        // Inject primary widget script first
+        var s1 = document.createElement('script');
+        s1.async = true;
+        s1.src = 'https://api.tidestoday.io/widgets-api/js-v1/en/india/maharashtra/malvan/widget.js';
+
+        // Chain: init script only after widget.js is ready
+        s1.onload = function () {
+            var s2 = document.createElement('script');
+            s2.async = true;
+            s2.src = 'https://api.tidestoday.io/widgets-api/js-v1/en/india/maharashtra/malvan/widget-init.js'
+                + '?includeMap=true&includeWeather=true&includeStyles=true'
+                + '&includeTitle=true&numberDays=5&weatherUnit=c&heightUnit=m';
+
+            s2.onload = function () {
+                // Widget ready — hide placeholder
+                if (placeholder) placeholder.style.display = 'none';
+            };
+
+            document.body.appendChild(s2);
+        };
+
+        s1.onerror = function () {
+            if (placeholder) {
+                placeholder.querySelector('p').textContent =
+                    'Tide data unavailable. Please check tidestoday.io directly.';
+            }
+        };
+
+        document.body.appendChild(s1);
+    }
+
+    // IntersectionObserver: pre-load 300px before section enters viewport
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            if (entries[0].isIntersecting) {
+                loadTideWidget();
+                observer.unobserve(section);
+            }
+        }, { rootMargin: '300px 0px' });
+
+        observer.observe(section);
+    } else {
+        // Fallback for older browsers
+        loadTideWidget();
+    }
+
+})();
