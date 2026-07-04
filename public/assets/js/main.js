@@ -355,19 +355,22 @@ window.addEventListener('DOMContentLoaded', function () {
                 quote: '"My kids loved the boat tour through the mangroves. The guides were knowledgeable, the food was tasty, and the stay was peaceful. Great value for money."',
                 name: 'Laboni Chatterjee',
                 role: 'Family Traveller, Durgapur',
-                rating: 5
+                rating: 5,
+                image: 'public/assets/images/testimonials/laboni.png'
             },
             {
                 quote: '"An unforgettable experience. The sunrise walk through the mangrove forest was magical — our guide knew every bird call by name. We left with a deep respect for nature."',
                 name: 'Aditya Nair',
                 role: 'Solo Explorer, Kochi',
-                rating: 5
+                rating: 5,
+                image: 'public/assets/images/testimonials/aditya.png'
             },
             {
                 quote: '"We brought our college group here for an eco-study trip. The conservation briefing was thorough, and the facilities were clean and comfortable."',
                 name: 'Priya Deshmukh',
                 role: 'Student Traveller, Pune',
-                rating: 5
+                rating: 5,
+                image: 'public/assets/images/testimonials/priya.png'
             }
         ];
 
@@ -379,6 +382,7 @@ window.addEventListener('DOMContentLoaded', function () {
         var nameEl = document.getElementById('t-reviewer-name');
         var roleEl = document.getElementById('t-reviewer-role');
         var starsEl = document.getElementById('t-stars');
+        var avatarEl = document.getElementById('t-reviewer-avatar');
         var prevBtn = document.getElementById('t-prev');
         var nextBtn = document.getElementById('t-next');
 
@@ -387,7 +391,7 @@ window.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        var targets = [quoteEl, nameEl, roleEl, starsEl];
+        var targets = [quoteEl, nameEl, roleEl, starsEl, avatarEl];
 
         /* ── Helper: build star HTML ── */
         function buildStars(count) {
@@ -430,6 +434,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 nameEl.textContent = t.name;
                 roleEl.textContent = t.role;
                 starsEl.innerHTML = buildStars(t.rating);
+                if (avatarEl) { avatarEl.src = t.image; avatarEl.alt = t.name; }
 
                 /* ── Phase 2: instantly jump to opposite side (no transition) ── */
                 clearSlideClasses();
@@ -497,6 +502,7 @@ window.addEventListener('DOMContentLoaded', function () {
         nameEl.textContent = firstT.name;
         roleEl.textContent = firstT.role;
         starsEl.innerHTML = buildStars(firstT.rating);
+        if (avatarEl) { avatarEl.src = firstT.image; avatarEl.alt = firstT.name; }
         startAutoSlide();
 
     }());
