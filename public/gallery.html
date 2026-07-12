@@ -2,57 +2,160 @@
 <html lang="en">
 
 <head>
+    <!-- ═══════════════════════════════════════════════════════
+         CRITICAL: CHARSET & VIEWPORT
+    ═══════════════════════════════════════════════════════ -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         LOGO 
+    ═══════════════════════════════════════════════════════ -->
+    <link rel="icon" href="assets/images/logos/pan-logo.webp">
+
 
     <!-- ═══════════════════════════════════════════════════════
          PRIMARY SEO
     ═══════════════════════════════════════════════════════ -->
-    <title>Gallery | Pankhol Juva — Mangrove Eco Tourism Maharashtra</title>
+    <title>Mangrove Gallery | Pankhol Juva, Malvan</title>
     <meta name="description"
-        content="Learn about Pankhol Juva — Maharashtra's leading mangrove conservation and eco-tourism initiative in Sindhudurg district. Meet our team, our mission, and our story.">
-    <meta name="keywords"
-        content="about Pankhol Juva, mangrove conservation Maharashtra, eco tourism Sindhudurg, Konkan coast wildlife, coastal conservation team">
-    <link rel="canonical" href="https://www.pankholjuva.com/about.html">
+        content="Browse photos and visuals from Pankhol Juva's mangrove eco-tours in Malvan, Sindhudurg. Explore the Konkan coastline, wildlife, and conservation activities through our gallery.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.pankholjuva.com/gallery.html">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="author" content="Pankhol Juva">
+    <meta name="format-detection" content="telephone=yes">
 
     <!-- ═══════════════════════════════════════════════════════
-         OPEN GRAPH
+         THEME
     ═══════════════════════════════════════════════════════ -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="About Us | Pankhol Juva — Mangrove Eco Tourism Maharashtra">
-    <meta property="og:description"
-        content="Learn about Pankhol Juva — Maharashtra's leading mangrove conservation and eco-tourism initiative.">
-    <meta property="og:image" content="https://www.pankholjuva.com/assets/images/hero/magroves.webp">
-    <meta property="og:url" content="https://www.pankholjuva.com/about.html">
-    <meta property="og:site_name" content="Pankhol Juva">
-    <meta property="og:locale" content="en_IN">
+    <meta name="theme-color" content="#1a5d3a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Pankhol Juva">
+    <meta name="application-name" content="Pankhol Juva">
+    <meta name="msapplication-TileColor" content="#1a5d3a">
+
+
 
     <!-- ═══════════════════════════════════════════════════════
-         FONTS — identical to index.html
+         PRECONNECT
     ═══════════════════════════════════════════════════════ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FONTS — Single merged request
+    ═══════════════════════════════════════════════════════ -->
     <link
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap"
         rel="stylesheet">
 
     <!-- ═══════════════════════════════════════════════════════
-         CSS — exact same stack as index.html
-         about.css added last (page-specific only, zero side effects)
+         CSS
     ═══════════════════════════════════════════════════════ -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/sections.css">
-    <link rel="stylesheet" href="assets/css/about.css">
 
+
+    <!-- ═══════════════════════════════════════════════════════
+         PHOSPHOR ICONS
+    ═══════════════════════════════════════════════════════ -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer crossorigin="anonymous"></script>
+
+    <!-- ═══════════════════════════════════════════════════════
+         OPEN GRAPH
+    ═══════════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mangrove Gallery | Pankhol Juva, Malvan">
+    <meta property="og:description"
+        content="Browse photos and visuals from Pankhol Juva's mangrove eco-tours in Malvan, Sindhudurg. Explore the Konkan coastline, wildlife, and conservation activities through our gallery.">
+    <meta property="og:image" content="https://www.pankholjuva.com/assets/images/hero/mangroves.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Mangrove forest photography at Pankhol Juva, Sindhudurg">
+    <meta property="og:url" content="https://www.pankholjuva.com/gallery.html">
+    <meta property="og:site_name" content="Pankhol Juva">
+    <meta property="og:locale" content="en_IN">
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         TWITTER / X CARD
+    ═══════════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pankholjuva">
+    <meta name="twitter:title" content="Mangrove Gallery | Pankhol Juva, Malvan">
+    <meta name="twitter:description"
+        content="Browse photos and visuals from Pankhol Juva's mangrove eco-tours in Malvan, Sindhudurg. Explore the Konkan coastline, wildlife, and conservation activities through our gallery.">
+    <meta name="twitter:image" content="https://www.pankholjuva.com/assets/images/hero/mangroves.webp">
+    <meta name="twitter:image:alt" content="Mangrove forest photography at Pankhol Juva, Sindhudurg">
+
+    <!-- ═══════════════════════════════════════════════════════
+         STRUCTURED DATA
+    ═══════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TravelAgency",
+          "@id": "https://www.pankholjuva.com/#organization",
+          "name": "Pankhol Juva",
+          "url": "https://www.pankholjuva.com"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.pankholjuva.com/#website",
+          "url": "https://www.pankholjuva.com",
+          "name": "Pankhol Juva",
+          "publisher": {
+            "@id": "https://www.pankholjuva.com/#organization"
+          }
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.pankholjuva.com/gallery.html#webpage",
+          "url": "https://www.pankholjuva.com/gallery.html",
+          "name": "Mangrove Gallery | Pankhol Juva, Malvan",
+          "description": "Photos from Pankhol Juva's mangrove eco-tours, wildlife, and conservation activities in Malvan, Sindhudurg.",
+          "isPartOf": {
+            "@id": "https://www.pankholjuva.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.pankholjuva.com/gallery.html#breadcrumb"
+          },
+          "inLanguage": "en-IN",
+          "datePublished": "2023-01-01T00:00:00+05:30",
+          "dateModified": "2026-07-12T00:00:00+05:30"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.pankholjuva.com/gallery.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.pankholjuva.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Gallery",
+              "item": "https://www.pankholjuva.com/gallery.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
