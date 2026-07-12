@@ -2,100 +2,168 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-
     <!-- ═══════════════════════════════════════════════════════
-         PRIMARY SEO
+         CRITICAL: CHARSET & VIEWPORT — Must be first 1024 bytes
     ═══════════════════════════════════════════════════════ -->
-    <title>Mangrove Conservation Maharashtra | Eco Tourism & Wildlife | Pankhol Juva</title>
-    <meta name="description"
-        content="Pankhol Juva is Maharashtra's leading mangrove conservation and eco-tourism initiative in Sindhudurg district. Join guided wildlife safaris, restoration drives, and biodiversity programs along the Konkan coast.">
-    <meta name="keywords"
-        content="mangrove conservation Maharashtra, eco tourism Sindhudurg, Konkan coast wildlife, coastal conservation, mangrove safari Maharashtra, Pankhol Juva, Malvan wildlife tour">
-    <link rel="canonical" href="https://www.pankholjuva.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
 
     <!-- ═══════════════════════════════════════════════════════
-         OPEN GRAPH — controls WhatsApp, Facebook, LinkedIn previews
+         PRIMARY SEO — Title, Description, Canonical, Robots
+    ═══════════════════════════════════════════════════════ -->
+    <title>Mangrove Eco-Tourism in Malvan | Pankhol Juva, Sindhudurg</title>
+    <meta name="description"
+        content="Book guided mangrove eco-tours, wildlife safaris & conservation programs with Pankhol Juva in Malvan, Sindhudurg. Explore Konkan's coastal biodiversity. Call +91-95293-21755.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.pankholjuva.com/">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ═══════════════════════════════════════════════════════
+         AUTHORSHIP & BRAND — E-E-A-T Signals
+    ═══════════════════════════════════════════════════════ -->
+    <meta name="author" content="Pankhol Juva">
+    <meta name="copyright" content="© 2026 Pankhol Juva. All rights reserved.">
+    <meta name="format-detection" content="telephone=yes">
+
+    <!-- ═══════════════════════════════════════════════════════
+         THEME & BROWSER CONFIGURATION
+    ═══════════════════════════════════════════════════════ -->
+    <meta name="theme-color" content="#1a5d3a" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d2e1d" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="light dark">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Pankhol Juva">
+    <meta name="application-name" content="Pankhol Juva">
+    <meta name="msapplication-TileColor" content="#1a5d3a">
+
+    <!-- ═══════════════════════════════════════════════════════
+         PRECONNECT & DNS-PREFETCH — Third-party resource hints
+    ═══════════════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- ═══════════════════════════════════════════════════════
+         PERFORMANCE — Hero image preload (LCP optimization)
+    ═══════════════════════════════════════════════════════ -->
+    <link rel="preload" as="image" href="/public/assets/images/hero/Pankhol_view.webp"
+        imagesrcset="/public/assets/images/hero/Pankhol_view_mobile.webp 600w, /public/assets/images/hero/Pankhol_view_tablet.webp 1024w, /public/assets/images/hero/Pankhol_view.webp 1920w"
+        imagesizes="100vw" fetchpriority="high">
+
+    <!-- ═══════════════════════════════════════════════════════
+         FONTS — Consolidated, non-blocking load with display=swap
+    ═══════════════════════════════════════════════════════ -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap"
+        rel="stylesheet">
+
+    <!-- ═══════════════════════════════════════════════════════
+         CSS — External stylesheets (Bootstrap with SRI recommended)
+    ═══════════════════════════════════════════════════════ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/assets/css/main.css">
+    <link rel="stylesheet" href="/public/assets/css/responsive.css">
+    <link rel="stylesheet" href="/public/assets/css/navbar.css">
+    <link rel="stylesheet" href="/public/assets/css/sections.css">
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCRIPTS — Non-blocking third-party icon font
+    ═══════════════════════════════════════════════════════ -->
+    <script src="https://unpkg.com/@phosphor-icons/web" async crossorigin="anonymous"></script>
+
+    <!-- ═══════════════════════════════════════════════════════
+         OPEN GRAPH — Facebook, LinkedIn, WhatsApp previews
     ═══════════════════════════════════════════════════════ -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Pankhol Juva | Mangrove Conservation & Eco Tourism Maharashtra">
+    <meta property="og:title" content="Guided Mangrove Eco-Tours & Conservation | Pankhol Juva, Malvan">
     <meta property="og:description"
-        content="Explore Maharashtra's coastal mangrove ecosystems through expert-guided eco-tours. Join conservation drives and wildlife safaris in Sindhudurg district.">
-    <meta property="og:image" content="https://www.pankholjuva.com/assets/images/hero/magroves.webp">
+        content="Book guided mangrove eco-tours, wildlife safaris & conservation programs in Maharashtra's coastal ecosystems. Explore Konkan biodiversity with expert naturalists.">
+    <meta property="og:image" content="https://www.pankholjuva.com/assets/images/hero/mangroves.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Lush mangrove forests along the Konkan coastline at Pankhol Juva">
     <meta property="og:url" content="https://www.pankholjuva.com/">
     <meta property="og:site_name" content="Pankhol Juva">
     <meta property="og:locale" content="en_IN">
 
     <!-- ═══════════════════════════════════════════════════════
-         TWITTER / X CARD
+         TWITTER / X CARD — Social sharing optimization
     ═══════════════════════════════════════════════════════ -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pankhol Juva | Mangrove Conservation & Eco Tourism Maharashtra">
+    <meta name="twitter:site" content="@pankholjuva">
+    <meta name="twitter:creator" content="@pankholjuva">
+    <meta name="twitter:title" content="Guided Mangrove Eco-Tours & Conservation | Pankhol Juva, Malvan">
     <meta name="twitter:description"
-        content="Guided eco-tours and conservation programs in Maharashtra's coastal mangrove ecosystems. Book your trail today.">
-    <meta name="twitter:image" content="https://www.pankholjuva.com/assets/images/hero/magroves.webp">
+        content="Book guided mangrove eco-tours, wildlife safaris & conservation programs in Maharashtra's coastal ecosystems. Explore Konkan biodiversity with expert naturalists.">
+    <meta name="twitter:image" content="https://www.pankholjuva.com/assets/images/hero/mangroves.webp">
+    <meta name="twitter:image:alt" content="Lush mangrove forests along the Konkan coastline at Pankhol Juva">
 
     <!-- ═══════════════════════════════════════════════════════
-         PERFORMANCE — Hero image preload
-    ═══════════════════════════════════════════════════════ -->
-    <link rel="preload" as="image" href="public/assets/images/hero/views.webp" imagesrcset="public/assets/images/hero/views-mobile.webp 600w, 
-                   public/assets/images/hero/views-tablet.webp 1024w, 
-                   public/assets/images/hero/views.webp 1920w" imagesizes="100vw" fetchpriority="high">
-    <!-- ═══════════════════════════════════════════════════════
-         FONTS — Correct loading method (replaces @import)
-         @import inside <style> was render-blocking (audit fix).
-         preconnect + stylesheet loads in parallel with the page.
-    ═══════════════════════════════════════════════════════ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap"
-        rel="stylesheet">
-
-
-    <!-- ═══════════════════════════════════════════════════════
-         CSS — CDN Bootstrap kept until local files are confirmed.
-         TODO: Replace CDN links with local paths once
-         bootstrap.min.css and bootstrap-icons.min.css
-         are placed inside assets/css/
-    ═══════════════════════════════════════════════════════ -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/public/assets/css/main.css">
-    <link rel="stylesheet" href="/public/assets/css/responsive.css">
-    <link rel="stylesheet" href="/public/assets/css/navbar.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-    <link rel="stylesheet" href="/public/assets/css/sections.css">
-
-    <!-- ═══════════════════════════════════════════════════════
-         SCHEMA.ORG STRUCTURED DATA
-         Enables rich results (address, phone, type) in Google Search.
+         SCHEMA.ORG STRUCTURED DATA — Enhanced Rich Results
     ═══════════════════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": ["Organization", "TravelAgency", "LocalBusiness"],
           "@id": "https://www.pankholjuva.com/#organization",
           "name": "Pankhol Juva",
+          "alternateName": "Pankhol Juva Mangrove Conservation",
           "url": "https://www.pankholjuva.com",
-          "logo": "https://www.pankholjuva.com/assets/images/logos/pankhol.webp",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.pankholjuva.com/assets/images/logos/pankhol.webp",
+            "width": 512,
+            "height": 512,
+            "caption": "Pankhol Juva Logo"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.pankholjuva.com/assets/images/hero/mangroves.webp",
+            "width": 1200,
+            "height": 630,
+            "caption": "Mangrove conservation and eco-tourism at Pankhol Juva, Malvan"
+          },
+          "description": "Maharashtra's leading mangrove conservation and eco-tourism initiative offering guided wildlife safaris, restoration drives, and biodiversity programs along the Konkan coast.",
+          "slogan": "Conserving Konkan's Mangroves, One Tour at a Time",
+          "foundingDate": "2020",
+          "knowsAbout": [
+            "Mangrove Conservation",
+            "Eco-Tourism",
+            "Wildlife Safari",
+            "Coastal Biodiversity",
+            "Sindhudurg Tourism",
+            "Konkan Coast Ecology"
+          ],
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91-95293-21755",
             "contactType": "customer service",
             "email": "info@pankholjuva.com",
             "availableLanguage": ["English", "Hindi", "Marathi"],
-            "areaServed": "IN"
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 16.0601,
+                "longitude": 73.4677
+              },
+              "geoRadius": "50000",
+              "unitText": "m"
+            }
           },
           "address": {
             "@type": "PostalAddress",
@@ -105,22 +173,72 @@
             "postalCode": "416606",
             "addressCountry": "IN"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 16.0601,
+            "longitude": 73.4677
+          },
+          "priceRange": "₹₹",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "06:00",
+              "closes": "18:00"
+            }
+          ],
           "sameAs": [
             "https://www.instagram.com/pankholjuva",
             "https://www.facebook.com/@pankholjuva"
-          ]
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Eco-Tourism & Conservation Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Guided Mangrove Eco-Tour",
+                  "description": "Expert-guided boat and walking tours through mangrove ecosystems with biodiversity education."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Wildlife Safari",
+                  "description": "Coastal wildlife observation safari including bird watching and marine life spotting."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Mangrove Restoration Drive",
+                  "description": "Participatory conservation program for mangrove plantation and habitat restoration."
+                }
+              }
+            ]
+          }
         },
         {
           "@type": "TouristAttraction",
           "@id": "https://www.pankholjuva.com/#attraction",
           "name": "Pankhol Juva — Mangrove Conservation & Eco Tourism",
+          "alternateName": "Pankhol Juva Mangrove Trail",
           "description": "A district-level initiative offering guided mangrove eco-tours, wildlife safaris, biodiversity surveys, and conservation programs along the Konkan coast in Maharashtra.",
           "url": "https://www.pankholjuva.com",
-          "image": "https://www.pankholjuva.com/assets/images/hero/magroves.webp",
+          "mainEntityOfPage": {
+            "@id": "https://www.pankholjuva.com/#webpage"
+          },
+          "image": {
+            "@id": "https://www.pankholjuva.com/assets/images/hero/mangroves.webp#image"
+          },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "16.0601",
-            "longitude": "73.4677"
+            "latitude": 16.0601,
+            "longitude": 73.4677
           },
           "address": {
             "@type": "PostalAddress",
@@ -128,20 +246,88 @@
             "addressRegion": "Maharashtra",
             "postalCode": "416606",
             "addressCountry": "IN"
+          },
+          "touristType": [
+            "Nature Tourist",
+            "Eco-Tourist",
+            "Wildlife Enthusiast",
+            "Family Tourist",
+            "Educational Tourist"
+          ],
+          "isAccessibleForFree": false,
+          "additionalType": "https://www.wikidata.org/wiki/Q1898689",
+          "provider": {
+            "@id": "https://www.pankholjuva.com/#organization"
           }
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.pankholjuva.com/assets/images/hero/mangroves.webp#image",
+          "url": "https://www.pankholjuva.com/assets/images/hero/mangroves.webp",
+          "width": 1200,
+          "height": 630,
+          "caption": "Lush mangrove forests along the Konkan coastline at Pankhol Juva, Malvan",
+          "contentUrl": "https://www.pankholjuva.com/assets/images/hero/mangroves.webp",
+          "license": "https://www.pankholjuva.com/terms",
+          "acquireLicensePage": "https://www.pankholjuva.com/contact"
         },
         {
           "@type": "WebSite",
           "@id": "https://www.pankholjuva.com/#website",
           "url": "https://www.pankholjuva.com",
           "name": "Pankhol Juva",
-          "description": "Mangrove conservation and eco-tourism in Maharashtra",
-          "publisher": { "@id": "https://www.pankholjuva.com/#organization" }
+          "alternateName": "Pankhol Juva Eco-Tourism",
+          "description": "Mangrove conservation and eco-tourism in Maharashtra's Sindhudurg district",
+          "publisher": {
+            "@id": "https://www.pankholjuva.com/#organization"
+          },
+          
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.pankholjuva.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.pankholjuva.com/#webpage",
+          "url": "https://www.pankholjuva.com/",
+          "name": "Guided Mangrove Eco-Tours & Conservation | Pankhol Juva, Malvan",
+          "description": "Book guided mangrove eco-tours, wildlife safaris and conservation programs with Pankhol Juva in Malvan, Sindhudurg. Explore Konkan's coastal biodiversity.",
+          "isPartOf": {
+            "@id": "https://www.pankholjuva.com/#website"
+          },
+          "about": {
+            "@id": "https://www.pankholjuva.com/#attraction"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://www.pankholjuva.com/assets/images/hero/mangroves.webp#image"
+          },
+          "breadcrumb": {
+            "@id": "https://www.pankholjuva.com/#breadcrumb"
+          },
+          "inLanguage": "en-IN",
+          "datePublished": "2023-01-01T00:00:00+05:30",
+          "dateModified": "2026-07-04T00:00:00+05:30"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.pankholjuva.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.pankholjuva.com/"
+            }
+          ]
         }
       ]
     }
     </script>
-
 </head>
 
 <body>
@@ -1441,7 +1627,8 @@
 
                         <!-- Reviewer info -->
                         <div class="t-reviewer-info text-center">
-                            <img src="public/assets/images/testimonials/laboni.png" alt="Laboni Chatterjee" class="t-reviewer-avatar" id="t-reviewer-avatar">
+                            <img src="public/assets/images/testimonials/laboni.png" alt="Laboni Chatterjee"
+                                class="t-reviewer-avatar" id="t-reviewer-avatar">
                             <h5 class="t-reviewer-name" id="t-reviewer-name">Laboni Chatterjee</h5>
                             <p class="t-reviewer-role" id="t-reviewer-role">Family Traveller, Durgapur</p>
                         </div>
@@ -1784,7 +1971,7 @@
     <!-- ═══════════════════════════════════════════════════════════
      SCRIPTS
 ═══════════════════════════════════════════════════════════ -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!--<script src="https://unpkg.com/@phosphor-icons/web"></script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
