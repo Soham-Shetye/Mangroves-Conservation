@@ -2,57 +2,210 @@
 <html lang="en">
 
 <head>
+  <!-- ═══════════════════════════════════════════════════════
+         CRITICAL: CHARSET & VIEWPORT
+    ═══════════════════════════════════════════════════════ -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- ═══════════════════════════════════════════════════════
+         LOGO 
+    ═══════════════════════════════════════════════════════ -->
+  <link rel="icon" href="assets/images/logos/pan-logo.webp">
 
   <!-- ═══════════════════════════════════════════════════════
          PRIMARY SEO
     ═══════════════════════════════════════════════════════ -->
-  <title>Tour Packages | Pankhol Juva — Mangrove Eco Tourism Maharashtra</title>
+  <title>Mangrove Eco-Tour Packages | Pankhol Juva, Malvan</title>
   <meta name="description"
-    content="Learn about Pankhol Juva — Maharashtra's leading mangrove conservation and eco-tourism initiative in Sindhudurg district. Meet our team, our mission, and our story.">
-  <meta name="keywords"
-    content="about Pankhol Juva, mangrove conservation Maharashtra, eco tourism Sindhudurg, Konkan coast wildlife, coastal conservation team">
-  <link rel="canonical" href="https://www.pankholjuva.com/about.html">
+    content="Explore mangrove eco-tour packages at Pankhol Juva, Malvan. Book guided trail walks, boat safaris, birdwatching, and conservation drives along the Sindhudurg coastline.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.pankholjuva.com/tour.html">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="author" content="Pankhol Juva">
+  <meta name="format-detection" content="telephone=yes">
 
   <!-- ═══════════════════════════════════════════════════════
-         OPEN GRAPH
+         THEME
     ═══════════════════════════════════════════════════════ -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="About Us | Pankhol Juva — Mangrove Eco Tourism Maharashtra">
-  <meta property="og:description"
-    content="Learn about Pankhol Juva — Maharashtra's leading mangrove conservation and eco-tourism initiative.">
-  <meta property="og:image" content="https://www.pankholjuva.com/assets/images/hero/magroves.webp">
-  <meta property="og:url" content="https://www.pankholjuva.com/about.html">
-  <meta property="og:site_name" content="Pankhol Juva">
-  <meta property="og:locale" content="en_IN">
+  <meta name="theme-color" content="#1a5d3a">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Pankhol Juva">
+  <meta name="application-name" content="Pankhol Juva">
+  <meta name="msapplication-TileColor" content="#1a5d3a">
 
   <!-- ═══════════════════════════════════════════════════════
-         FONTS — identical to index.html
+         PRECONNECT
     ═══════════════════════════════════════════════════════ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+  <!-- ═══════════════════════════════════════════════════════
+         FONTS — Single merged request
+    ═══════════════════════════════════════════════════════ -->
   <link
     href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap"
     rel="stylesheet">
 
   <!-- ═══════════════════════════════════════════════════════
-         CSS — exact same stack as index.html
-         about.css added last (page-specific only, zero side effects)
+         CSS
     ═══════════════════════════════════════════════════════ -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/navbar.css">
   <link rel="stylesheet" href="assets/css/sections.css">
-  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/tour.css">
 
+  <!-- ═══════════════════════════════════════════════════════
+         PHOSPHOR ICONS — defer prevents blank icons on first paint
+    ═══════════════════════════════════════════════════════ -->
+  <script src="https://unpkg.com/@phosphor-icons/web" defer crossorigin="anonymous"></script>
+
+  <!-- ═══════════════════════════════════════════════════════
+         OPEN GRAPH
+    ═══════════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mangrove Eco-Tour Packages | Pankhol Juva, Malvan">
+  <meta property="og:description"
+    content="Explore mangrove eco-tour packages at Pankhol Juva, Malvan. Book guided trail walks, boat safaris, birdwatching, and conservation drives along the Sindhudurg coastline.">
+  <meta property="og:image" content="https://www.pankholjuva.com/assets/images/hero/mangroves.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mangrove eco-tour boat safari at Pankhol Juva, Malvan">
+  <meta property="og:url" content="https://www.pankholjuva.com/tour.html">
+  <meta property="og:site_name" content="Pankhol Juva">
+  <meta property="og:locale" content="en_IN">
+
+
+  <!-- ═══════════════════════════════════════════════════════
+         TWITTER / X CARD
+    ═══════════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pankholjuva">
+  <meta name="twitter:title" content="Mangrove Eco-Tour Packages | Pankhol Juva, Malvan">
+  <meta name="twitter:description"
+    content="Explore mangrove eco-tour packages at Pankhol Juva, Malvan. Book guided trail walks, boat safaris, birdwatching, and conservation drives along the Sindhudurg coastline.">
+  <meta name="twitter:image" content="https://www.pankholjuva.com/assets/images/hero/mangroves.webp">
+  <meta name="twitter:image:alt" content="Mangrove eco-tour boat safari at Pankhol Juva, Malvan">
+
+  <!-- ═══════════════════════════════════════════════════════
+         STRUCTURED DATA
+    ═══════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TravelAgency",
+          "@id": "https://www.pankholjuva.com/#organization",
+          "name": "Pankhol Juva",
+          "url": "https://www.pankholjuva.com"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.pankholjuva.com/#website",
+          "url": "https://www.pankholjuva.com",
+          "name": "Pankhol Juva",
+          "publisher": {
+            "@id": "https://www.pankholjuva.com/#organization"
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.pankholjuva.com/tour.html#webpage",
+          "url": "https://www.pankholjuva.com/tour.html",
+          "name": "Mangrove Eco-Tour Packages | Pankhol Juva, Malvan",
+          "description": "Explore mangrove eco-tour packages at Pankhol Juva, Malvan. Book guided trail walks, boat safaris, birdwatching, and conservation drives along the Sindhudurg coastline.",
+          "isPartOf": {
+            "@id": "https://www.pankholjuva.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.pankholjuva.com/tour.html#breadcrumb"
+          },
+          "inLanguage": "en-IN",
+          "datePublished": "2023-01-01T00:00:00+05:30",
+          "dateModified": "2026-07-12T00:00:00+05:30"
+        },
+        {
+          "@type": "ItemList",
+          "name": "Mangrove Eco-Tour Packages",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Product",
+                "name": "Mangrove Trail Walk",
+                "description": "Guided walk through mangrove forests along the Konkan coastline",
+                "provider": {
+                  "@id": "https://www.pankholjuva.com/#organization"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Product",
+                "name": "Mangrove Boat Tour",
+                "description": "Guided boat tour through mangrove channels in Sindhudurg",
+                "provider": {
+                  "@id": "https://www.pankholjuva.com/#organization"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Product",
+                "name": "Birdwatching Tour",
+                "description": "Expert-guided birdwatching in mangrove habitats of the Konkan coast",
+                "provider": {
+                  "@id": "https://www.pankholjuva.com/#organization"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Product",
+                "name": "Conservation Restoration Drive",
+                "description": "Participatory mangrove plantation and coastal conservation activity",
+                "provider": {
+                  "@id": "https://www.pankholjuva.com/#organization"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.pankholjuva.com/tour.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.pankholjuva.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tour Packages",
+              "item": "https://www.pankholjuva.com/tour.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -65,7 +218,7 @@
 
       <a class="navbar-brand d-flex align-items-center flex-nowrap" href="index.html" aria-label="Pankhol Juva — Home"
         style="min-width: 0;">
-        <img src="assets/images/logos/logo.png" alt="Pankhol Juva logo" width="40" height="40"
+        <img src="assets/images/logos/pan-logo.webp" alt="Pankhol Juva logo" width="40" height="40"
           class="me-2 rounded-circle border border-secondary border-opacity-25 flex-shrink-0"
           style="max-width: 40px; height: auto;">
         <span class="fw-bold text-truncate" style="font-size: clamp(0.8rem, 4vw, 1rem);">PANKHOL JUVA</span>
@@ -104,7 +257,7 @@
     <div class="offcanvas-header border-bottom border-secondary">
       <div class="d-flex align-items-center">
         <div class="mobile-logo-circle me-2">
-          <img src="assets/images/logos/logo.png" alt="Pankhol Juva logo" width="40" height="40">
+          <img src="assets/images/logos/pan-logo.webp" alt="Pankhol Juva logo" width="40" height="40">
         </div>
         <h6 class="mb-0 fw-bold text-white" id="mobileMenuLabel">PANKHOL JUVA</h6>
       </div>
