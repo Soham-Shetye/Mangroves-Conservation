@@ -102,12 +102,12 @@ document.addEventListener('DOMContentLoaded', function () {
         heroCarousel.cycle();
 
         /* Reset and restart the progress bar after each slide transition */
-        heroCarouselEl.addEventListener('slid.bs.carousel', function () {
-            resetProgressBar();
-        });
+        /*heroCarouselEl.addEventListener('slid.bs.carousel', function () {
+              resetProgressBar();
+          });*/
 
         /* Start the progress bar immediately on page load */
-        startProgressBar();
+        /*startProgressBar();*/
     }
 
 
