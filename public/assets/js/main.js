@@ -359,18 +359,18 @@ window.addEventListener('DOMContentLoaded', function () {
                 image: 'public/assets/images/testimonials/laboni.png'
             },
             {
-                quote: '"An unforgettable experience. The sunrise walk through the mangrove forest was magical — our guide knew every bird call by name. We left with a deep respect for nature."',
-                name: 'Aditya Nair',
-                role: 'Solo Explorer, Kochi',
+                quote: '"Great experience being part of the Pankhol Juva team! Turning mangrove conservation into an engaging digital story was a rewarding challenge — I am proud of the site we built."',
+                name: 'Somaji Korgoankar',
+                role: 'Web Developer, Kudal',
                 rating: 5,
-                image: 'public/assets/images/testimonials/aditya.png'
+                image: 'public/assets/images/testimonials/Somaji_Korgoankar.png'
             },
             {
-                quote: '"We brought our college group here for an eco-study trip. The conservation briefing was thorough, and the facilities were clean and comfortable."',
-                name: 'Priya Deshmukh',
-                role: 'Student Traveller, Pune',
+                quote: "An awesome experience designing and developing this site! Imprinting natural habitats onto a webpage was a thrilling challenge, resulting in a digital experience that perfectly captures the rich biodiversity of Pankhol Juva's wetlands.",
+                name: 'Soham Shetye',
+                role: 'Web Developer, Kudal',
                 rating: 5,
-                image: 'public/assets/images/testimonials/priya.png'
+                image: 'public/assets/images/testimonials/Soham_Shetye.png'
             }
         ];
 

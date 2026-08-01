@@ -1272,7 +1272,7 @@
     letter-spacing: 0.3em;
     white-space: nowrap;
     pointer-events: none;
-    user-select: none;
+
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -1314,8 +1314,8 @@
 }
 
 .t-reviewer-avatar {
-    width: 55px;
-    height: 55px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #c8a84b;
